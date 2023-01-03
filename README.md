@@ -1,6 +1,8 @@
 # Buku Saku JavaScript
 
-Series ini adalah bagi mereka yang sabar ingin mempelajari JavaScript dari dasar. Diharapkan pembaca dapat memahami JavaScript fundamental dan konsep-konsep dasar lainnya sehingga membantu membentuk pemahaham yang kuat sebelum lebih jauh terjun ke dunia Web Development dan Framework-framework JavaScript diluar sana
+Series ini adalah bagi mereka yang sabar ingin mempelajari JavaScript dari dasar. Diharapkan pembaca dapat memahami JavaScript fundamental dan konsep-konsep dasar lainnya sehingga membantu membentuk pemahaham yang kuat sebelum lebih jauh terjun ke dunia Web Development dan Framework-framework JavaScript diluar sana.
+
+Sangat disarankan untuk membaca semua materi dalam series ini secara berurutan agar pemahaman kamu menjadi lebih baik dan lebih melekat. Termasuk pada bagian *Introduction*, disana kamu dapat mengetahui sekilas tentang JavaScript mulai dari sejarahnya, creatornya dan yang lainnya. Pengetahuan dasar seperti ini banyak diremehkan orang padahal sangat penting untuk diketahui.
 
 # Latar Belakang
 
@@ -12,7 +14,7 @@ Sekarang saatnya *back to basic*. Ayoo kita belajar bersama Fundamental JavaScri
 
 # Kontribusi
 
-Buku saku ini terbuka bagi siapa saja yang ingin *contribute* agar isi, redaksi dan konten secara keseluruhan menjadi lebih baik dan bermanfaat bagi programmer-programmer Indonesia 
+Buku saku ini terbuka bagi siapa saja yang ingin *contribute* agar isi, redaksi dan konten secara keseluruhan menjadi lebih baik dan bermanfaat bagi programmer-programmer Indonesia. 
 
 # Topic Bahasan
 
@@ -42,4 +44,4 @@ Buku saku ini terbuka bagi siapa saja yang ingin *contribute* agar isi, redaksi 
 
 # Live Demo
 
-Beberapa sample coding akan di publish di https://stackblitz.com sehingga kamu dapat mencobanya sendiri
+Beberapa sample coding akan di publish di https://stackblitz.com sehingga kamu dapat mencobanya sendiri.
