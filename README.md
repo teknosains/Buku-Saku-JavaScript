@@ -42,4 +42,4 @@ Buku saku ini terbuka bagi siapa saja yang ingin *contribute* agar isi, redaksi 
 
 # Live Demo
 
-Semua contoh coding / live demo akan di publish di https://stackblitz.com
+Jika ada sample coding yang perlu demo akan di publish di https://stackblitz.com sehingga kamu dapat mencobanya sendiri
