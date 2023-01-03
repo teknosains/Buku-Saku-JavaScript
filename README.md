@@ -25,6 +25,7 @@ Buku saku ini terbuka bagi siapa saja yang ingin *contribute* agar isi, redaksi 
   * Object
   * Array
   * Function
+  * *this* keyword
   * dll
 * DOM dan Events di Browser
   * Event Listener
