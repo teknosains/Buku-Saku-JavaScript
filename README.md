@@ -38,3 +38,7 @@ Buku saku ini terbuka bagi siapa saja yang ingin *contribute* agar isi, redaksi 
   * AJAX
   * AJAX dengan Axios
   * dll
+
+# Live Demo
+
+Semua contoh coding / live demo akan di publish di https://stackblitz.com
