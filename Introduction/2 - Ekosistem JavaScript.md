@@ -35,4 +35,4 @@ Saking sudah terlalu besarnya, sampai-sampai creator Node.JS, **Ryan Dahl** kini
 <div align="center">
   <img src="https://user-images.githubusercontent.com/3906229/210555170-49c17b5e-1799-4dfb-8366-07a74e004bf5.PNG" width="500">
 </div>
-<p align="center"><i color="red">sumber: https://deno.land </i></p>
+<p align="center"><i color="red">sumber: deno.land </i></p>
