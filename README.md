@@ -2,7 +2,7 @@
 
 Series ini adalah bagi mereka yang sabar ingin mempelajari JavaScript dari dasar. Diharapkan pembaca dapat memahami JavaScript fundamental dan konsep-konsep dasar lainnya sehingga membantu membentuk pemahaham yang kuat sebelum lebih jauh terjun ke dunia Web Development dan Framework-framework JavaScript diluar sana.
 
-Sangat disarankan untuk membaca semua materi dalam series ini secara berurutan agar pemahaman kamu menjadi lebih baik dan lebih melekat. Termasuk pada bagian *Introduction*, disana kamu dapat mengetahui sekilas tentang JavaScript mulai dari sejarahnya, creatornya dan yang lainnya. Pengetahuan dasar seperti ini banyak diremehkan orang padahal sangat penting untuk diketahui dan seringkali hal ini ditanyakan diberbagai kesempatan seperti saat Interview kerja, seminar dll.
+**Sangat disarankan** untuk membaca semua materi dalam series ini secara berurutan agar pemahaman kamu menjadi lebih baik dan lebih melekat. Termasuk pada bagian *Introduction*, disana kamu dapat mengetahui sekilas tentang JavaScript mulai dari sejarahnya, creatornya dan yang lainnya. Pengetahuan dasar seperti ini banyak diremehkan orang padahal sangat penting untuk diketahui dan seringkali hal ini ditanyakan diberbagai kesempatan seperti saat Interview kerja, seminar dll.
 
 Mengetehaui hal-hal dasar tentang suatu tekonologi / bahasa Pemrograman artinya kita memberi perhatian khusus pada teknologi itu sehingga bisa menimbulkan rasa kecintaan, motivasi, percaya diri dan bahkan akan diperhatikan orang lain karena berarti kita serius dalam bidang tersebut.
 
