@@ -4,7 +4,7 @@ Ekosistem JavaScript kini bisa dibilang ada yang terbesar di dunia software engi
 
 Dulu JS utamanya digunakan di _environment_ browser untuk web development, kini JS sudah menjelma menjadi bahasa pemrograman umum yang bisa juga digunakan untuk keperluan komputasi lain (selain di browser).
 
-### JavaScript Untuk Web/Browser
+## JavaScript Untuk Web/Browser
 
 Mengembangkan sebuah aplikasi Web (Website atau aplikasi perkantoran berbasis web) minimal menggunakan 3 teknologi yakni HTML, CSS dan JavaScript. Jika kamu ingin  menjadi seorang **Frontend Developer** maka ke-3 teknologi diatas wajib untuk dikuasai terutama JavaScript.
 
@@ -21,7 +21,7 @@ Silahkan pilih dan gunakan _alat bantu_ diatas sesuai kebutuhan dan selera. Namu
 
 Sangat disarankan juga kamu pernah atau punya portofolio project yang kamu kerjakan dalam JS Native (Vanilla JS), tidak menggunakan framework atau libraries seperti jQuery dan semisalnya. 
 
-### JavaScript Untuk Server
+## JavaScript Untuk Server
 
 Setelah Google mengembangkan V8 Engine, lahirlah Node.JS yang memungkinkan kode JavaScript untuk berjalan di luar browser. Node.JS adalah environment JavaScript yang berjalan di Server dan bisa digunakan untuk proses IO, proses HTTP request,  koneksi ke database, file processing, membuat API dan banyak kegunaan lainnya. 
 
@@ -37,7 +37,7 @@ Saking sudah terlalu besarnya ekosistem Node.JS, sampai-sampai creator Node.JS, 
 </div>
 <p align="center"><i color="red">sumber: deno.land </i></p>
 
-### Komunitas
+## Komunitas
 
 Tidak diragukan lagi bahwa komunitas developer JavaScript adalah yang paling besar jadi segala macam permasalahan seputar JavaScript pasti mudah untuk dicari solusinya. Sumber atau tempat untuk belajar JavaScript pun amat banyak sehingga kamu tidak perlu khawatir akan mengalami kesulitan.
 
