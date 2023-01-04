@@ -4,7 +4,7 @@ Ekosistem JavaScript kini bisa dibilang ada yang terbesar di dunia software engi
 
 Dulu JS utamanya digunakan di _environment_ browser untuk web development, kini JS sudah menjelma menjadi bahasa pemrograman umum yang bisa juga digunakan untuk keperluan komputasi lain (selain di browser).
 
-#### JavaScript Untuk Web
+#### JavaScript Untuk Web/Browser
 
 Mengembangkan sebuah aplikasi Web (Website atau aplikasi perkantoran berbasis web) minimal menggunakan 3 teknologi yakni HTML, CSS dan JavaScript. Jika kamu ingin  menjadi seorang **Frontend Developer** maka ke-3 teknologi diatas wajib untuk dikuasai terutama JavaScript.
 
