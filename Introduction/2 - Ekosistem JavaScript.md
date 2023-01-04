@@ -25,7 +25,7 @@ Sangat disarankan juga kamu pernah atau punya portofolio project yang kamu kerja
 
 Setelah Google mengembangkan V8 Engine, lahirlah Node.JS yang memungkinkan kode JavaScript untuk berjalan di luar browser. Node.JS adalah environment JavaScript yang berjalan di Server dan bisa digunakan untuk proses IO, proses HTTP request,  koneksi ke database, file processing, membuat API dan banyak kegunaan lainnya. 
 
-Berkat Node.JS kini ekosistem JavaScript makin luar biasa besar hingga bermunculan tools-tools baru yang digunakan untuk development aplikasi menggunakan JavaScript. Sebut saja _NPM, NPX, Bubble, Webpack_ dan framework-framework Node.JS untuk pengembangan teknologi Backend seperti _ExpressJS, HapiJS, NestJS_. Ada juga tools JavaScript populer karya Engineer hebat Indonesia, **Ariya Hidayat** seperti _PhantomJS_ dan _Esprima_
+Berkat Node.JS kini ekosistem JavaScript makin luar biasa besar hingga bermunculan tools-tools baru yang digunakan untuk development aplikasi menggunakan JavaScript. Sebut saja _NPM, NPX, Bubble, Webpack_ dan framework-framework Node.JS untuk pengembangan teknologi Backend seperti _ExpressJS, HapiJS, NestJS_. Ada juga tools JavaScript populer karya Engineer hebat Indonesia, **Ariya Hidayat** seperti _PhantomJS_ dan _Esprima_.
 
 Saking sudah terlalu besarnya ekosistem Node.JS, sampai-sampai creator Node.JS, **Ryan Dahl** kini membuat environment JavaScript baru yang dinamai **Deno** dengan performa yang diclaim jauh lebih cepat dari Node.JS
 
