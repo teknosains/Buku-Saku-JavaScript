@@ -1,6 +1,6 @@
 # JavaScript
 
-JavaScript atau JS adalah bahasa pemrograman yang umum digunakan untuk mengembangankan aplikasi berbasis Web. JS memungkinkan aplikasi Web lebih dinamis dan interaktif sehingga Web lebih dari sekedar tampilan statis untuk dibaca. 
+JavaScript atau JS adalah bahasa pemrograman yang umum digunakan untuk mengembangankan aplikasi berbasis Web. JS memungkinkan aplikasi Web lebih dinamis dan interaktif sehingga Web lebih dari sekedar tampilan statis untuk dibaca, tak heran jika JS digunakan oleh lebih dari 95% Website di dunia.
 
 Namun kini JavaScript sudah jauh ber-evolusi, tidak hanya di sematkan di web yang eksekusi Browser, JS kini populer juga sebagai teknologi Backend yang bisa digunakan untuk berkomunikasi dengan Server dan Database.
 
