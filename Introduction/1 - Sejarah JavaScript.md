@@ -1,4 +1,4 @@
-# JavaScript
+## JavaScript
 
 JavaScript atau JS adalah bahasa pemrograman yang umum digunakan untuk mengembangankan aplikasi berbasis Web. JS memungkinkan aplikasi Web lebih dinamis dan interaktif sehingga Web lebih dari sekedar tampilan statis untuk dibaca, tak heran jika JS digunakan oleh lebih dari 95% Website di dunia.
 
@@ -6,7 +6,7 @@ Namun kini JavaScript sudah jauh ber-evolusi, tidak hanya di sematkan di web yan
 
 Kini bahkan kamu bisa secara khusus menekuni salah satunya yaitu focus ke Frontend atau Backend developement dengan JavaScript. Untuk backend kamu bisa pelajari Node.JS atau Deno.
 
-# Sejarah JavaScript
+## Sejarah JavaScript
 
 September 1995, seorang programmer berbakat bernama **Brendan Eich** mengembangkan bahasa scripting baru untuk digunakan di browser Netscape 2 hanya dalam 10 hari. Netscape 2 atau Netscape Navigator 2 adalah *browser* besutan perusahaan teknologi Netscape yang sangat populer dimasa itu.
 
@@ -14,7 +14,7 @@ Awalnya bahasa scripting baru ini dinamai Mocha lalu berubah nama menjadi LiveSc
 
 Kini JS menjadi _lingua franca_ nya Web dan semua browser yang ada "_wajib_" men-support JavaScript.
 
-# Kenapa Harus JavaScript?
+## Kenapa Harus JavaScript?
 
 JS saat ini adalah satu satu bahasa pemrograman paling populer di dunia dengan _demand_ yang tinggi baik dibidang Frontend ataupun backend. Lowongan kerja untuk mereka para programmer JavaScript sudah tentu sangat banyak dan terus meningkat, inilah mengapa JavaScript adalah pilihan paling menjanjikan untuk kamu
 
