@@ -7,3 +7,9 @@ Namun kini JavaScript sudah jauh ber-evolusi, tidak hanya di sematkan di web yan
 Kini bahkan kamu bisa secara khusus menekuni salah satunya yaitu focus ke Frontend atau Backend developement dengan JavaScript. Untuk backend kamu bisa pelajari Node.JS atau Deno.
 
 # Sejarah JavaScript
+
+September 1995, seorang programmer berbakat bernama **Brendan Eich** mengembangkan bahasa scripting baru untuk digunakan di browser Netscape 2 hanya dalam 10 hari. Netscape 2 atau Netscape Navigator 2 adalah *browser* besutan perusahaan teknologi Netscape yang sangat populer dimasa itu.
+
+Awalnya bahasa scripting baru ini dinamai Mocha lalu berubah nama menjadi LiveScript dan akhirnya menjadi JavaScript. **Brendan Eich** sendiri merupakah salah satu co-founder Mozilla Corporation dengan produk browser populer nya, Firefox.
+
+Kini JS menjadi _lingua franca_ nya Web dan semua browser yang ada "_wajib_" men-support JavaScript.
