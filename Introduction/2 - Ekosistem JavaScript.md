@@ -41,3 +41,8 @@ Saking sudah terlalu besarnya ekosistem Node.JS, sampai-sampai creator Node.JS, 
 
 Tidak diragukan lagi bahwa komunitas developer JavaScript adalah yang paling besar jadi segala macam permasalahan seputar JavaScript pasti mudah untuk dicari solusinya. Sumber atau tempat untuk belajar JavaScript pun amat banyak sehingga kamu tidak perlu khawatir akan mengalami kesulitan.
 
+Beberapa tempat nongkrong komunitas / tempat belajar JavaScript yang bisa kamu ikuti:
+* [FB Group: JavaScript Indonesia](https://www.facebook.com/groups/125918327491451)
+* [Programmer Zaman Now](https://www.youtube.com/@ProgrammerZamanNow)
+* [Stackoverflow](https://stackoverflow.com/questions/tagged/javascript)
+
