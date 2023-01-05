@@ -1,6 +1,10 @@
 # Konsep Dasar
 
 ## Environment JavaScript
+...
+
+## Scope
+...
 
 ## Mengenal function/fitur Yang Sebenarnya Bukan Bagian Dari JavaScript
 
