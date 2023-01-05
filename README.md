@@ -22,6 +22,7 @@ Buku saku ini terbuka bagi siapa saja yang ingin *contribute* agar isi, redaksi 
 
 * Introduction
 * Fundamental JavaScript
+  * Konsep Dasar
   * Tipe Data
   * Variable
   * Looping
@@ -30,6 +31,7 @@ Buku saku ini terbuka bagi siapa saja yang ingin *contribute* agar isi, redaksi 
   * Array
   * Function
   * *this* keyword
+  * _use strict_
   * dll
 * DOM dan Events di Browser
   * Event Listener
