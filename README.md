@@ -6,7 +6,7 @@ Series ini adalah bagi mereka yang sabar ingin mempelajari JavaScript dari dasar
 
 Mengetehaui hal-hal dasar tentang suatu tekonologi / bahasa Pemrograman artinya kita memberi perhatian khusus pada teknologi itu sehingga bisa menimbulkan rasa kecintaan, motivasi, percaya diri dan bahkan akan diperhatikan orang lain karena berarti kita serius dalam bidang tersebut.
 
-# Latar Belakang
+## Latar Belakang
 
 * Apakah kamu baru ingin memulai belajar Web Development?
 * Apakah kamu termasuk yang memulai belajar Web Development langsung menggunakan jQuery?
