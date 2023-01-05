@@ -45,4 +45,5 @@ Beberapa tempat nongkrong komunitas / tempat belajar JavaScript yang bisa kamu i
 * [FB Group: JavaScript Indonesia](https://www.facebook.com/groups/125918327491451)
 * [Programmer Zaman Now](https://www.youtube.com/@ProgrammerZamanNow)
 * [Stackoverflow](https://stackoverflow.com/questions/tagged/javascript)
+* [FB Group: NodeJS Indonesia](https://web.facebook.com/groups/121311681337610)
 
