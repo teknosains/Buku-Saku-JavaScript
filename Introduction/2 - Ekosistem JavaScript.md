@@ -6,7 +6,7 @@ Dulu JS utamanya digunakan di _environment_ browser untuk web development, kini 
 
 ## JavaScript Untuk Web/Browser
 
-Mengembangkan sebuah aplikasi Web (Website atau aplikasi perkantoran berbasis web) minimal menggunakan 3 teknologi yakni HTML, CSS dan JavaScript. Jika kamu ingin  menjadi seorang **Frontend Developer** maka ke-3 teknologi diatas wajib untuk dikuasai terutama JavaScript.
+Mengembangkan sebuah aplikasi Web (Website, aplikasi perkantoran atau aplikasi bisnis berbasis web) minimal menggunakan 3 teknologi yakni HTML, CSS dan JavaScript. Jika kamu ingin  menjadi seorang **Frontend Developer** maka ke-3 teknologi diatas wajib untuk dikuasai terutama JavaScript.
 
 Kini sudah banyak sekali _alat bantu / framework_ yang mempermudah membangun aplikasi Web dengan JavaScript seperti:
 
