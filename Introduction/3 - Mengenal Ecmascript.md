@@ -16,7 +16,6 @@ Ketika pengembang browser dan JavaScript Engine sudah mengikuti spesifikasi terb
 | ES4           | ECMAScript 4       | tidak dirilis |
 | ES5           | ECMAScript 5 (2009)| penambahan _strict mode_, JSON, method looping pada Array dll|
 | ES6           | ECMAScript 2015    | penambahan _let dan const_, _Array.find()_, _Array.findIndex()_, value untuk paramater default di function|
-| ES5           | ECMAScript 5 (2009)| penambahan _strict mode_, JSON, method looping pada Array dll|
 
 Sejak 2016, perilisan ECMAScript secara resmi tidak menggunakan kode ES lagi, tapi langsung menggunakan nama resmi nya. Namun kebanyakan orang tetap melabeli dengan kode ES
 
