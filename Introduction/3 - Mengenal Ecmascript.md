@@ -1,4 +1,4 @@
-# Mengenal Ecmascript
+## Mengenal Ecmascript
 
 Pada tahun 1997, dikarenakan perkembangan dan popularitas JavaScript yang makin menanjak maka JavaScript sangat perlu untuk di maintain dan distandarisasi dengan lebih baik. Oleh karena itu Netscape menyerahkan pengembangan standarisasi dan spesifikasi JavaScript kepada European Computer Manufacturers Association (ECMA), lembaga yang mengurusi standarisasi sistem/teknologi komputer. Dan dibentuklah _"divisi"_ [Technical Committee 39 (TC39)](https://github.com/tc39) yang bertugas untuk mengembangkan JavaScript lebih lanjut.
 
