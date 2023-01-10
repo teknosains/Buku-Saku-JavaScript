@@ -8,7 +8,7 @@ Mengetehaui hal-hal dasar tentang suatu tekonologi / bahasa Pemrograman artinya 
 
 ## Latar Belakang
 
-* Apakah kamu baru ingin memulai belajar Web Development?
+* Apakah kamu baru ingin/memulai belajar Web Development?
 * Apakah kamu termasuk yang memulai belajar Web Development langsung menggunakan jQuery?
 * Atau bahkan yang langsung terjun menggunakan framework seperti Angular, Vue React dsb?
 
