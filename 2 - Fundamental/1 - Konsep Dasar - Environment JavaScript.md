@@ -91,10 +91,6 @@ Deno adalah alternatif lain selain Node.JS jika kamu ingin _coding_ untuk backen
 Pelajari tentang Deno disitus resminya [Deno Land](https://deno.land/)
 
 
-## Scope
-STOP !!! berhenti sejenak, tidak perlu terburu-buru, kamu akan mulai masuk ke konsep dasar yang *paling* wajib difahami di JavaScript. Sebelum memulai, sebaiknya kamu sudah hafal diluar kepala tentang Environment JavaScript diatas. 
-
-
 ## Mengenal function/fitur Yang Sebenarnya Bukan Bagian Dari JavaScript
 
 Suatu saat kita akan sampai ke tahap web development yang lebih dalam dan menemukan kode-kode seperti:
