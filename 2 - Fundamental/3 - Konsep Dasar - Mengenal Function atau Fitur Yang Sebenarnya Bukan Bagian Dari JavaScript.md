@@ -40,3 +40,4 @@ alert('Buku Saku JavaScript');
 ```
 
 Berikut list Web API selengkapnya yang bisa kamu pelajari. [Web API](https://developer.mozilla.org/en-US/docs/Web/API)
+
