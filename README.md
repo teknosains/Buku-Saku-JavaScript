@@ -31,6 +31,7 @@ Buku saku ini terbuka bagi siapa saja yang ingin *contribute* agar isi, redaksi 
   * Array
   * Function
   * Arrow Function
+  * Callback Function
   * *this* keyword
   * _use strict_
   * dll
