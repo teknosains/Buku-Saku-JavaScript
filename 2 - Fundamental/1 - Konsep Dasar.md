@@ -1,7 +1,33 @@
 # Konsep Dasar
 
 ## Environment JavaScript
-...
+Kita bisa bilang Environment JavaScript adalah tempat dimana code JavaScript bisa dijalankan. Saat ini minimal ada 3 environment yang wajib kita ketahui yaitu
+
+* Browser environment
+* Node environment
+* Deno environment
+
+#### 1. Browser environment
+Ini yang paling umum dan yang kita tentu saja paling kenal. Code JavaScript yang kita tulis akan di eksekusi oleh JavaScript Engine yang dibawa oleh Browser yang kita pakai dan kemudian kita bisa lihat langsung _output_ nya di layar/halaman browser. 
+
+Contoh:
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buku Saku JavaScript</title>
+  </head>
+  <body>
+    <h1>Selamat datang!</h1>
+    <script>
+      const title = 'Buku Saku JavaScript';
+      window.alert(title);
+    </script>
+  </body>
+</html>
+```
+
+
 
 ## Scope
 ...
