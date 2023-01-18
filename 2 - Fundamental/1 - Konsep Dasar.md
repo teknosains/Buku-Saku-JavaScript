@@ -27,6 +27,19 @@ Contoh:
 </html>
 ```
 
+Seperti terlihat pada sample code diatas, kita bisa letakkan langsung code JavaScript beserta code _HTML_ didalam tag _<script></script>_ 
+
+```html
+<body>
+  <h1>Selamat datang!</h1>
+  <!-- code html lainnya diatas-->
+  <!-- code JavaScript dibawah -->
+  <script>
+   const title = 'Buku Saku JavaScript';
+   alert(title);
+  </script>
+</body>
+```
 
 
 ## Scope
