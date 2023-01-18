@@ -30,6 +30,7 @@ Buku saku ini terbuka bagi siapa saja yang ingin *contribute* agar isi, redaksi 
   * Object
   * Array
   * Function
+  * Arrow Function
   * *this* keyword
   * _use strict_
   * dll
