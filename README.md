@@ -18,10 +18,6 @@ Mengetehaui hal-hal dasar tentang suatu tekonologi / bahasa Pemrograman artinya 
 
 Sekarang saatnya *back to basic*. Ayoo kita belajar bersama Fundamental JavaScript disini. Perlahan kita akan mengulas dengan singkat dan bahasa yang simple materi JavaScript mulai dari yang paling *basic* hingga konsep yang lebih advance atau jarang kamu dengar seperti *Prototypal Inheritance*, *Classical Inheritance*, *Closure*, *IIFE* dll.
 
-## Kontribusi
-
-Buku saku ini terbuka bagi siapa saja yang ingin *contribute* agar isi, redaksi dan konten secara keseluruhan menjadi lebih baik dan bermanfaat bagi programmer-programmer Indonesia. 
-
 ## Topic Bahasan
 
 * Introduction
