@@ -57,6 +57,12 @@ alert(title);
   <script src="script.js"></script>
 </body>
 ```
+Manfaat dari memisahkan code JavaScript menjadi file tersendiri adalah struktur file project kita menjadi lebih rapih dan mudah dibaca. Namun untuk project yang besar, adakalanya kita lebih memilih untuk langsung di _embedd_ di html seperti contoh sebelumnya. Ini bisa mengurangi beban network request ke server karena dengan  menulis code seperti ini
+
+```html
+  <script src="script.js"></script>
+```
+si browser akan me-lakukan request ke server untuk me-load file _script.js_. Namun tidak perlu terlalu dikhawatirkan untuk saat ini, silahkan gunakan cara mana yang kamu lebih suka.
 
 
 ## Scope
