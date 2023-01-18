@@ -3,7 +3,7 @@
 Series ini adalah bagi mereka yang sabar ingin mempelajari JavaScript dari dasar. Diharapkan pembaca dapat memahami JavaScript fundamental dan konsep-konsep dasar lainnya sehingga membantu membentuk pemahaham yang kuat sebelum lebih jauh terjun ke dunia Web Development dan Framework-framework JavaScript diluar sana.
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/3906229/213116776-ebc0e27d-03d5-4811-9544-1068cd399fb0.png"/>
+<img src="https://user-images.githubusercontent.com/3906229/213153956-11adbdf9-a528-488e-9c1b-0056d8b65081.png"/>
 </div>
 
 **Sangat disarankan** untuk membaca semua materi dalam series ini secara berurutan agar pemahaman kamu menjadi lebih baik dan lebih melekat. Termasuk pada bagian *Introduction*, disana kamu dapat mengetahui sekilas tentang JavaScript mulai dari sejarahnya, creatornya dan yang lainnya. Pengetahuan dasar seperti ini banyak diremehkan orang padahal sangat penting untuk diketahui dan seringkali hal ini ditanyakan diberbagai kesempatan seperti saat interview kerja, seminar dll.
