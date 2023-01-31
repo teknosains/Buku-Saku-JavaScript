@@ -1,6 +1,6 @@
 # Buku Saku JavaScript
 
-Series ini adalah bagi mereka yang sabar ingin mempelajari JavaScript dari dasar. Diharapkan pembaca dapat memahami JavaScript fundamental dan konsep-konsep dasar lainnya sehingga membantu membentuk pemahaham yang kuat sebelum lebih jauh terjun ke dunia Web Development dan Framework-framework JavaScript diluar sana.
+Series ini adalah bagi mereka yang sabar ingin mempelajari JavaScript dari ```titik 0```. Diharapkan pembaca dapat memahami JavaScript fundamental dan konsep-konsep dasar lainnya sehingga membantu membentuk pemahaham yang kokoh sebelum lebih jauh terjun ke dunia Web Development dan Framework-framework JavaScript diluar sana.
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/3906229/213153956-11adbdf9-a528-488e-9c1b-0056d8b65081.png"/>
