@@ -145,6 +145,25 @@ function luasPersegi(panjang, lebar) {
 
 ```
 
+Comment juga berfungsi untuk me-nonaktifkan suatu statement agar tidak di eksekusi oleh JS Engine atau browser
+
+```javascript
+
+// non-aktifkan sementara, kita ganti dengan yg baru
+
+/*
+function luasPersegi(panjang, lebar) {
+  return panjang * lebar;
+}
+*/
+
+// tanggal update 3 Jan 2023
+
+function luasPersegiPanjang(panjang, lebar) {
+  return panjang * lebar;
+}
+
+```
 
 ```NOTES:``` Sebaiknya hanya gunakan comment jika kita memang benar-benar perlu saja. Tidak semua statement harus kita kasih comment. 
 
