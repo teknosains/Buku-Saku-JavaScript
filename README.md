@@ -48,6 +48,9 @@ Sekarang saatnya *back to basic*. Ayoo kita belajar bersama Fundamental JavaScri
   * AJAX dengan Axios
   * dll
 
+## Kontribusi
+Bantu saya memperbaiki konten, typo dan kesalahan lainnya agar series ini menjadi lebih baik. Silahkan clone dan lakukan PR (Pull Request) untuk berkontribusi memperbaiki series ini.
+
 ## Live Demo
 
 Beberapa sample coding akan di publish di https://stackblitz.com sehingga kamu dapat mencobanya sendiri.
