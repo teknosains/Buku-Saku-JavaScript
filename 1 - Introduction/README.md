@@ -1,6 +1,6 @@
 # Introduction
 
-Bab ini membahas 3 point utama yang wajib kamu ketahui yaitu:
+Bab ini membahas 3 point utama yang ```wajib``` kamu ketahui yaitu:
 
 * [Sejarah JavaScript](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/1%20-%20Introduction/1%20-%20Sejarah%20JavaScript.md)
 * [Ekosistem JavaScript](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/1%20-%20Introduction/2%20-%20Ekosistem%20JavaScript.md)
