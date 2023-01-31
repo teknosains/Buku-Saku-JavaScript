@@ -44,7 +44,7 @@ Seperti terlihat pada sample code diatas, kita bisa letakkan langsung code JavaS
 Praktek yang umum dilakukan adalah membuat file javascript terpisah lalu kemudian di-_load_ di html-nya dengan cara seperti berikut:
 
 ```javascript
-/* file script.js */
+// file script.js
 
 const title = 'Buku Saku JavaScript';
 alert(title);
