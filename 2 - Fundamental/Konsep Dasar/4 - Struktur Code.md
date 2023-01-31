@@ -101,3 +101,34 @@ alert("Hello world"); // <-- pakai titik koma disini
 
 ```
 
+### Comments
+Comment berguna untuk memberi keterangan tambahan pada codingan kita. Dengan begitu kita atau programmer lainnya yang akan membaca codingan kita dikemudian hari lebih mudah memahami arti atau maksud dari codingan kita.
+
+Comment tidak akan di eksekusi oleh JavaScript, jadi tidak perlu khawatir bisa jadi bugs atau masalah. Ada **2** cara yang umum untuk menulis _comment_ yaitu 
+
+* menggunakan syntax ```/* ... */``` untuk comment yang lebih dari satu baris
+* menggunakan syntax ```// .. ``` jika comment nya hanya satu baris saja
+
+```javascript
+
+/*
+   ini adalah untuk check kondisi status usia berdasarkan umur
+   dari seseorang.
+    
+   Outputnya hanya ada 2 yatu *kecil* atau *besar* saja
+*/
+if (umur < 12) {
+  console.log('Kamu masih kecil');
+} else {
+  console.log('Kamu sudah besar');
+}
+
+
+// jika hujan, stay di rumah saja
+if (hujan === true) {
+  console.log('Dirumah sajalah')
+}
+
+```
+```NOTES:``` Sebaiknya hanya gunakan comment jika kita memang benar-benar perlu saja. Tidak semua statement harus kita kasih comment. 
+
