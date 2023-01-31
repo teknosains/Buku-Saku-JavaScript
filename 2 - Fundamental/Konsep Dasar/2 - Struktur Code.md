@@ -157,7 +157,7 @@ function luasPersegi(panjang, lebar) {
 }
 */
 
-// tanggal update 3 Jan 2023
+// tanggal update: 3 Jan 2023 oleh Budi K
 
 function luasPersegiPanjang(panjang, lebar) {
   return panjang * lebar;
