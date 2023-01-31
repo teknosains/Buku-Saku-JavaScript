@@ -145,7 +145,7 @@ function luasPersegi(panjang, lebar) {
 
 ```
 
-Comment juga berfungsi untuk me-nonaktifkan suatu statement agar tidak di eksekusi oleh JS Engine atau browser
+Comment juga berfungsi untuk me-nonaktifkan suatu statement agar tidak di eksekusi oleh JS Engine atau browser.
 
 ```javascript
 
