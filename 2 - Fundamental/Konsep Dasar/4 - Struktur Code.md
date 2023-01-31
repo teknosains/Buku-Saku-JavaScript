@@ -82,7 +82,7 @@ class Animal {
 
 ```
 
-Rekomendasi saya tetap gunakan titik koma karena ada beberapa situasi dimana code kita akan error jika tidak pakai titik koma. Contoh seperti berikut
+Rekomendasi saya tetap gunakan titik koma karena ada beberapa situasi dimana code kita akan ```error``` jika tidak pakai titik koma. Contoh seperti berikut
 
 ```javascript
 alert("Hello world")
