@@ -16,7 +16,7 @@ localStorage
 
 sessionStorage
 ```
-function atau fitur diatas bukanlah bagian dari spesifikasi resmi JavaScript alias tidak ada implementasinya di JavaScript Engine. Fitur-fitur diatas adalah Web API yakni **fitur yang disediakan oleh browser** yang dapat di panggil oleh JavaScript.
+function atau fitur diatas bukanlah bagian dari spesifikasi resmi JavaScript alias tidak ada implementasinya di JavaScript Engine. Fitur-fitur diatas adalah ```Web API``` yakni **fitur yang disediakan oleh browser** yang dapat di panggil oleh JavaScript.
 
 Web API ada didalam _**window**_ object yang tersedia secara global (_Global scope_), bisa dipakai dimanapun dihalaman suatu aplikasi web.
 
