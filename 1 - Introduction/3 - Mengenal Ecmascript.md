@@ -1,6 +1,6 @@
-## Mengenal Ecmascript
+## Mengenal Ecmascript (ES)
 
-Pada tahun 1997, dikarenakan perkembangan dan popularitas JavaScript yang makin menanjak maka JavaScript sangat perlu untuk di maintain dan distandarisasi dengan lebih baik. Oleh karena itu Netscape menyerahkan pengembangan standarisasi dan spesifikasi JavaScript kepada European Computer Manufacturers Association (ECMA), lembaga yang mengurusi standarisasi sistem/teknologi komputer. Dan dibentuklah _"divisi"_ [Technical Committee 39 (TC39)](https://github.com/tc39) yang bertugas untuk mengembangkan JavaScript lebih lanjut.
+Pada tahun 1997, dikarenakan perkembangan dan popularitas JavaScript yang makin menanjak maka JavaScript sangat perlu untuk di _maintain_ dan distandarisasi dengan lebih baik. Oleh karena itu Netscape menyerahkan pengembangan standarisasi dan spesifikasi JavaScript kepada European Computer Manufacturers Association (ECMA), lembaga yang mengurusi standarisasi sistem/teknologi komputer. Dan dibentuklah _"divisi"_ [Technical Committee 39 (TC39)](https://github.com/tc39) yang bertugas untuk mengembangkan JavaScript lebih lanjut.
 
 Setelah itu JavaScript mulai berkembang dengan spesifikasi dan standarisasi baru dengan kode ES. Kamu akan sering dengar istilah ES4, ES5, ES6, ES7 dst...ini me-representasikan versi spesifikasi atau **versi JavaScript** yang dikeluarkan oleh ECMA. Spesifikasi ini biasanya akan diikuti oleh pengembang browser atau JavaScript Engine (V8 dari Google, SpiderMonkey dari Mozilla, JavaScriptCore dari Apple dll).
 
