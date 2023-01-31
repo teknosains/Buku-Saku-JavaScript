@@ -87,7 +87,7 @@ Rekomendasi saya tetap gunakan titik koma karena ada beberapa situasi dimana cod
 ```javascript
 alert("Hello world")
 
-[1, 2, 3].forEach(alert);  
+['Budi', 'Agus', 'Ujang'].forEach(name => alert(name));  
 
 // error: Uncaught TypeError: Cannot read properties of undefined (reading '2')
 ```
@@ -97,7 +97,7 @@ Code seperti diatas akan error jika kita jalankan karena, oleh karena itu perlu 
 ```javascript
 alert("Hello world"); // <-- pakai titik koma disini
 
-[1, 2, 3].forEach(alert);  
+['Budi', 'Agus', 'Ujang'].forEach(name => alert(name)); 
 
 ```
 
