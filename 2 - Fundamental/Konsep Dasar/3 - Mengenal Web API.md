@@ -15,6 +15,13 @@ setInterval()
 localStorage
 
 sessionStorage
+
+// event listener
+const bukuButton = document.getElementById('buku-botton');
+bukuButton.addEventListener('click', function() {
+  alert('Buku Saku JavaScript')
+});
+
 ```
 function atau fitur diatas bukanlah bagian dari spesifikasi resmi JavaScript alias tidak ada implementasinya di JavaScript Engine. Fitur-fitur diatas adalah ```Web API``` yakni **fitur yang disediakan oleh browser** yang dapat di panggil oleh JavaScript.
 
