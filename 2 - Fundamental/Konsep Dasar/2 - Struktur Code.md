@@ -1,4 +1,4 @@
-## Struktur Coding
+## Struktur Code
 
 Seperti pada bahasa pemrograman lainnya, JavaScript juga punya struktur code yang harus diketahui sebelum lebih lanjut praktek coding. 
 
