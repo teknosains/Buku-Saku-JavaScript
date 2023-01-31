@@ -129,6 +129,22 @@ if (hujan === true) {
   console.log('Dirumah sajalah');
 }
 
+
+// contoh comment yang lebih advance, untuk documentasi internal
+
+/**
+* fungsi untuk menghitung luas persegi
+* 
+* @param {number} panjang, panjang dari persegi
+* @param {number} lebar, lebar dari persegi
+* @return {number} luas persegi
+*/
+function luasPersegi(panjang, lebar) {
+  return panjang * lebar;
+}
+
 ```
+
+
 ```NOTES:``` Sebaiknya hanya gunakan comment jika kita memang benar-benar perlu saja. Tidak semua statement harus kita kasih comment. 
 
