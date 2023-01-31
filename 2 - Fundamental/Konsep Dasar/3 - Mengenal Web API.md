@@ -27,7 +27,7 @@ function atau fitur diatas bukanlah bagian dari spesifikasi resmi JavaScript ali
 
 Web API ada didalam _**window**_ object yang tersedia secara global (_Global scope_), bisa dipakai dimanapun dihalaman suatu aplikasi web.
 
-Sebagai contoh,
+Sebagai contoh:
 
 ```javascript
 window.setTimeout(() => {
