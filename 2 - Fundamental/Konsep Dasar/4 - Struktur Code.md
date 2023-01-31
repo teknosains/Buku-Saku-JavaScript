@@ -126,7 +126,7 @@ if (umur < 12) {
 
 // jika hujan, stay di rumah saja
 if (hujan === true) {
-  console.log('Dirumah sajalah')
+  console.log('Dirumah sajalah');
 }
 
 ```
