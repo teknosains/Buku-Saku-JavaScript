@@ -48,6 +48,8 @@ Sekarang saatnya *back to basic*. Ayoo kita belajar bersama Fundamental JavaScri
   * AJAX dengan Axios
   * dll  
 * Advance Concept
+  * Promise
+  * Async/Await
   * IIFE (Immediately Invoked Function Expression)
   * Prototypal Inheritance
   * Classical Inheritance
