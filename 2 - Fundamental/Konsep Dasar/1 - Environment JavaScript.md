@@ -27,7 +27,7 @@ Contoh:
 </html>
 ```
 
-Seperti terlihat pada sample code diatas, kita bisa letakkan langsung code JavaScript beserta code _HTML_ didalam tag _<script></script>_ 
+Seperti terlihat pada sample code diatas, kita bisa letakkan langsung code JavaScript beserta code _HTML_ didalam tag ```<script></script>```
 
 ```html
 <body>
@@ -62,7 +62,7 @@ Manfaat dari memisahkan code JavaScript menjadi file tersendiri adalah struktur 
 ```html
   <script src="script.js"></script>
 ```
-si browser akan me-lakukan request ke server untuk me-load file _script.js_. Namun tidak perlu terlalu dikhawatirkan untuk saat ini, silahkan gunakan cara mana yang kamu lebih suka.
+si browser akan me-lakukan request ke server untuk me-load file ```script.js```. Namun tidak perlu terlalu dikhawatirkan untuk saat ini, silahkan gunakan cara mana yang kamu lebih suka.
 
 #### 2. Node environment
 Code JavaScript yang kita tulis bisa berjalan di Server berkat Node.JS. Kita bisa menulis JavaScript untuk membuat API dan kebutuhan lainnya yang berjalan di Server seperti halnya bahasa pemrograman lain yang kamu kenal seperti PHP, C#, Java dll.
