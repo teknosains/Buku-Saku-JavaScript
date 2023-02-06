@@ -46,7 +46,12 @@ Sekarang saatnya *back to basic*. Ayoo kita belajar bersama Fundamental JavaScri
   * HTTP Verbs
   * AJAX
   * AJAX dengan Axios
-  * dll
+  * dll  
+* Advance Concept
+  * Prototypal Inheritance
+  * Event loop
+  * Closure
+  * Design Pattern
 
 ## Kontribusi
 Bantu saya memperbaiki konten, typo dan kesalahan lainnya agar series ini menjadi lebih baik. Silahkan clone dan lakukan PR (Pull Request) untuk berkontribusi memperbaiki series ini.
