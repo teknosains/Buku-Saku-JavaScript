@@ -48,7 +48,9 @@ Sekarang saatnya *back to basic*. Ayoo kita belajar bersama Fundamental JavaScri
   * AJAX dengan Axios
   * dll  
 * Advance Concept
+  * IIFE (Immediately Invoked Function Expression)
   * Prototypal Inheritance
+  * Classical Inheritance
   * Event loop
   * Closure
   * Design Pattern
