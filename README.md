@@ -20,10 +20,10 @@ Sekarang saatnya *back to basic*. Ayoo kita belajar bersama Fundamental JavaScri
 
 ## Topic Bahasan
 
-* Introduction
-* Fundamental JavaScript
-  * Konsep Dasar
-  * Tipe Data
+* [Introduction](https://github.com/teknosains/Buku-Saku-JavaScript/tree/main/1%20-%20Introduction)
+* [Fundamental JavaScript](https://github.com/teknosains/Buku-Saku-JavaScript/tree/main/2%20-%20Fundamental)
+  * [Konsep Dasar](https://github.com/teknosains/Buku-Saku-JavaScript/tree/main/2%20-%20Fundamental/Konsep%20Dasar)
+  * [Tipe Data](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/1.%20Tipe%20Data.md)
   * Variable
   * Looping
   * Conditional
