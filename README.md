@@ -25,7 +25,7 @@ Sekarang saatnya *back to basic*. Ayoo kita belajar bersama Fundamental JavaScri
   * [Konsep Dasar](https://github.com/teknosains/Buku-Saku-JavaScript/tree/main/2%20-%20Fundamental/Konsep%20Dasar)
   * [Tipe Data](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/1.%20Tipe%20Data.md)
   * [Variable](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/2.%20Variable.md)
-  * Basic Operator
+  * [Basic Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/3.%20Basic%20Operator.md)
   * Conditional
   * Looping
   * Object
