@@ -84,6 +84,6 @@ server.listen(port, hostname, () => {
 ```
 
 #### 3. Deno environment
-Deno adalah alternatif lain selain Node.JS jika kamu ingin _coding_ untuk backend (di server). Saat ini Deno mungkin belum terlalu populer namun sangat layak kita nantikan bagaimana perkembangan kedepannya di Indonesia. Jika makin banyak yang implementasi di Indonesia, maka mungkin kita bersegera mempelajarinya nanti
+Deno adalah alternatif lain selain Node.JS jika kamu ingin _coding_ untuk backend (di server). Saat ini Deno mungkin belum terlalu populer namun sangat layak kita nantikan bagaimana perkembangan kedepannya di Indonesia. Jika makin banyak yang implementasi di Indonesia, maka mungkin kita bersegera mempelajarinya nanti.
 
 Pelajari tentang Deno disitus resminya https://deno.land
