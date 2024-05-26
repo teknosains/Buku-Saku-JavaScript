@@ -26,6 +26,7 @@ Sekarang saatnya *back to basic*. Ayoo kita belajar bersama Fundamental JavaScri
   * [Tipe Data](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/1.%20Tipe%20Data.md)
   * [Variable](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/2.%20Variable.md)
   * [Basic Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/3.%20Basic%20Operator.md)
+  * Comparison Operator
   * Conditional
   * Looping
   * Object
