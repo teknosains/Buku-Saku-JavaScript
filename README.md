@@ -16,18 +16,23 @@ Mengetehaui hal-hal dasar tentang suatu tekonologi / bahasa Pemrograman artinya 
 * Apakah kamu termasuk yang memulai belajar Web Development langsung menggunakan jQuery?
 * Atau bahkan yang langsung terjun menggunakan framework seperti Angular, Vue React dsb?
 
-Sekarang saatnya *back to basic*. Ayoo kita belajar bersama Fundamental JavaScript disini. Perlahan kita akan mengulas dengan singkat dan bahasa yang simple materi JavaScript mulai dari yang paling *basic* hingga konsep yang lebih advance atau jarang kamu dengar seperti *Prototypal Inheritance*, *Classical Inheritance*, *Closure*, *IIFE* dll.
+Sekarang saatnya *back to basic*. Ayoo kita belajar bersama Fundamental JavaScript disini. Perlahan kita akan mengulas dengan singkat dan bahasa yang simple materi-materi JavaScript mulai dari yang paling *basic* hingga konsep yang lebih advance atau jarang kamu dengar seperti *Prototypal Inheritance*, *Classical Inheritance*, *Closure*, *IIFE* dll.
 
 ## Topic Bahasan
+
+Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar secara runut dan efektif.
+
+#### Chapter 1
 
 * [Introduction](https://github.com/teknosains/Buku-Saku-JavaScript/tree/main/1%20-%20Introduction)
 * [Fundamental JavaScript](https://github.com/teknosains/Buku-Saku-JavaScript/tree/main/2%20-%20Fundamental)
   * [Konsep Dasar](https://github.com/teknosains/Buku-Saku-JavaScript/tree/main/2%20-%20Fundamental/Konsep%20Dasar)
   * [Tipe Data](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/1.%20Tipe%20Data.md)
   * [Variable](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/2.%20Variable.md)
-  * [Basic Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/3.%20Basic%20Operator.md)
-  * Comparison Operator
-  * Conditional
+  * [Mengenal Istilah Truthy, Falsy dan Nullish](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/3.%20Mengenal%20Istilah%20Truthy%2C%20Falsy%20dan%20Nullish.md)
+  * [Basic Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/4.%20Basic%20Operator.md)
+  * [Comparison Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/5.%20Comparison%20Operator.md)
+  * [Conditional Operator]()
   * Looping
   * Object
   * Array
@@ -37,8 +42,12 @@ Sekarang saatnya *back to basic*. Ayoo kita belajar bersama Fundamental JavaScri
   * *this* keyword
   * _use strict_
   * dll
-* DOM dan Events di Browser
+* DOM Dan Events Di Browser
   * Event Listener
+
+#### Chapter 2
+
+* DOM Dan Events Di Browser Lanjutan  
   * Event Bubbling
   * Event Delegation
   * DOM Tree
@@ -49,6 +58,9 @@ Sekarang saatnya *back to basic*. Ayoo kita belajar bersama Fundamental JavaScri
   * AJAX
   * AJAX dengan Axios
   * dll  
+
+#### Chapter 3
+
 * Advance Concept
   * Promise
   * Async/Await
