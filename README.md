@@ -34,13 +34,14 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * [Comparison Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/5.%20Comparison%20Operator.md)
   * [Logical Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/6.%20Logical%20Operator.md)
   * [Conditional Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/7.%20Conditional%20Operator.md)
-  * Looping
+  * [Conditional Statement](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/8.%20Conditional%20Statement.md)
+  * Loop
   * Object
   * Array
   * Function
   * Arrow Function
   * Callback Function
-  * *this* keyword
+  * Keyword *this*
   * _use strict_
   * dll
 * DOM Dan Events Di Browser
