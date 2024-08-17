@@ -41,10 +41,11 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * Function
   * Arrow Function
   * Callback Function
-  * Keyword *this*
-  * _use strict_
-  * dll
+  * Constructor Function
+  * Class
+
 * DOM Dan Events Di Browser
+  * Basic DOM
   * Event Listener
 
 #### Chapter 2
@@ -57,21 +58,33 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * dll
 * Network / Backend Request
   * HTTP Verbs
-  * AJAX
+  * AJAX dengan Fetch
   * AJAX dengan Axios
-  * dll  
+  * AJAX dengan jQuery
+* Browser Storage
+  * Local Storage
+  * Session Storage
+  * Cookie
 
 #### Chapter 3
 
+* Function Lanjutan
+  * IIFE (Immediately Invoked Function Expression)
+  * Function Binding
+  * Function Generator
+  * Function Composition
+
 * Advance Concept
+  * Rest & Spread Operator
   * Promise
   * Async/Await
-  * IIFE (Immediately Invoked Function Expression)
   * Prototypal Inheritance
   * Classical Inheritance
   * Event loop
   * Closure
   * Design Pattern
+  * Currying & Mixin
+
 
 ## Kontribusi
 Bantu saya memperbaiki konten, typo dan kesalahan lainnya agar series ini menjadi lebih baik. Silahkan clone dan lakukan PR (Pull Request) untuk berkontribusi memperbaiki series ini.
