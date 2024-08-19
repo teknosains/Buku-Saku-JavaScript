@@ -17,8 +17,8 @@ localStorage
 sessionStorage
 
 // event listener
-const bukuButton = document.getElementById('buku-botton');
-bukuButton.addEventListener('click', function() {
+const btn = document.getElementById('btn');
+btn.addEventListener('click', function() {
   alert('Buku Saku JavaScript')
 });
 
@@ -48,5 +48,5 @@ alert('Buku Saku JavaScript');
 
 Nah sekarang kita jadi tahu bahwa **tidak semua** _codingan JS_ yang kita tulis nantinya adalah asli bawaan JS Engine. Ada banyak sekali fungsi/fitur yang ternyata disediakan oleh Browser.
 
-Berikut list Web API selengkapnya yang bisa kamu pelajari. [Web API](https://developer.mozilla.org/en-US/docs/Web/API)
+List Web API selengkapnya yang bisa kamu pelajari lebih lanjut di https://developer.mozilla.org/en-US/docs/Web/API
 
