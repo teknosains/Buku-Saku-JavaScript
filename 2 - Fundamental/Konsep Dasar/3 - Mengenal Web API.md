@@ -36,7 +36,7 @@ window.setTimeout(() => {
 
 window.alert('Buku Saku JavaScript');
 ```
-kode diatas adalah valid dan memang aslinya begitu. Namun karena **window** object yang bersifat **Global**, maka kita tidak perlu coding seperti diatas. Cukup kita tulis seperti berikut
+Karena **window** object yang bersifat **Global**, maka kita tidak perlu coding seperti diatas. Cukup kita tulis seperti berikut
 
 ```javascript
 setTimeout(() => {
