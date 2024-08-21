@@ -58,7 +58,7 @@ alert(title);
 Manfaat dari memisahkan code JavaScript menjadi file tersendiri adalah struktur file project kita menjadi lebih rapih, lebih modular dan lebih mudah dibaca. Namun untuk project yang besar, adakalanya kita lebih memilih untuk langsung di _embedd_ di html seperti contoh sebelumnya. Ini bisa mengurangi beban network request ke server karena dengan menulis code seperti ini
 
 ```html
-  <script src="script.js"></script>
+<script src="script.js"></script>
 ```
 si browser akan me-lakukan request ke server untuk me-load file ```script.js```. Namun tidak perlu terlalu dikhawatirkan untuk saat ini, silahkan gunakan cara mana yang kamu lebih suka.
 
@@ -66,6 +66,7 @@ si browser akan me-lakukan request ke server untuk me-load file ```script.js```.
 Code JavaScript yang kita tulis bisa berjalan di Server berkat Node.JS. Kita bisa menulis JavaScript untuk membuat API dan kebutuhan lainnya yang berjalan di Server seperti halnya bahasa pemrograman lain yang kamu kenal seperti PHP, C#, Java dll.
 
 Contoh code Node.JS
+
 ```javascript
 const http = require('http');
 
@@ -84,6 +85,7 @@ server.listen(port, hostname, () => {
 ```
 
 #### 3. Deno environment
+
 Deno adalah alternatif lain selain Node.JS jika kamu ingin _coding_ untuk backend (di server). Saat ini Deno mungkin belum terlalu populer namun sangat layak kita nantikan bagaimana perkembangan kedepannya di Indonesia. Jika makin banyak yang implementasi di Indonesia, maka mungkin kita bersegera mempelajarinya nanti.
 
 Pelajari tentang Deno disitus resminya https://deno.land
