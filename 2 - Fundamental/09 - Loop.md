@@ -101,6 +101,7 @@ for (i = 0; i < 5; i++) {
 
 console.log(i); // 5
 ```
+
 Pembahasan mengenal _hoisting_ dapat dilihat lebih lanjut di pembahasan **_Konsep Dasar > Mengenal Scope di JavaScript_**.
 
 ```for``` juga bisa digunakan untuk membuat infinite loop alias looping forever dengan cara seperti ini
@@ -110,6 +111,7 @@ for(;;) {
   console.log('looping forever');
 }
 ```
+
 **perhatian**: hati-hati jika ingin menjalankan contoh code looping forever diatas karena bisa membuat tab browser crash. 
 
 
@@ -122,6 +124,7 @@ while (condition) {
   // jalanin code didalam sini
 }
 ```
+
 Iterasi dalam statement ```while``` akan terus _running_ selama ```condition``` nya  ```truthy``` dan akan _stop_ jika ```condition``` nya ```falsy```. Contoh:
 
 ```javascript
@@ -257,6 +260,7 @@ console.log(star);
 ```
 
 output:
+
 ```javascript
 *
 ***
