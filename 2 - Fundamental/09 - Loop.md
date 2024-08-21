@@ -31,6 +31,7 @@ Di JavaScript ada beberapa cara untuk melakukan perulangan atau loop, yaitu meng
 ```for``` adalah loop yang paling umum digunakan terlebih jika kita tahu diawal berapa jumlah iterasi yang akan dilakukan.
 
 sintaks:
+
 ```javascript
 for(begin; condition; step) {
   // lakukan iterasi baris code didalam sini
@@ -38,6 +39,7 @@ for(begin; condition; step) {
 ```
 
 contoh:
+
 ```javascript
 for (let i = 1; i <= 100; i++) {
   console.log(i);
@@ -48,6 +50,7 @@ Code diatas sejatinya adalah memerintahkan JavaScript untuk mencetak bilangan ``
 
 
 #### Cara kerja ```for``` loop
+
 Secara sederhana berikut adalah cara kerja ```for``` loop. Misal code berikut
 
 ```javascript
@@ -57,6 +60,7 @@ for (let i = 1; i < 5; i++) {
 ```
 
 cara kerjanya adalah seperti berikut
+
 ```javascript
 step #1 : inisialisasi let i = 1
 step #2 : Cek apakah nilai i < 5, Jika benar maka #3, Jika salah maka #5
@@ -66,12 +70,14 @@ step #5 : exit loop
 ```
 
 output:
+
 ```javascript
 1
 2
 3
 4
 ```
+
 Di internal JavaScript saat eksekusi Loop diatas nilai dari ```i``` sebenarnya sampai dengan angka ```5```. Tapi karena kondisi ```i < 5``` dan
 jika dievaluasi menjadi ```5 < 5``` hasilnya adalah false, maka loop nya berhenti dan yang akan di print hanya sampai angka ```4``` saja.
 
@@ -110,12 +116,14 @@ for(;;) {
 ### ```while``` loop
 
 sintaks:
+
 ```javascript
 while (condition) {
   // jalanin code didalam sini
 }
 ```
 Iterasi dalam statement ```while``` akan terus _running_ selama ```condition``` nya  ```truthy``` dan akan _stop_ jika ```condition``` nya ```falsy```. Contoh:
+
 ```javascript
 let i = 0;
 while (i < 5) {
@@ -124,6 +132,7 @@ while (i < 5) {
 }
 ```
 output:
+
 ```javascript
 0
 1
@@ -142,6 +151,7 @@ while (age != 90) {
 }
 ```
 output:
+
 ```javascript
 Masih hidup
 Masih hidup
@@ -163,6 +173,7 @@ while (age) {
 }
 ```
 output:
+
 ```javascript
 3
 2
@@ -172,9 +183,7 @@ output:
 Pada contoh diatas iterasi akan terus _running_ hanya jika statement ```while (age) ``` masih bernilai _truthy_. Saat ```age``` bernilai ```0``` (ingat bahwa ```0``` termasuk salah satu value yang bersifat```falsy```), maka iterasi tidak akan dilanjutkan oleh karena itu pada bagian _output_ hanya angka 3, 2, dan 1 yang akan di print.
 
 
-
 Dengan definisi dan contoh diatas kita simpulkan bahwa ```while``` lebih cocok digunakan saat jumlah iterasi (berapa kali-nya) tidak diketahui dengan pasti. Kita hanya tahu pokoknya selama kondisinya ```truthy``` ya lakukan terus iterasi-nya.
-
 
 
 ### ```do..while``` loop
@@ -273,6 +282,7 @@ for (let i = 1; i <= 4; i++) {
 ```
 
 output:
+
 ```javascript
 1
 2
