@@ -60,15 +60,15 @@ if (umur) {
 }
 
 // output: Tidak ada nilai umurnya
-
 ```
+
 saat ```if (umur)``` di evaluasi oleh JavaScript engine, maka akan menjadi false sehingga eksekusi kode akan masuk ke blok ```else``` dibawah nya.
 
 #### 2. undefined
 
 Di JavaScript type ```undefined``` juga ada special type yang berarti belum di assign / di isi. Sama seperti ```null```, type ```undefined``` juga bersifat falsy.
 
-Contoh
+contoh:
 
 ```javascript
 let umur;
@@ -89,13 +89,14 @@ if (umur) {
 
 // output: masuk sana
 ```
+
 Deklarasi ```let umur;``` artinya bahwa sebuah variable sudah dideklarasikan namun nilai nya belum di assign / di isi.
 
 #### 3. boolean
 
 Boolean mempunyai dua value yaitu ```true``` dan ```false```. Type ini digunakan sebagai operator logika dalam conditional statement.
 
-Contoh
+contoh:
 
 ```javascript
 let cerah = true;
@@ -115,7 +116,6 @@ if (cerah === false) {
 if (!cerah) {
   console.log('Dirumah saja');
 }
-
 ```
 
 #### 4. number
@@ -125,7 +125,6 @@ Number digunakan untuk menyimpan value integer (bilangan bulat) atau floating-po
 Contoh
 
 ```javascript
-
 // integer
 
 const umur = 12;
@@ -135,7 +134,6 @@ let tinggi = 120;
 
 const pi = 3.14;
 let panjang = 7.5;
-
 ```
 
 #### 5. bigint
@@ -156,7 +154,6 @@ console.log(angka)
 Untuk menyimpan suatu value dalam type ```string``` dapat menggunakan 3 cara yaitu pakai _single quote_, _double quote_ atau _backticks_.
 
 
-
 ```javascript
 // single quote
 const nama = 'Budi'
@@ -166,8 +163,6 @@ const nama = "Budi"
 
 // backticks
 const nama = `Budi`;
-
-
 ```
 
 #### 7. symbol
