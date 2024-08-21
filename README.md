@@ -27,15 +27,15 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
 * [Introduction](https://github.com/teknosains/Buku-Saku-JavaScript/tree/main/1%20-%20Introduction)
 * [Fundamental JavaScript](https://github.com/teknosains/Buku-Saku-JavaScript/tree/main/2%20-%20Fundamental)
   * [Konsep Dasar](https://github.com/teknosains/Buku-Saku-JavaScript/tree/main/2%20-%20Fundamental/Konsep%20Dasar)
-  * [Tipe Data](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/1.%20Tipe%20Data.md)
-  * [Variable](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/2.%20Variable.md)
-  * [Mengenal Istilah Truthy, Falsy dan Nullish](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/3.%20Mengenal%20Istilah%20Truthy%2C%20Falsy%20dan%20Nullish.md)
-  * [Basic Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/4.%20Basic%20Operator.md)
-  * [Comparison Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/5.%20Comparison%20Operator.md)
-  * [Logical Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/6.%20Logical%20Operator.md)
-  * [Conditional Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/7.%20Conditional%20Operator.md)
+  * [Tipe Data](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/01%20-%20Tipe%20Data.md)
+  * [Variable](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/02%20-%20Variable.md)
+  * [Mengenal Istilah Truthy, Falsy dan Nullish](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/03%20-%20Mengenal%20Istilah%20Truthy%2C%20Falsy%20dan%20Nullish.md)
+  * [Basic Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/04%20-%20Basic%20Operator.md)
+  * [Comparison Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/05%20-%20Comparison%20Operator.md)
+  * [Logical Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/06%20-%20Logical%20Operator.md)
+  * [Conditional Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/07%20-%20Conditional%20Operator.md)
   * [Conditional Statement](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/8.%20Conditional%20Statement.md)
-  * [Loop](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/9.%20Loop.md)
+  * [Loop](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/09%20-%20Loop.md)
   * Object
   * Array
   * Function
