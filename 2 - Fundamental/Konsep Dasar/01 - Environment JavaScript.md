@@ -63,6 +63,7 @@ Manfaat dari memisahkan code JavaScript menjadi file tersendiri adalah struktur 
 si browser akan me-lakukan request ke server untuk me-load file ```script.js```. Namun tidak perlu terlalu dikhawatirkan untuk saat ini, silahkan gunakan cara mana yang kamu lebih suka.
 
 #### 2. Node environment
+
 Code JavaScript yang kita tulis bisa berjalan di Server berkat Node.JS. Kita bisa menulis JavaScript untuk membuat API dan kebutuhan lainnya yang berjalan di Server seperti halnya bahasa pemrograman lain yang kamu kenal seperti PHP, C#, Java dll.
 
 Contoh code Node.JS
@@ -84,8 +85,8 @@ server.listen(port, hostname, () => {
 });
 ```
 
-#### 3. Deno environment
+#### 3. Environment lainnya
 
-Deno adalah alternatif lain selain Node.JS jika kamu ingin _coding_ untuk backend (di server). Saat ini Deno mungkin belum terlalu populer namun sangat layak kita nantikan bagaimana perkembangan kedepannya di Indonesia. Jika makin banyak yang implementasi di Indonesia, maka mungkin kita bersegera mempelajarinya nanti.
+Ada 2 environment cukup populer lainnya yaitu Bun dan Deno. Deno adalah alternatif lain selain Node.JS jika kamu ingin _coding_ untuk backend (di server) dan faktanya adalah creator Deno adalah orang yang sama dengan creator Node.JS. Pelajari tentang Deno lebih lanjut disitus resminya https://deno.land
 
-Pelajari tentang Deno disitus resminya https://deno.land
+Adapun Bun adalah environment JavaScript yang di claim yang tercepat sejauh ini. Pelajari tentang Bun lebih jauh disitus resminya https://bun.sh
