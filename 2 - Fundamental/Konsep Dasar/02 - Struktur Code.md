@@ -128,7 +128,7 @@ if (hujan === true) {
   console.log('Dirumah sajalah');
 }
 
-// contoh comment yang lebih advance, untuk documentasi internal
+// contoh comment yang lebih advance, untuk dokumentasi internal
 
 /**
 * fungsi untuk menghitung luas persegi
