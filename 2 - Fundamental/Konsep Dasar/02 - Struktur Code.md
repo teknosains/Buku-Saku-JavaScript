@@ -4,7 +4,7 @@ Seperti pada bahasa pemrograman lainnya, JavaScript juga punya struktur code yan
 
 ### Statement
 
-Statement adalah syntax instruksi atau kalimat perintah yang kita tulis agar di eksekusi oleh si JavaScript Engine atau Browser. Contoh sederhana Statement adalah seperti berikut
+Statement adalah sintaks instruksi atau kalimat perintah yang kita tulis agar di eksekusi oleh si JavaScript Engine atau Browser. Contoh sederhana Statement adalah seperti berikut
 
 ```javascript
 // statement untuk mendefinisakan variable
@@ -102,20 +102,20 @@ alert("Hello world"); // <-- pakai titik koma disini
 ```
 
 ### Comments
+
 Comment berguna untuk memberi keterangan tambahan pada codingan kita. Dengan begitu kita atau programmer lainnya yang akan membaca codingan kita dikemudian hari lebih mudah memahami arti atau maksud dari codingan kita.
 
 Comment tidak akan di eksekusi oleh JavaScript, jadi tidak perlu khawatir bisa jadi bugs atau masalah. Ada **2** cara yang umum untuk menulis _comment_ yaitu 
 
-* menggunakan syntax ```/* ... */``` untuk comment yang lebih dari satu baris
-* menggunakan syntax ```// .. ``` jika comment nya hanya satu baris saja
+* menggunakan sintaks ```/* ... */``` untuk comment yang lebih dari satu baris
+* menggunakan sintaks ```// .. ``` jika comment nya hanya satu baris saja
 
 ```javascript
-
 /*
-   ini adalah untuk check kondisi status usia berdasarkan umur
-   dari seseorang.
+  ini adalah untuk check kondisi status usia berdasarkan umur
+  dari seseorang.
     
-   Outputnya hanya ada 2 yatu *kecil* atau *besar* saja
+  Outputnya hanya ada 2 yatu *kecil* atau *besar* saja
 */
 if (umur < 12) {
   console.log('Kamu masih kecil');
@@ -123,12 +123,10 @@ if (umur < 12) {
   console.log('Kamu sudah besar');
 }
 
-
 // jika hujan, stay di rumah saja
 if (hujan === true) {
   console.log('Dirumah sajalah');
 }
-
 
 // contoh comment yang lebih advance, untuk documentasi internal
 
@@ -142,13 +140,11 @@ if (hujan === true) {
 function luasPersegi(panjang, lebar) {
   return panjang * lebar;
 }
-
 ```
 
 Comment juga berfungsi untuk me-nonaktifkan suatu statement agar tidak di eksekusi oleh JS Engine atau browser.
 
 ```javascript
-
 // non-aktifkan sementara, kita ganti dengan yg baru
 
 /*
@@ -162,8 +158,6 @@ function luasPersegi(panjang, lebar) {
 function luasPersegiPanjang(panjang, lebar) {
   return panjang * lebar;
 }
-
 ```
 
-```NOTES:``` Sebaiknya hanya gunakan comment jika kita memang benar-benar perlu saja. Tidak semua statement harus kita kasih comment. 
-
+```NOTES:``` Sebaiknya hanya gunakan comment jika kita memang benar-benar perlu saja. Tidak semua statement harus kita kasih comment.
