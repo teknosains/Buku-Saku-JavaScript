@@ -81,10 +81,11 @@ console.log(typeof umur)
 
 let umur;
 
-if (umur)
+if (umur) {
   console.log('masuk sini');
-else
-   console.log('masuk sana');
+} else {
+  console.log('masuk sana');
+}
 
 // output: masuk sana
 ```
