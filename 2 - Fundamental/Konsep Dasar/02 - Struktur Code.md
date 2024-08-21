@@ -123,8 +123,8 @@ if (umur < 12) {
   console.log('Kamu sudah besar');
 }
 
-// jika hujan, stay di rumah saja
-if (hujan === true) {
+// check kondisi cuaca
+if (cuaca === 'hujan') {
   console.log('Dirumah sajalah');
 }
 
