@@ -156,10 +156,10 @@ Untuk menyimpan suatu value dalam type ```string``` dapat menggunakan 3 cara yai
 
 ```javascript
 // single quote
-const nama = 'Budi'
+const nama = 'Budi';
 
 // double quote
-const nama = "Budi"
+const nama = "Budi";
 
 // backticks
 const nama = `Budi`;
