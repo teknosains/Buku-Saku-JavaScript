@@ -34,7 +34,7 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * [Comparison Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/05%20-%20Comparison%20Operator.md)
   * [Logical Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/06%20-%20Logical%20Operator.md)
   * [Conditional Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/07%20-%20Conditional%20Operator.md)
-  * [Conditional Statement](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/8.%20Conditional%20Statement.md)
+  * [Conditional Statement](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/8%20-%20Conditional%20Statement.md)
   * [Loop](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/09%20-%20Loop.md)
   * [Object](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/10%20-%20Object.md)
   * Array
