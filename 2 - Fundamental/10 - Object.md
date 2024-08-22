@@ -158,7 +158,7 @@ console.log(car[key]);
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/f442150d-c1e2-4230-b52c-6e0c49563e71" 
-  style="max-width: 400px"
+  width="460"
   />
 </div>
 
