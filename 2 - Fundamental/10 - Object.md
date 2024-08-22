@@ -136,5 +136,25 @@ let city = user['address']['city'];
 
 console.log(name); // Budi
 console.log(city); // Jakarta
-
 ```
+
+Saat menggunakan bracket notation, nama property atau _key_ nya harus dijadikan _string_. Misal _key_ ```name``` menjadi ```'name'``` atau dengan kutip dua ```"name"```.
+
+Keseringannya untuk mengakses property object memang biasa pakai _dot notation_, tapi banyak _case_ dimana _bracket notation_ biasa dipakai seperti saat ada kebutuhan untuk mengakses property secara dinamis.
+Nama property atau _key_ nya di set dinamis dalam bentuk variable. Contoh
+
+```javascript
+let car = {
+  name: 'xpander',
+  type: 'sedan',
+  color: 'blue',
+  year: 2003
+};
+
+let key = prompt('Masukan key yang ingin diakses');
+
+console.log(car[key]);
+```
+
+Output dari contoh diatas akan sesuai dengan nama property / key yang di input. Misal _key_ ```color``` akan menghasilkan _value_ ```blue``` dst.
+
