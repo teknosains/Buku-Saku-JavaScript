@@ -89,3 +89,52 @@ let user = {
 
 Object ```user``` terlihat lebih kompleks dari sebelumnya. Didalamnya ada property ```address``` yang
 juga value nya adalah sebuah object. Kemudian property ```address``` masih punya property yang juga sebuah object yaitu ```mapLocation```.
+
+### Mengakses Property Object
+
+_Properties_ object dapat di akses dengan menggunakan _dot notation_ dan _bracket notation_.
+
+Mengakses object dengan _dot notation_
+
+```javascript
+let user = {
+  name: 'Budi',
+  age: 33
+};
+
+console.log(user.name); // Budi
+console.log(user.age); // 33
+```
+
+contoh _dot notation_ untuk nested object
+
+```javascript
+let user = {
+  name: 'Budi',
+  age: 33,
+  address: {
+    city: 'Jakarta',
+  }
+};
+
+console.log(user.address.city); // Jakarta
+```
+
+Kemudian dengan _bracket notation_ seperti berikut
+
+```javascript
+let user = {
+  name: 'Budi',
+  age: 33,
+  address: {
+    city: 'Jakarta',
+  }
+};
+
+let name = user['name'];
+let city = user['address']['city'];
+
+console.log(name); // Budi
+console.log(city); // Jakarta
+
+```
