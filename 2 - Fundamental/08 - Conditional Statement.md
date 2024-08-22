@@ -285,8 +285,8 @@ Bagaimana kalau kita ingin multiple condition dengan ```switch```?. ```switch```
 biasa disebut ```fall-through```, yaitu kondisi dimana jika sebuah ```case``` tidak punya statement ```break```,
 maka eksekusi code akan dilanjutkan ke ```case``` selanjutnya sampai ketemu ```break```.
 
-```fall-through``` ini dapat bisa dibilang se-prilaku dengan condition ```OR``` di ```if``` saat kita punya
-multiple condition.
+```fall-through``` ini dapat bisa dibilang se-prilaku dengan ```if...else``` saat kita punya
+multiple condition dengan ```OR "||"```
 
 contoh:
 
@@ -328,6 +328,9 @@ console.log(
 
 // Output: Hari libur kerja
 ```
+
+Pada contoh diatas jika bilangan hari nya 1 **atau** 2 atau 3 atau 4 atau 5, maka ```status``` akan bernilai ```Hari kerja```. 
+Sedangkan jika bilangan 6 atau 7, maka ```status``` akan bernilai ```Hari libur kerja```.
 
 
 **Catatan**: penjelasan diatas bukan untuk menyimpulkan ```switch``` lebih baik dari```if...else```. Keduanya sama namun harus digunakan sesuai dengan fungsi dan kasusnya masing-masing. 
