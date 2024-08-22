@@ -36,7 +36,7 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * [Conditional Operator](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/07%20-%20Conditional%20Operator.md)
   * [Conditional Statement](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/8.%20Conditional%20Statement.md)
   * [Loop](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/09%20-%20Loop.md)
-  * Object
+  * [Object](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/10%20-%20Object.md)
   * Array
   * Function
   * Arrow Function
