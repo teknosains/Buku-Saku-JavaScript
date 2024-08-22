@@ -11,7 +11,7 @@ sintaks:
   key: value,
   key2: value2,
   // ...
-  keyN: valueN
+  keyN: valueN,
 }
 ```
 
@@ -38,7 +38,7 @@ Contoh membuat object dengan object literal ```{ }```
 ```javascript
 let user = {
   name: 'Budi',
-  age: 33
+  age: 33,
 };
 ```
 
@@ -56,6 +56,17 @@ Semua contoh diatas akan menghasilkan output yang sama saat di _console_.
 [Object] {
   age: 33,
   name: "Budi"
+}
+```
+
+Disarankan juga ketika membuat object langsung, kita menambahkan koma ```,``` pada property terakhir. Ini disebut sebagai ```trailing comma``` yang fungsinya untuk membuat lebih mudah saat menambah, menghapus atau memindahkan posisi property.
+
+contoh:
+
+```javascript
+let user = {
+  name: 'Budi',
+  age: 33, // trailing comma
 }
 ```
 
@@ -81,7 +92,7 @@ let user = {
       longitude: 106.8451,
       zoomLevel: 18,
       markerTitle: 'Jl. kemayoran no 12',
-      mapService: ['Google', 'Waze', 'Apple']
+      mapService: ['Google', 'Waze', 'Apple'],
     }
   }
 };
@@ -99,7 +110,7 @@ Mengakses object dengan _dot notation_
 ```javascript
 let user = {
   name: 'Budi',
-  age: 33
+  age: 33,
 };
 
 console.log(user.name); // Budi
@@ -148,7 +159,7 @@ const car = {
   name: 'xpander',
   type: 'sedan',
   color: 'blue',
-  year: 2003
+  year: 2003,
 };
 
 let key = prompt('Masukan key yang ingin diakses');
@@ -179,15 +190,11 @@ console.log(user.email); // undefined
 console.log(user['email']); // undefined
 ```
 
-Untuk mengantisipasi pengaksesan property yang tidak ada didalam object (agar meminimalisir bugs), ada beberapa cara yang kita bisa dilakukan seperti menggunakan _optional chaining_, operator ```in```, ```property !== undefined``` dan ```Object.hasOwnProperty()```.
+Untuk mengantisipasi pengaksesan property yang tidak ada didalam object (agar meminimalisir bugs), ada beberapa cara yang kita bisa dilakukan seperti menggunakan operator ```in```, ```property !== undefined```, dan ```Object.hasOwnProperty()```.
 
 contoh:
 
 ```javascript
-// optional chaining
-
-let email = user?.email || 'default@email.com';
-
 // operator "in"
 
 if ('email' in user) {
@@ -207,4 +214,122 @@ if (user.email !== undefined) {
 }
 ```
 
+#### Mengakses Property Object Dengan ```for-in```
 
+Statement loop ```for-in``` secara khusus digunakan untuk mengakses / mengiterasi semua property dalam sebuah object. Contoh
+
+```javascript
+let user = {
+  name: 'Budi',
+  age: 33,
+  address: {
+    city: 'Jakarta',
+  }
+};
+
+for (let key in user) {
+  console.log(user[key]);
+}
+
+// Output:
+Budi
+33
+Object {
+  city: "Jakarta"
+}
+```
+
+Untuk nested object maka bisa nested ```for-in``` juga seperti berikut:
+
+```javascript
+for (let key in user) {
+  if (typeof user[key] === 'object') {
+    for (let nestedKey in user[key]) {
+      console.log(user[key][nestedKey]);
+    }
+  } else {
+    console.log(user[key]);
+  }
+}
+```
+
+Pada contoh diatas ada penambahan pengecekan ```typeof user[key] === 'object'``` agar loop ```for-in``` yang kedua
+(nested) hanya akan di eksekusi jika _value_ dari salah satu property object ```user``` adalah sebuah object.
+Dalam contoh diatas berarti _value_ dari property ```address``` lah yang berupa object.
+
+Bagaimana jika nested object nya ada banyak, misal kedalamannya lebih dari 5? Untuk kasus seperti itu maka kita bisa gunakan bantuan loop ```while``` (dengan modifikasi khusus tentunya ) dan bahkan dengan function rekursif.
+Kita tidak akan membahasnya lebih detail dalam materi ini karena akan panjang sekali dan bisa membuat kamu pusing dan melewatkan hal-hal yang justru lebih ditekankan dalam pembahasan ini.
+
+### Operasi-operasi Pada Object
+
+Object akan sering kita modifikasi seperti menambahkan property baru, mengubah value nya dan menghapusnya.
+
+#### Menambahkan Property Baru
+
+Untuk menambahkan property baru, kita bisa menggunakan _bracket notation_ dan _dot notation_ seperti contoh berikut:
+
+```javascript
+const userLogin = {
+  username: 'budi',
+  password: 'secret',
+};
+
+userLogin.isLogin = true;
+userLogin['email']= 'budi@email.com'
+
+console.log(userLogin);
+```
+
+Pada contoh diatas kita menambahkan property baru ```isLogin``` dan ```email``` sehingga object ```userLogin```
+akan menjadi seperti berikut (ketika di console)
+
+```javascript
+Object {
+  email: "budi@email.com",
+  isLogin: true,
+  password: "secret",
+  username: "budi"
+}
+```
+
+#### Mengubah Value Property
+
+Untuk mengubah value sebuah property, kita juga bisa menggunakan _bracket notation_ dan _dot notation_ seperti contoh berikut:
+
+```javascript
+const userLogin = {
+  username: 'budi',
+  password: 'secret',
+};
+
+userLogin.username = 'agus';
+userLogin['password']= 'newsecret';
+
+console.log(userLogin);
+
+// Output:
+Object {
+  password: "newsecret",
+  username: "agus"
+}
+```
+
+#### Menghapus Property
+
+Untuk menghapus sebuah property kita bisa menggunakan operator ```delete```. Contoh:
+
+```javascript
+const userLogin = {
+  username: 'budi',
+  password: 'secret',
+};
+
+delete userLogin.username;
+
+// Output:
+Object {
+  password: "secret"
+}
+```
+
+### Computed Property
