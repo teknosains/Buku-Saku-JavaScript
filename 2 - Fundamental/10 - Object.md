@@ -144,7 +144,7 @@ Keseringannya untuk mengakses property object memang biasa pakai _dot notation_,
 Nama property atau _key_ nya di set dinamis dalam bentuk variable. Contoh
 
 ```javascript
-let car = {
+const car = {
   name: 'xpander',
   type: 'sedan',
   color: 'blue',
@@ -153,7 +153,7 @@ let car = {
 
 let key = prompt('Masukan key yang ingin diakses');
 
-console.log(car[key]);
+alert(car[key]); // blue
 ```
 
 <div align="center">
@@ -163,4 +163,48 @@ console.log(car[key]);
 </div>
 
 Output dari contoh diatas akan sesuai dengan nama property / key yang di input. Misal _key_ ```color``` akan menghasilkan _value_ ```blue``` dst.
+
+Ketika mengakses nama property yang tidak ada didalam object maka akan menghasilkan _undefined_. Contoh
+
+```javascript
+let user = {
+  name: 'Budi',
+  age: 33,
+  address: {
+    city: 'Jakarta',
+  }
+};
+
+console.log(user.email); // undefined
+console.log(user['email']); // undefined
+```
+
+Untuk mengantisipasi pengaksesan property yang tidak ada didalam object (agar meminimalisir bugs), ada beberapa cara yang kita bisa dilakukan seperti menggunakan _optional chaining_, operator ```in```, ```property !== undefined``` dan ```Object.hasOwnProperty()```.
+
+contoh:
+
+```javascript
+// optional chaining
+
+let email = user?.email || 'default@email.com';
+
+// operator "in"
+
+if ('email' in user) {
+  console.log(user.email);
+}
+
+// hasOwnProperty()
+
+if (user.hasOwnProperty('email')) {
+  console.log(user.email);
+}
+
+// !== undefined
+
+if (user.email !== undefined) {
+  console.log(user.email);
+}
+```
+
 
