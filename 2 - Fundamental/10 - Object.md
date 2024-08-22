@@ -333,3 +333,58 @@ Object {
 ```
 
 ### Computed Property
+
+Adalah nama property atau _key_ yang dibuat menggunakan kurung siku ```[variable]``` untuk membuat property ini menjadi
+dinamis.
+
+contoh:
+
+```javascript
+function printRating(jenis, bintang) {
+  return {
+    [`${jenis}Name`]: 'Doraemon',
+    [`${jenis}Rating`]: `Dapat bintang ${bintang}`
+  }
+}
+
+const film = printRating('film', 5);
+const serial = printRating('serial', 4);
+```
+
+Misal pada contoh diatas kita ingin membuat sebuah fungsi untuk mencetak rating anime Doraemon dalam bentuk film atau serial-nya. Contoh diatas akan menghasilkan output seperti berikut:
+
+```javascript
+Object {
+  filmName: "Doraemon",
+  filmRating: "Dapat bintang 5"
+}
+
+Object {
+  serialName: "Doraemon",
+  serialRating: "Dapat bintang 4"
+}
+```
+
+sehingga kita bisa akses property nya dengan cara seperti ini
+
+```javascript
+const film = printRating('film', 5);
+
+console.log(film.filmName); 
+// Output: Doraemon
+
+console.log(film.filmRating); 
+// Output: Dapat bintang 5
+
+const serial = printRating('serial', 4);
+
+console.log(serial.serialName); 
+// Output: Doraemon
+
+console.log(serial.serialRating); 
+// Output: Dapat bintang 4
+```
+
+Computed property tidak usah terlalu dipusingkan dulu karena seujujur nya memang cukup jarang ketemu _case_ yang
+mengharuskan pakai computed property. Nanti saat kita membuat aplikasi yang kompleks, baru kita akan
+ketemu _case_ yang mungkin harus pakai computed property.
