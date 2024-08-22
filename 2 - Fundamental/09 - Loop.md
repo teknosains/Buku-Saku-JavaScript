@@ -28,6 +28,7 @@ Di JavaScript ada beberapa cara untuk melakukan perulangan atau loop, yaitu meng
 
 
 ### ```for``` loop
+
 ```for``` adalah loop yang paling umum digunakan terlebih jika kita tahu diawal berapa jumlah iterasi yang akan dilakukan.
 
 sintaks:
@@ -143,6 +144,7 @@ output:
 3
 4
 ```
+
 Loop diatas akan melakukan 5x iterasi dan _stop_ saat nilai ```i``` menyentuh angka ```5``` karena ```5 < 5``` saat di evaluasi akan bernilai ```false```. 
 
 Contoh berikutnya,
@@ -184,7 +186,6 @@ output:
 ```
 
 Pada contoh diatas iterasi akan terus _running_ hanya jika statement ```while (age) ``` masih bernilai _truthy_. Saat ```age``` bernilai ```0``` (ingat bahwa ```0``` termasuk salah satu value yang bersifat```falsy```), maka iterasi tidak akan dilanjutkan oleh karena itu pada bagian _output_ hanya angka 3, 2, dan 1 yang akan di print.
-
 
 Dengan definisi dan contoh diatas kita simpulkan bahwa ```while``` lebih cocok digunakan saat jumlah iterasi (berapa kali-nya) tidak diketahui dengan pasti. Kita hanya tahu pokoknya selama kondisinya ```truthy``` ya lakukan terus iterasi-nya.
 
@@ -229,6 +230,7 @@ do {
 } while (i < 5);
 ```
 output:
+
 ```javascript
 1
 2
