@@ -128,9 +128,11 @@ Pada contoh diatas, JavaScript pertama kali akan cek apakah ```cuaca === 'terang
 
 
 ### Nested if...else
+
 Secara sederhana, kondisi Nested atau bersarang (sebaiknya jangan pakai istilah _bersarang_ dalam keseharian nanti yah :D ) digunakan saat kita butuh ada ```if``` didalam ```if``` dan ini sangat umum digunakan dalam keseharian coding.
 
 contoh:
+
 ```javascript
 let score = 60;
 let behaviour = 'Baik';
@@ -138,11 +140,11 @@ let status = '';
 
 if (score < 70) {
   if (score >= 60) {
-     if (behaviour === 'Baik') {
-       status = 'Lulus bersyarat';
-     } else if (behaviour === 'Tidak Baik') {
-       status = 'Tidak lulus';
-     } 
+    if (behaviour === 'Baik') {
+      status = 'Lulus bersyarat';
+    } else if (behaviour === 'Tidak Baik') {
+      status = 'Tidak lulus';
+    } 
   } else {
     status = 'Tidak lulus';
   }
@@ -159,9 +161,11 @@ untuk cek ```score >= 60```, jika ternyata score nya >= 60 maka harus di cek jug
 
 ### switch
 
-Switch statement baru digunakan ketika percabangan dengan ```if...else``` sudah mulai sulit dibaca dan memang kondisinya sudah semakin banyak.
+Switch statement baru digunakan ketika percabangan dengan ```if...else``` sudah mulai sulit dibaca dan memang kondisinya sudah semakin banyak
+namun kita hanya punya **satu** expression atau condition untuk diperbandingkan.
 
 sintaks:
+
 ```javascript
 switch (condition) {
   case value1:
@@ -176,7 +180,11 @@ switch (condition) {
 }
 ```
 
+Normalnya ```switch``` lebih cocok digunakan ketika kita punya **satu** expression yang ingin di _compare_ dengan
+beberapa _value_ yang memungkinkan.
+
 contoh:
+
 ```javascript
 function checkWeather(cuaca) {
   
@@ -206,6 +214,120 @@ console.log(nonton);
 
 // Output: Cuaca tidak dikenali
 ```
-Kalau diperhatikan lagi, menggunakan contoh potongan code yang sama, penulisan dengan ```switch``` terlihat lebih mudah dibaca dan code menjadi lebih clean. Untuk kondisi percabangan yang cukup banyak, jika menggunakan ```if...else``` maka secara natural mata kita akan scan tiap kondisi pada  ```if...else``` nya sampai akhir.
+
+Perhatikan bahwa kita hanya punya **satu** expression yakni ```cuaca```, dan kita ingin _compare_ isi 
+dari ```cuaca``` dengan beberapa kemungkinan value seperti ```terang```, ```mendung```, ```hujan```, dll.
+
+Seandai kita punya lebih dari satu condition, misalkan kita punya ```cuaca``` dan ```suhu``` maka mungkin
+memakai ```if``` akan lebih cocok. Misal:
+
+```javascript
+if (cuaca === 'terang' && suhu >= 30) {
+  console.log('Nonton diluar');
+} else if (cuaca === 'mendung' && suhu < 30) {
+  // ..dst
+}
+```
+
+Contoh berikut ini harusnya lebih meyakinkan kita kalau ```switch``` lebih cocok saat kita punya **satu**
+condition untuk di _compare_ dengan beberapa bahkan banyak _value_ yang memungkinkan.
+
+```javascript
+
+function printDayName(day) {
+
+  let dayName = '';
+
+  switch (day) {
+    case 1:
+      dayName = 'Senin';
+      break;
+    case 2:
+      dayName = 'Selasa';
+      break;
+    case 3:
+      dayName = 'Rabu';
+      break;
+    case 4:
+      dayName = 'Kamis';
+      break;
+    case 5:
+      dayName = 'Jumat';
+      break;
+    case 6:
+      dayName = 'Sabtu';
+      break;
+    case 7:
+      dayName = 'Minggu';
+      break;
+    default:
+      dayName = 'Hari tidak dikenali';
+      break;
+  }
+
+  return dayName;
+
+}
+
+console.log(
+  printDayName(7)
+);
+
+// Output: Minggu
+```
+
+Kalau diperhatikan lagi, menggunakan contoh potongan code yang sama, penulisan dengan ```switch``` terlihat lebih mudah dibaca dan code menjadi lebih clean. 
+Untuk kondisi percabangan yang cukup banyak, jika menggunakan ```if...else``` maka secara natural mata kita akan scan tiap kondisi pada  ```if...else``` nya sampai akhir.
+
+#### Fitur ```fall-through``` di statement ```switch```
+
+Bagaimana kalau kita ingin multiple condition dengan ```switch```?. ```switch``` punya behaviour spesial yang 
+biasa disebut ```fall-through```, yaitu kondisi dimana jika sebuah ```case``` tidak punya statement ```break```,
+maka eksekusi code akan dilanjutkan ke ```case``` selanjutnya sampai ketemu ```break```.
+
+```fall-through``` ini dapat bisa dibilang se-prilaku dengan condition ```OR``` di ```if``` saat kita punya
+multiple condition.
+
+contoh:
+
+```javascript
+function workStatus(day) {
+
+  let status = '';
+
+  switch (day) {
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+      status = 'Hari kerja';
+      break;
+    case 6:
+    case 7:
+      status = 'Hari libur kerja';
+      break;
+    default:
+      status = 'Hari tidak dikenali';
+      break;
+  }
+
+  return status;
+
+}
+
+console.log(
+  workStatus(4)
+);
+
+// Output: Hari kerja
+
+console.log(
+  workStatus(6)
+);
+
+// Output: Hari libur kerja
+```
+
 
 **Catatan**: penjelasan diatas bukan untuk menyimpulkan ```switch``` lebih baik dari```if...else```. Keduanya sama namun harus digunakan sesuai dengan fungsi dan kasusnya masing-masing. 
