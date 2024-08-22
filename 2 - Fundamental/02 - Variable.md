@@ -11,6 +11,7 @@ let alamat = 'Jl. Ujung berung Bandung';
 Dimana **nama, umur dan alamat** adalah sebuah _variable_. Untuk membuat sebuah variable di JavaScript cukup menggunakan keyword ```let``` atau ```const```.
 
 Struktur sebuah variable secara sederhana mengikuti pola berikut:
+
 ```javascript
 [keyword] [nama variable] = [value];
 
@@ -89,12 +90,13 @@ let listBuah = ['Apel', 'Jambu', 'Jeruk'];
 const app = document.getElementById('app');
 ```
 
-### Aturan penamaan variable
+### Aturan Penamaan Variable
 
 Ada beberapa aturan penaaman **variable** di JavaScript yang wajib kita patuhi diantaranya:
 - Nama variable wajib hanya terdiri dari huruf, kombinasi huruf-angka, simbol ```$``` dan ```_``` 
    
-  Contoh:
+  contoh:
+
   ```javascript
   let email = 'email@github.com'; // OK
   let email2 = 'email2@github.com'; // OK
@@ -116,14 +118,16 @@ Ada beberapa aturan penaaman **variable** di JavaScript yang wajib kita patuhi d
   ```
 - Tidak boleh hanya digit/angka dan tidak boleh didahului angka
   
-  Contoh:
+  contoh:
+
   ```javascript
   let 3email = 'email@gmail.com'; // Error
   let 1234 = 'email@gmail.com'; // Error
   ```
 - Tidak boleh menggunakan _reserved keyword_ seperti ```let```, ```const```, ```var```, ```class```, ```function```, ```return```, ```this```, ```new``` dan yang lainnya. Untuk melihat daftar _reserved keyword_ lengkap, silahkan baca di [MDN - Reserved Keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords) atau https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords
 
-  Contoh:
+  contoh:
+
   ```javascript
   let class = 'Windows'; // Error
   let function = 'Github'; // Error
@@ -131,7 +135,8 @@ Ada beberapa aturan penaaman **variable** di JavaScript yang wajib kita patuhi d
   ```
 - Variable itu Case-sensitive
   
-  Contoh:
+  contoh:
+
   ```javascript
   let NAMA = 'Budi';
   let nama = 'Budi';
@@ -141,7 +146,8 @@ Ada beberapa aturan penaaman **variable** di JavaScript yang wajib kita patuhi d
   ```
 - Direkomendasi menggunakan format **camelCase** 
 
-  Contoh:
+  contoh:
+
   ```javascript
   let namaLengkap = 'Agus Hidayat';
   let alamatLengkap = 'Jl. Palmerah no 12 Rt/Rw 01/03';
@@ -151,16 +157,52 @@ Ada beberapa aturan penaaman **variable** di JavaScript yang wajib kita patuhi d
   
   Penggunaan bahasa **inggris** dalam penamaan _variable_ akan membuat code lebih selaras dengan syntax-syntax JavaScript yang memang dibuat dalam bahasa inggris.
 
-  Contoh:
+  contoh:
+
   ```javascript
   let name = 'Agus';
   let address = 'Jl. Palmerah no 12 Rt/Rw 01/03'
   
   function getUserInfo() {
-     return 'My name is ' + name + ', address is at ' + address;
+    return 'My name is ' + name + ', address is at ' + address;
   }
   ```
   
 Buat dan namailah variable sesuai dengan aturan dan rekomendasi agar code kita lebih clean dan lebih terlihat profesional. Selanjutnya, pada contoh-contoh code dalam series **Buku Saku JavaScript** ini, kita akan menamai variable dengan bahasa inggris yah.
+
+### Konkatenasi / penggabungan Variable dan String
+
+Ini adalah salah satu operasi yang paling sering kita gunakan dalam JavaScript. Akan selalu ada situasi di mana kita ingin menggabungkan variable dengan string untuk membentuk suatu kalimat / string baru. Ada 2 cara untuk melakukannya yaitu dengan bantuan operator ```+```, dan ```template literal```.
+
+contoh:
+
+```javascript
+let name = 'Budi';
+let age = 33;
+
+let greeting = 'Halo nama saya ' + name + ', umur saya ' + age + '.';
+
+console.log(greeting);
+
+// Output: Halo nama saya Budi, umur saya 33 tahun.
+```
+
+Kemudian karakter backticks atau disebut juga _template literal_ ada untuk lebih memudahkan kita menggabungkan variable dengan string. Ketika menggunakan template literal, variable ditulis dengan format ```${variable}```.
+
+contoh:
+
+```javascript
+let name = 'Budi';
+let age = 33;
+
+let greeting = `Halo nama saya ${name}, umur saya ${age} tahun.`;
+
+console.log(greeting);
+
+// Output: Halo nama saya Budi, umur saya 33 tahun.
+```
+
+Saat dibutuhkan untuk menggabungkan / konkatenasi string dengan variable yang cukup panjang / kompleks, gunakanlah _backticks_ / template literal.
+
   
 
