@@ -1,0 +1,170 @@
+# Array
+
+Sebelumnya kita sudah membahas tentang Object yang digunakan untuk menyimpan data dalam format ```key:value```.
+Maka Array pun pada hakikatnya sama seperti Object yaitu digunakan untuk menyimpan data. Namun data dalam Array
+disusun dalam bentuk _list_ berurutan.
+
+sintaks:
+
+```javascript
+const variable = [item1, item2, item3, ...];
+```
+
+Array sangat bermanfaat untuk menyimpan sejumlah atau sekumpulan data kedalam sebuah variable. Misal kita punya data daftar beberapa negara, alih-alih menuliskan code nya dalam bentuk seperti ini
+
+```javascript
+const negara1 = 'Indonesia';
+const negara2 = 'Malaysia';
+const negara3 = 'Singapura';
+const negara4 = 'Filipina';
+const negara5 = 'Brunei';
+```
+
+maka lebih baik jika disimpan ke dalam sebuah **variable** saja dengan bantuan array menjadi seperti ini
+
+```javascript
+const negara = [
+  'Indonesia', 
+  'Malaysia', 
+  'Singapura', 
+  'Filipina', 
+  'Brunei'
+];
+```
+Data di dalam sebuah array sering juga disebut sebagai _element_. Dan element array dapat berupa _string_, _number_, _boolean_, _object_ dan bahkan _array_ juga. Misalnya
+
+```javascript
+const myArray = [
+  'Indonesia',
+  79,
+  true,
+  { ibuKota: 'Nusantara', pulau: 'Kalimantan'},
+  [17, 'Agustus', 1945]
+];
+```
+
+Jadi data tipe apapun bisa dimasukan kedalam array meskipun pada praktek nya kebanyakan kita tentu saja akan
+menyimpan data ke dalam array sesuai dengan kesamaan tipe data nya seperti list data yang berupa _string_ saja atau _object_ saja.
+
+Untuk membuat array, kita bisa menggunakan array literal ```[ ]``` atau _constructor_ ```new Array()```:
+
+```javascript
+let arr = [];
+let arr = new Array();
+```
+
+Dan seperti halnya Object, cara pertama adalah yang paling sering digunakan. Jadi kedepan kamu baiknya terus membuat array menggunakan array literal ```[ ]```.
+
+### Mengakses Element Array dengan ```index```
+
+Hal yang paling fundamental mengenai array adalah bahwa element array disusun dengan penomoran berurut yang disebut dengan ```index```. Element pertama dalam array diindex ```0``` dan terakhir ```N-1```. dimana ```N``` adalah **panjang** dari array.
+
+**Panjang** array adalah jumlah banyaknya element di dalamnya dan bisa di ketahui dengan menggunakan property ```length```.
+
+```javascript
+let cars = ['BMW', 'Toyota', 'Wuling'];
+
+console.log(cars.length);
+
+// Output: 3
+```
+
+Oleh karena itu untuk mengakses element array adalah dengan menggunakan nomor ```index``` nya seperti berikut:
+
+```javascript
+let cars = ['BMW', 'Toyota', 'Wuling'];
+
+console.log(cars[0]); // BMW
+console.log(cars[1]); // Toyota
+console.log(cars[2]); // Wuling
+```
+
+Dari pola diatas juga terlihat bahwa jika kita ingin mengakses element array yang terakhir kita tinggal menuliskan ```cars.length - 1```, tidak peduli seberapa banyak element array nya.
+
+```javascript
+let lastElement = cars[cars.length - 1];
+
+console.log(cars[lastElement]); 
+
+// Output: Wuling
+```
+
+### Mengakses Element Array dengan Loop
+
+Semakin besar array maka tentu gk mungkin lagi di akses satu persatu, artinya kita harus pakai bantuan loop.
+Semua jenis loop bisa digunakan namun dalam materi ini kita akan contohkan menggunakan loop ```for```, ```for-of``` dan ```Array.map()``` saja.
+
+contoh dengan ```for```:
+
+```javascript
+const person = ['John', 'Doe', 'Mark'];
+
+// for
+
+for (let i = 0; i < person.length; i++) {
+  console.log(person[i]);
+}
+
+// for-of
+
+for (const i of person) {
+  console.log(i);
+}
+
+// Array.map()
+
+person.map((val, index) => {
+  console.log(val);
+});
+```
+
+Ketiga cara diatas sama-sama akan menghasilkan output:
+
+```javascript
+John
+Doe
+Mark
+```
+
+Dari ketiga cara diatas mana yang sebaiknya digunakan ?. Bebas, gunakan yang mana saja yang kita mau, namun banyak orang (termasuk saya) lebih sering menggunakan ```Object.map()```.
+
+```Object.map()``` nyaman digunakan untuk mengolah array yang biasa datang dari _backend_ atau server.
+Misal kita dapat response dari sebuah API / backend dengan format seperti berikut:
+
+```javascript
+{
+  status: true,
+  message: "success",
+  data: [
+    { id: 1, country: "Indonesia" },
+    { id: 2, country: "Malaysia" },
+    { id: 3, country: "Singapura" },
+    { id: 4, country: "Filipina" },
+  ]
+}
+```
+
+data kita ingin mencetak list yang ada pada property ```data```, maka kita bisa menggunakan ```Object.map()```
+seperti ini:
+
+```javascript
+let arr = response.data;
+
+arr.map((val, index) => {
+  console.log(
+    `Index ke-${index} => Id: ${val.id}, Country: ${val.country}`
+  );
+});
+
+// Output:
+
+Index ke-0 => Id: 1, Country: Indonesia
+Index ke-1 => Id: 2, Country: Malaysia
+Index ke-2 => Id: 3, Country: Singapura
+Index ke-3 => Id: 4, Country: Filipina
+```
+
+
+
+
+
