@@ -315,6 +315,6 @@ Saat menggunakan array, hampir pasti kita akan butuh untuk melakukan validasi se
   }
   ```
 
-  Catatan: saat menggunakan ```Array.indexOf()```, jika sebuah element tidak ada di dalam array maka ```-1``` akan direturn.
+  Catatan: saat menggunakan ```Array.indexOf()```, jika sebuah element tidak ada di dalam array maka akan me-return ```-1```.
 
 Pada pembahasan berikutnya kita mungkin akan banyak menggunakan contoh-contoh code menggunakan Array. Oleh karena itu agar semakin terbiasa, baiknya di baca ulang dan dicoba lagi beberapa kali yah.
