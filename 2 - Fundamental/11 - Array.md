@@ -177,7 +177,7 @@ Array methods adalah sejumlah fungsi-fungsi _built-in_ yang disediakan agar deve
 
 - **Basic methods**
 
-  Yaitu kumpulan method-method yang biasa digunakan untuk memanipulasi array. Misalnya ```Array.push()```, ```Array.pop()```, ```Array.unshift()```, ```Array.shift()```, ```Array.splice()```, ```Array.reverse()```, ```Array.sort()```, dll. 
+  Yaitu kumpulan method-method yang biasa digunakan untuk memanipulasi array. Misalnya ```Array.push()```, ```Array.pop()```, ```Array.unshift()```, ```Array.shift()```, ```Array.splice()```, ```Array.join()```, dll. 
 
   Misal kita perlu untuk membuang element terakhir dari array, kita bisa gunakan ```Array.pop()```.
 
@@ -189,6 +189,18 @@ Array methods adalah sejumlah fungsi-fungsi _built-in_ yang disediakan agar deve
 
   console.log(person);
   // Output: [ 'John', 'Doe' ]
+  ```
+  atau ingin menggabungkan semua element array menjadi sebuah _string_, kita bisa gunakan ```Array.join()```.
+
+  contoh:
+  
+  ```javascript
+  const person = ['John', 'Doe', 'Mark'];
+  let separator = '-';
+  person.join(separator);
+
+  console.log(person);
+  // Output: John-Doe-Mark
   ```
 
 - **Search methods**
