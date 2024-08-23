@@ -208,5 +208,14 @@ Array methods adalah sejumlah fungsi-fungsi _built-in_ yang disediakan agar deve
   ```
 
 - **Iteration methods**
-- Sorting methods
+
+  Yaitu kumpulan method-method yang biasa digunakan untuk nge-_loop_ array dan melakukan operasi-operasi yang diinginkan. Misalnya ```Array.forEach()```, ```Array.map()```, ```Array.filter()```, ```Array.reduce()```, dll.
+
+- **Sorting methods**
+
+  Yaitu kumpulan method-method yang biasa digunakan untuk nge-_sort_ / mengurutkan array. Misalnya ```Array.sort()```, ```Array.reverse()```, dll.
+
+Semua method-method diatas tidak mungkin kita bahas satu-satu dalam buku ini. Untuk mengetahui semua method-method yang tersedia, silahkan visit [MDN JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
+
+Pada pembahasan berikutnya kita mungkin akan banyak menggunakan contoh-contoh code menggunakan Array. Oleh karena itu agar semakin terbiasa, baiknya di baca ulang dan dicoba lagi beberapa kali yah.
 
