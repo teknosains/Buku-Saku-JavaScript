@@ -68,16 +68,11 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
 
 #### Chapter 3
 
-* Function Lanjutan
-  * IIFE (Immediately Invoked Function Expression)
-  * Function Binding
-  * Function Generator
-  * Function Composition
-
 * Advance Concept
   * Rest & Spread Operator
   * Promise
   * Async/Await
+  * Error Handling
   * Prototypal Inheritance
   * Classical Inheritance
   * Event loop
@@ -85,6 +80,11 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * Design Pattern
   * Currying & Mixin
 
+* Function Lanjutan
+  * IIFE (Immediately Invoked Function Expression)
+  * Function Binding
+  * Function Generator
+  * Function Composition
 
 ## Kontribusi
 Bantu saya memperbaiki konten, typo dan kesalahan lainnya agar series ini menjadi lebih baik. Silahkan clone dan lakukan PR (Pull Request) untuk berkontribusi memperbaiki series ini.
