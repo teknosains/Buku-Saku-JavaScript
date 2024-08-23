@@ -65,7 +65,6 @@ Hal yang paling fundamental mengenai array adalah bahwa element array disusun de
 let cars = ['BMW', 'Toyota', 'Wuling'];
 
 console.log(cars.length);
-
 // Output: 3
 ```
 
@@ -85,7 +84,6 @@ Dari pola diatas juga terlihat bahwa jika kita ingin mengakses element array yan
 let lastElement = cars[cars.length - 1];
 
 console.log(cars[lastElement]); 
-
 // Output: Wuling
 ```
 
@@ -144,27 +142,71 @@ Misal kita dapat response dari sebuah API / backend dengan format seperti beriku
 }
 ```
 
-data kita ingin mencetak list yang ada pada property ```data```, maka kita bisa menggunakan ```Object.map()```
-seperti ini:
+Dan hal yang normal kita butuh modif lagi menjadi array baru sesuai dengan kebutuhan. Untuk hal semacam ini 
+maka kita bisa gunakan ```Object.map()``` seperti ini:
 
 ```javascript
 let arr = response.data;
 
-arr.map((val, index) => {
-  console.log(
-    `Index ke-${index} => Id: ${val.id}, Country: ${val.country}`
-  );
+let newArr = arr.map(function(val, index) {
+   return {
+    idx: index,
+    countryID: val.id,
+    countryName: val.country
+  }
 });
 
-// Output:
-
-Index ke-0 => Id: 1, Country: Indonesia
-Index ke-1 => Id: 2, Country: Malaysia
-Index ke-2 => Id: 3, Country: Singapura
-Index ke-3 => Id: 4, Country: Filipina
+console.log(newArr);
 ```
 
+Variable ```newArr``` diatas kini berisi array yang baru hasil modifikasi dari array aslinya (dari API / Backend).
 
+```javascript
+newArr = [
+  { idx: 0, countryID: 1, countryName: "Indonesia" },
+  { idx: 1, countryID: 2, countryName: "Malaysia" },
+  ...
+]
+```
 
+### Array Methods
 
+Saking begitu seringnya array dipakai saat _coding_ membuat aplikasi, JavaScript menyediakan banyak sekali **methods** _tinggal-pakai_ yang digunakan untuk mengolah array.
+
+Array methods adalah sejumlah fungsi-fungsi _built-in_ yang disediakan agar developer mudah mengolah array sesuai dengan kebutuhan. Secara umum Array methods dibagi menjadi beberapa kategori yaitu:
+
+- **Basic methods**
+
+  Yaitu kumpulan method-method yang biasa digunakan untuk memanipulasi array. Misalnya ```Array.push()```, ```Array.pop()```, ```Array.unshift()```, ```Array.shift()```, ```Array.splice()```, ```Array.reverse()```, ```Array.sort()```, dll. 
+
+  Misal kita perlu untuk membuang element terakhir dari array, kita bisa gunakan ```Array.pop()```.
+
+  contoh:
+
+  ```javascript
+  const person = ['John', 'Doe', 'Mark'];
+  person.pop();
+
+  console.log(person);
+  // Output: [ 'John', 'Doe' ]
+  ```
+
+- **Search methods**
+
+  Yaitu kumpulan method-method yang biasa digunakan untuk nge-_search_ element array. Misalnya ```Array.indexOf()```, ```Array.lastIndexOf()```, ```Array.includes()```, ```Array.find()```, dll.
+
+  Misal kita perlu mencari index dari element ```'Doe'```, kita bisa gunakan ```Array.indexOf()```.
+
+  contoh:
+
+  ```javascript
+  const person = ['John', 'Doe', 'Mark'];
+  const index = person.indexOf('Doe');
+  
+  console.log(index);
+  // Output: 1
+  ```
+
+- **Iteration methods**
+- Sorting methods
 
