@@ -37,7 +37,7 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * [Conditional Statement](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/08%20-%20Conditional%20Statement.md)
   * [Loop](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/09%20-%20Loop.md)
   * [Object](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/10%20-%20Object.md)
-  * Array
+  * [Array](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/11%20-%20Array.md)
   * Function
   * Arrow Function
   * Callback Function
