@@ -92,7 +92,7 @@ console.log(cars[lastElement]);
 Semakin besar array maka tentu gk mungkin lagi di akses satu persatu, artinya kita harus pakai bantuan loop.
 Semua jenis loop bisa digunakan namun dalam materi ini kita akan contohkan menggunakan loop ```for```, ```for-of``` dan ```Array.map()``` saja.
 
-contoh dengan ```for```:
+Perhatikan contoh berikut:
 
 ```javascript
 const person = ['John', 'Doe', 'Mark'];
@@ -124,7 +124,7 @@ Doe
 Mark
 ```
 
-Dari ketiga cara diatas mana yang sebaiknya digunakan ?. Bebas, gunakan yang mana saja yang kita mau, namun banyak orang (termasuk saya) lebih sering menggunakan ```Object.map()```.
+Dari ketiga cara diatas mana yang sebaiknya digunakan ?. Bebas, gunakan yang mana saja yang kita mau, namun banyak orang (termasuk kami) lebih sering menggunakan ```Object.map()```.
 
 ```Object.map()``` nyaman digunakan untuk mengolah array yang biasa datang dari _backend_ atau server.
 Misal kita dapat response dari sebuah API / backend dengan format seperti berikut:
@@ -142,8 +142,7 @@ Misal kita dapat response dari sebuah API / backend dengan format seperti beriku
 }
 ```
 
-Dan hal yang normal kita butuh modif lagi menjadi array baru sesuai dengan kebutuhan. Untuk hal semacam ini 
-maka kita bisa gunakan ```Object.map()``` seperti ini:
+Dan adalah hal yang normal kita butuh modif lagi menjadi array baru sesuai dengan kebutuhan. Untuk hal semacam ini kita bisa gunakan ```Object.map()``` seperti ini:
 
 ```javascript
 let arr = response.data;
@@ -193,7 +192,7 @@ Array methods adalah sejumlah fungsi-fungsi _built-in_ yang disediakan agar deve
   atau ingin menggabungkan semua element array menjadi sebuah _string_, kita bisa gunakan ```Array.join()```.
 
   contoh:
-  
+
   ```javascript
   const person = ['John', 'Doe', 'Mark'];
   let separator = '-';
@@ -231,3 +230,91 @@ Semua method-method diatas tidak mungkin kita bahas satu-satu dalam buku ini. Un
 
 Pada pembahasan berikutnya kita mungkin akan banyak menggunakan contoh-contoh code menggunakan Array. Oleh karena itu agar semakin terbiasa, baiknya di baca ulang dan dicoba lagi beberapa kali yah.
 
+
+### Array Multidimensi
+
+Array multidimensi adalah array yang terdiri dari array lainnya atau bisa juga dibilang nested array.
+
+contoh:
+
+```javascript
+let arr = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+
+console.log(arr[1][2]);
+// Output: 6
+
+console.log(arr[0]);
+// Output: [ 1, 2, 3 ]
+```
+
+Ketika membangun _real-world_ aplikasi, kita akan sering menggunakan array multidimensi yang di _combine_ dengan Object. Biasanya array multidimensi campur object ini didapat dari API / Backend. Seperti contoh:
+
+```javascript
+{
+  status: true,
+  message: "success",
+  data: [
+    { 
+      id: 1, 
+      country: "Indonesia", 
+      province: [
+        "DKI Jakarta",
+        "Jawa Barat",
+        "Jawa Tengah",
+        "Jawa Timur",
+        // ...
+      ] 
+    },
+    // ...
+  ]
+}
+```
+
+
+### Validasi-validasi dalam Array
+
+Saat menggunakan array, hampir pasti kita akan butuh untuk melakukan validasi sebuah array. Beberapa validasi yang umum dilakukan yaitu:
+
+- Check array kosong
+
+  contoh:
+
+  ```javascript
+  let arr = [];
+
+  if (arr.length === 0) {
+    console.log('array kosong');
+  }
+  ```
+- Check apakah variable sebuah array
+
+  contoh:
+
+  ```javascript
+  let arr = [];
+
+  if (Array.isArray(arr)) {
+    console.log('variable arr adalah array');
+  }
+  ```
+- Check apakah sebuah element exist
+
+  contoh:
+
+  ```javascript
+  const person = ['John', 'Doe', 'Mark'];
+  
+  if (person.includes('Doe')) {
+    console.log('Doe ada di dalam array person');
+  }
+
+  if (person.indexOf('Doe') !== -1) {
+    console.log('Doe ada di dalam array person');
+  }
+  ```
+
+  Catatan: saat menggunakan ```Array.indexOf()```, jika sebuah element tidak ada di dalam array maka ```-1``` akan direturn.
