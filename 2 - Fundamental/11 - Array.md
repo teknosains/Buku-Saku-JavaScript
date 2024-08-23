@@ -228,8 +228,6 @@ Array methods adalah sejumlah fungsi-fungsi _built-in_ yang disediakan agar deve
 
 Semua method-method diatas tidak mungkin kita bahas satu-satu dalam buku ini. Untuk mengetahui semua method-method yang tersedia, silahkan visit [MDN JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 
-Pada pembahasan berikutnya kita mungkin akan banyak menggunakan contoh-contoh code menggunakan Array. Oleh karena itu agar semakin terbiasa, baiknya di baca ulang dan dicoba lagi beberapa kali yah.
-
 
 ### Array Multidimensi
 
@@ -318,3 +316,5 @@ Saat menggunakan array, hampir pasti kita akan butuh untuk melakukan validasi se
   ```
 
   Catatan: saat menggunakan ```Array.indexOf()```, jika sebuah element tidak ada di dalam array maka ```-1``` akan direturn.
+
+Pada pembahasan berikutnya kita mungkin akan banyak menggunakan contoh-contoh code menggunakan Array. Oleh karena itu agar semakin terbiasa, baiknya di baca ulang dan dicoba lagi beberapa kali yah.
