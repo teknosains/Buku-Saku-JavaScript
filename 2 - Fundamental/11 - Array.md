@@ -142,7 +142,7 @@ Misal kita dapat response dari sebuah API / backend dengan format seperti beriku
 }
 ```
 
-Dan adalah hal yang normal kita butuh modif lagi menjadi array baru sesuai dengan kebutuhan. Untuk hal semacam ini kita bisa gunakan ```Object.map()``` seperti ini:
+Dan adalah hal yang normal kalau kita butuh modif lagi menjadi array baru sesuai dengan kebutuhan. Untuk hal semacam ini kita bisa gunakan ```Object.map()``` seperti ini:
 
 ```javascript
 let arr = response.data;
