@@ -43,7 +43,6 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * Callback Function
   * Constructor Function
   * Class
-
 * DOM Dan Events Di Browser
   * Basic DOM
   * Event Listener
@@ -55,7 +54,6 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * Event Delegation
   * DOM Tree
   * Mouse Events
-  * dll
 * Network / Backend Request
   * HTTP Verbs
   * AJAX dengan Fetch
@@ -79,7 +77,10 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * Closure
   * Design Pattern
   * Currying & Mixin
-
+* Object Lanjutan
+  * Reference Object
+  * Cloning Object
+  * Freeze Object
 * Function Lanjutan
   * IIFE (Immediately Invoked Function Expression)
   * Function Binding
