@@ -23,7 +23,10 @@ btn.addEventListener('click', function() {
 });
 
 ```
-function atau fitur diatas bukanlah bagian dari spesifikasi resmi JavaScript alias tidak ada implementasinya di JavaScript Engine. Fitur-fitur diatas adalah ```Web API``` yakni **fitur yang disediakan oleh browser** yang dapat di panggil oleh JavaScript.
+function atau fitur diatas bukanlah bagian dari spesifikasi resmi JavaScript alias tidak ada implementasinya di JavaScript Engine. Fitur-fitur diatas adalah ```Web API``` yakni **fitur yang disediakan oleh browser** yang dapat di panggil oleh JavaScript. 
+
+Jadi para pembuat browser seperti Google (Chrome), Mozilla (Firefox), Apple (Safari), Microsoft (Edge), dll semacam memiliki konsensus bersama untuk mengimplementasikan Web API diatas di browser masing-masing sehingga lebih
+universal dan mudah bagi para developer. Bayangkan misal fitur ```console.log()``` hanya tersedia di Chrome saja tapi di Firefox tidak ada...misal aja di Firefox mau nya ```console.print()```, Edge ```console.display()``` maka ini akan bikin repot para developer / programmer.
 
 Web API ada didalam _**window**_ object yang tersedia secara global (_Global scope_), bisa dipakai dimanapun dihalaman suatu aplikasi web.
 
