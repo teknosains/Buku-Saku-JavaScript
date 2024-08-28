@@ -179,7 +179,7 @@ adalah si _value_ nya itu sendiri yang di kirim ke function. Agar lebih mudah di
 
 Di JavaScript, function adalah ```first-class``` object. Artinya function itu bisa di _passing_ ke function lain, di _return_ dari function dan di-_assign_ ke sebuah variable.
 
-contoh function bisa di _passing_ ke function lain sebagai _argument_.
+- **Function di _passing_ ke function lain sebagai _argument_**
 
 ```javascript
 function printMessage() {
@@ -239,7 +239,7 @@ function tanpaParamater() {
 tanpaParamater('Budi', '35', 'Pria');
 ```
 
-contoh function bisa di return dari function
+- **Function bisa di return dari function**
 
 ```javascript
 function printName(prefix) {
@@ -263,7 +263,7 @@ console.log(msg);
 // Output: Hello Mr. Budi!
 ```
 
-contoh function di-_assign_ ke variable
+-  **Function di-_assign_ ke variable**
 
 ```javascript
 const printName = function(name) {
@@ -281,7 +281,7 @@ printTitle();
 // Output: S.kom
 ```
 
-Karena di JavaScript function itu _first-class_ object, maka akan kita temui banyak sekali berbagai operasi dan penggunaannya
+Karena di JavaScript function itu _first-class_ object, maka akan kita temui banyak sekali berbagai operasi dan penggunaannya. Oleh karena itu wajib banget latihan terus membuat function dengan berbagai variasi dan contoh-contoh seperti diatas agar semakin faham dan terbiasa.
 
 ### Pure Function
 ...
