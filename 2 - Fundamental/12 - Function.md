@@ -43,7 +43,7 @@ kemudian fungsi ini kita panggil dengan memberi input ```x``` sebuah angka
 f(5) = 2 * 5 + 1 = 11
 ```
 
-Dimana angka ```11``` diatas adalah _output_ yang dihasilkan oleh fungsi ```f```. Kalau kita tulis ke JavaScript kira-kira jadi seperti ini:
+Angka ```11``` diatas adalah _output_ yang dihasilkan oleh fungsi ```f```. Kalau kita tulis ke JavaScript kira-kira jadi seperti ini:
 
 ```javascript
 function f(x) {
@@ -125,7 +125,7 @@ Bisa terlihat kalau penyusunan code kedalam _function-function_ membuat code leb
 
 ### Statement ```return```
 
-Hal yang umum saat membuat function adalah kita tulis juga statement ```return``` di akhir sebuah function._return_ value. Statement ```return``` normalnya digunakan untuk men-_stop_ eksekusi function dan me-return _value_, namun kadang juga ```return``` digunakan **hanya** untuk men-_stop_ eksekusi function seperti saat melakukan _debugging_.
+Hal yang umum saat membuat function adalah kita tulis juga statement ```return``` di akhir sebuah function. Statement ```return``` normalnya digunakan untuk men-_stop_ eksekusi function dan me-return _value_, namun kadang juga ```return``` digunakan **hanya** untuk men-_stop_ eksekusi function seperti saat melakukan _debugging_.
 
 ```javascript
 function checkStatus(score) {
@@ -165,9 +165,6 @@ console.log(login);
 
 // Output: undefined
 ```
-
-
-
 
 ### Function Paramater & Argument
 
@@ -212,7 +209,20 @@ printNumber(add(10, 10));
 // Output : 20
 ```
 
+Di javascript function tanpa paramater-pun bisa kita passing-kan argument dan bisa kita cek isinya apa saja dengan statement ```argument```. Perhatikan dan cobalah contoh berikut:
 
+```javascript
+function tanpaParamater() {
+  console.log(arguments); 
+  // Output: { 0: 'Budi', 1: '35', 2: 'Pria' }
+  console.log(arguments.length);
+  // Output: 3
+  console.log(arguments[0]); 
+  // Output: Budi
+}
+
+tanpaParamater('Budi', '35', 'Pria');
+```
 
 
 contoh function bisa di return sebagai _value_
