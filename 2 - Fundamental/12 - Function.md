@@ -83,7 +83,7 @@ console.log(e);
 // Output: 20
 ```
 
-Sangat jelas terlihat bedanya, dengan function code diatas menjadi lebih terstruktur dan bisa di panggil berulang kali dengan paramater yang lebih dinamis.
+Sangat jelas terlihat bedanya, dengan function code diatas menjadi lebih terstruktur dan bisa di panggil berulang kali dengan _argument_ yang lebih dinamis.
 
 Contoh lagi yang lebih _real_ misal kita membuat fitur untuk mengelola _Account_ dalam aplikasi. Kita bisa susun
 proses-proses yang terjadi kedalam sebuah file dengan function-function yang sesuai.
@@ -127,10 +127,10 @@ Bisa terlihat kalau penyusunan code kedalam _function-function_ membuat code leb
 ### Function Paramater & Argument
 
 Paramater dalam sebuah function adalah variable yang gunakan untuk menampung sebuah value, sedangkan **Argument**
-adalah si _value_ nya itu sendiri yang di kirim ke function. Bisa kita terlihat dalam ilustrasi dibawah
+adalah si _value_ nya itu sendiri yang di kirim ke function. Agar lebih mudah difahami, perhatikan ilustrasi dibawah
 
 <div align="center">
- <img width="460" alt="Function" src="https://github.com/user-attachments/assets/b7471cb8-ba3c-47d0-8708-990ba0c96e67">
+ <img width="460" alt="Function" src="https://github.com/user-attachments/assets/0e0df713-feda-4182-85e2-a4cccd6579d8">
 </div>
 
 ### Function Sebagai Object
