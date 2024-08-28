@@ -61,7 +61,7 @@ console.log(e);
 
 Sangat jelas terlihat bedanya, dengan function code diatas menjadi lebih terstruktur dan bisa di panggil berulang kali dengan paramater yang lebih dinamis.
 
-Contoh lagi yang lebih real misal kita membuat fitur untuk mengelola _Account_ dalam aplikasi. Kita bisa susun
+Contoh lagi yang lebih _real_ misal kita membuat fitur untuk mengelola _Account_ dalam aplikasi. Kita bisa susun
 proses-proses yang terjadi kedalam sebuah file dengan function-function yang sesuai.
 
 Misal kita buat sebuah file ```account.js``` dengan isi seperti:
@@ -76,12 +76,11 @@ function registerUser(form) {
   };
 
   let save = submitToServer(user);
-
-  if (save === true) {
+  if (save) {
     return 'Register berhasil';
   }
 
-  return 'Register gagal';
+  return 'Register gagal. Silahkan coba lagi';
 }
 
 function doLogin(username, password) {
@@ -91,7 +90,7 @@ function doLogin(username, password) {
     return 'login success';
   }
 
-  return 'login failed';
+  return 'Username atau password salah';
 }
 
 function doLogout() {
@@ -99,12 +98,19 @@ function doLogout() {
 }
 ```
 
+Bisa terlihat kalau penyusunan code kedalam _function-function_ membuat code lebih terstruktur, mudah dibaca, di modifikasi dan di _refactor_.
+
+### Function Paramater & Argument
+
+Paramater dalam sebuah function adalah variable yang gunakan untuk menampung sebuah value. Sementara **Argument**
+adalah si _value_ nya itu sendiri. Bisa kita terlihat dalam ilustrasi dibawah
+
 ### Function Sebagai Object
 
 Di JavaScript, function adalah ```first-class``` object. Artinya function itu bisa di _pass_ ke function lain atau
 di _return_ sebagai sebuah value.
 
-contoh function bisa di pass ke function lain sebagai _argument_.
+contoh function bisa di _pass_ ke function lain sebagai _argument_.
 
 ```javascript
 
