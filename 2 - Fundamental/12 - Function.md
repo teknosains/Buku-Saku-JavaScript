@@ -108,8 +108,8 @@ function registerUser(form) {
 
 function doLogin(username, password) {
   // pura-pura nya get data ke DB
-  let account = getDataFromServer(username, password);
-  if (account.exist) {
+  let verify = verifyAccout(username, password);
+  if (verify) {
     return 'login success';
   }
 
