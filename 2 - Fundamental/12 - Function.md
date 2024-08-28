@@ -125,7 +125,7 @@ Bisa terlihat kalau penyusunan code kedalam _function-function_ membuat code leb
 
 ### Statement ```return```
 
-Hal yang umum saat membuat function adalah kita tulis juga statement ```return``` di akhir sebuah function. Statement ```return``` normalnya digunakan untuk men-_stop_ eksekusi function dan me-return _value_, namun kadang juga ```return``` digunakan **hanya** untuk men-_stop_ eksekusi function seperti saat melakukan _debugging_.
+Hal yang umum saat membuat function adalah kita tulis juga statement ```return``` di akhir function. Statement ```return``` normalnya digunakan untuk men-_stop_ eksekusi function dan me-return _value_-nya, namun kadang juga ```return``` digunakan **hanya** untuk men-_stop_ eksekusi function seperti saat melakukan _debugging_.
 
 ```javascript
 function checkStatus(score) {
