@@ -54,7 +54,6 @@ console.log(f(5));
 // Output: 11
 ```
 
-
 Saat coding, Function kita buat saat code-code yang kita tulis dirasa butuh untuk dijadikan satu proses sendiri yang bisa di panggil berkali-kali. Ini juga membuat code kita menjadi lebih terstruktur dan mudah dibaca.
 
 ```javascript
@@ -124,6 +123,52 @@ function doLogout() {
 
 Bisa terlihat kalau penyusunan code kedalam _function-function_ membuat code lebih terstruktur, mudah dibaca, di modifikasi dan di _refactor_.
 
+### Statement ```return```
+
+Hal yang umum saat membuat function adalah kita tulis juga statement ```return``` di akhir sebuah function._return_ value. Statement ```return``` normalnya digunakan untuk men-_stop_ eksekusi function dan me-return _value_, namun kadang juga ```return``` digunakan **hanya** untuk men-_stop_ eksekusi function seperti saat melakukan _debugging_.
+
+```javascript
+function checkStatus(score) {
+  if (score > 70) {
+    return 'Lulus';
+  }
+
+  return 'Tidak lulus';
+}
+```
+
+```return``` saat digunakan untuk _debug_
+
+```javascript
+function doLogin(username, password) {
+  if (username !== '') {
+    console.log('masuk sini');
+    return;
+    // code dibawah gk akan di eksekusi
+    let check = checkToServer(username, password);
+    // ...
+  }
+
+  return 'Malah masuk sini';
+}
+```
+
+Function juga sah-sah saja meski tidak punya statement ```return```. Namun jika tidak ada statement ```return``` nya, by default JavaScript sebenarnya akan me-return ```undefined```. Kita bisa buktikan behaviour ini dengan cara berikut
+
+```javascript
+function doLogin() {
+  // kosongin aja  
+}
+
+let login = doLogin();
+console.log(login);
+
+// Output: undefined
+```
+
+
+
+
 ### Function Paramater & Argument
 
 Paramater dalam sebuah function adalah variable yang gunakan untuk menampung sebuah value, sedangkan **Argument**
@@ -165,8 +210,10 @@ function add(a, b) {
 printNumber(add(10, 10));
 
 // Output : 20
-
 ```
+
+
+
 
 contoh function bisa di return sebagai _value_
 
