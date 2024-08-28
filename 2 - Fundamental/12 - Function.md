@@ -208,6 +208,22 @@ printNumber(add);
 // Output : 20
 ```
 
+Sering juga orang (termasuk kami :D) menulis seperti ini, langsung masukin function nya _as argument_
+
+```javascript
+setTimeout(function () {
+  console.log('Hello World!');
+}, 3000);
+
+// 3 detik kemudian:
+// Output : Hello World!
+
+let button = document.getElementById('button');
+button.addEventListener('click', function () {
+  alert('Hello World!');
+});
+```
+
 Di javascript function tanpa paramater-pun bisa kita passing-kan argument dan bisa kita cek isinya apa saja dengan statement ```argument```. Perhatikan dan cobalah contoh berikut:
 
 ```javascript
@@ -246,6 +262,26 @@ let msg = printName('Mr.')('Budi');
 console.log(msg);
 // Output: Hello Mr. Budi!
 ```
+
+contoh function di-_assign_ ke variable
+
+```javascript
+const printName = function(name) {
+  console.log(name);
+}
+
+printName('Budi');
+// Output: Budi
+
+let printTitle = function(title) {
+  console.log('S.kom');
+}
+
+printTitle();
+// Output: S.kom
+```
+
+Karena di JavaScript function itu _first-class_ object, maka akan kita temui banyak sekali berbagai operasi dan penggunaannya
 
 ### Pure Function
 ...
