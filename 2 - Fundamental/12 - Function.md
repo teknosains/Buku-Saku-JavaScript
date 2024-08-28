@@ -105,6 +105,12 @@ Bisa terlihat kalau penyusunan code kedalam _function-function_ membuat code leb
 Paramater dalam sebuah function adalah variable yang gunakan untuk menampung sebuah value. Sementara **Argument**
 adalah si _value_ nya itu sendiri. Bisa kita terlihat dalam ilustrasi dibawah
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/f442150d-c1e2-4230-b52c-6e0c49563e71" 
+  width="460"
+  />
+</div>
+
 ### Function Sebagai Object
 
 Di JavaScript, function adalah ```first-class``` object. Artinya function itu bisa di _pass_ ke function lain atau
