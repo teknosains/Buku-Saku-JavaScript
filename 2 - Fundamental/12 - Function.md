@@ -106,9 +106,7 @@ Paramater dalam sebuah function adalah variable yang gunakan untuk menampung seb
 adalah si _value_ nya itu sendiri. Bisa kita terlihat dalam ilustrasi dibawah
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/f442150d-c1e2-4230-b52c-6e0c49563e71" 
-  width="460"
-  />
+ <img width="460" alt="Function" src="https://github.com/user-attachments/assets/442489e9-e53d-42c0-94a0-aa633ba2d843">
 </div>
 
 ### Function Sebagai Object
