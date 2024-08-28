@@ -6,10 +6,10 @@ Dikatakan _reusable_ karena dapat dijalankan kembali kapan saja dan dimana saja 
 Kita sudah sering lihat dan pakai contoh ```built-in``` function di browser seperti
 
 ```javascript
-alert('Hello world!');
+alert('Hi JS!');
 prompt('Masukan nama kamu:');
 confirm('Apakah kamu yakin?');
-console.log('Hello world!');
+console.log('Hi JS!');
 ```
 Dan kedepan kitapun harus terbiasa membuat dan menggunakan ```function``` buatan sendiri. 
 
@@ -183,13 +183,13 @@ Di JavaScript, function adalah ```first-class``` object. Artinya function itu bi
 
 ```javascript
 function printMessage() {
-  console.log('Hello World!');
+  console.log('Hi JS!');
 }
 
 setTimeout(printMessage, 3000);
 
 // 3 detik kemudian:
-// Output: Hello World!
+// Output: Hi JS!
 ```
 
 contoh lain:
@@ -212,15 +212,15 @@ Sering juga orang (termasuk kami :D) menulis seperti ini, langsung masukin funct
 
 ```javascript
 setTimeout(function () {
-  console.log('Hello World!');
+  console.log('Hi JS!');
 }, 3000);
 
 // 3 detik kemudian:
-// Output: Hello World!
+// Output: Hi JS!
 
-let button = document.getElementById('button');
-button.addEventListener('click', function () {
-  alert('Hello World!');
+let btn = document.getElementById('button');
+btn.addEventListener('click', function () {
+  alert('Hi JS!');
 });
 ```
 
