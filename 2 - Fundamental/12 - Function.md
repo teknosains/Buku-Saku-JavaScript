@@ -189,7 +189,7 @@ function printMessage() {
 setTimeout(printMessage, 3000);
 
 // 3 detik kemudian:
-// Output : Hello World!
+// Output: Hello World!
 ```
 
 contoh lain:
@@ -205,7 +205,7 @@ function add(a, b) {
 
 printNumber(add);
 
-// Output : 20
+// Output: 20
 ```
 
 Sering juga orang (termasuk kami :D) menulis seperti ini, langsung masukin function nya _as argument_
@@ -216,7 +216,7 @@ setTimeout(function () {
 }, 3000);
 
 // 3 detik kemudian:
-// Output : Hello World!
+// Output: Hello World!
 
 let button = document.getElementById('button');
 button.addEventListener('click', function () {
