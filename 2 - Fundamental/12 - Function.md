@@ -15,7 +15,7 @@ Dan kedepan kitapun harus terbiasa membuat dan menggunakan ```function``` buatan
 
 sintaks:
 
-function tanpa parameter
+Function tanpa parameter
 
 ```javascript
 function functionName() {
@@ -23,7 +23,7 @@ function functionName() {
 }
 ```
 
-function dengan parameter
+Function dengan parameter
 
 ```javascript
 function functionName(param1, param2, ...) {
@@ -33,15 +33,11 @@ function functionName(param1, param2, ...) {
 
 Konsep function sangat mirip seperti function atau _fungsi_ yang kita pelajari dalam Matematika. Dimana sebuah fungsi biasa menerima _input_, memprosesnya lalu menghasilkankan _output_. Misal fungsi matematika berikut 
 
-```math
-f(x) = 2x + 1
-```
+&emsp;<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><mn>2</mn><mi>x</mi><mo>&#xA0;</mo><mo>+</mo><mo>&#xA0;</mo><mn>1</mn></math>
 
-kemudian fungsi ini kita panggil dengan memberi input ```x``` sebuah angka
+kemudian fungsi ini kita panggil dengan memberi input <math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi></math> sebuah angka
 
-```math
-f(5) = 2 * 5 + 1 = 11
-```
+&emsp;<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi><mo>(</mo><mn>5</mn><mo>)</mo><mo>=</mo><mn>2</mn><mo>&#x2217;</mo><mn>5</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>11</mn></math>
 
 Angka ```11``` diatas adalah _output_ yang dihasilkan oleh fungsi ```f```. Kalau kita tulis ke JavaScript kira-kira jadi seperti ini:
 
@@ -137,7 +133,7 @@ function checkStatus(score) {
 }
 ```
 
-```return``` saat digunakan untuk _debug_
+Statement ```return``` saat digunakan untuk _debug_
 
 ```javascript
 function doLogin(username, password) {
