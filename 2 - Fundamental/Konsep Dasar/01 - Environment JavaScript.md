@@ -1,5 +1,5 @@
 ## Environment JavaScript
-Kita bisa bilang Environment JavaScript adalah tempat dimana code JavaScript bisa dijalankan. Saat ini minimal ada 3 environment yang wajib kita ketahui yaitu
+Kita bisa bilang Environment JavaScript adalah tempat dimana code JavaScript bisa dijalankan. Ada beberapa environment yang wajib kita ketahui yaitu
 
 * Browser environment
 * Node environment
