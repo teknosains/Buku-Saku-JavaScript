@@ -15,20 +15,30 @@ Dan kedepan kitapun harus terbiasa membuat dan menggunakan ```function``` buatan
 
 sintaks:
 
-Function tanpa parameter
-
 ```javascript
+// tanpa parameter
+
 function functionName() {
-  // code
+  // body
+}
+
+// dengan parameter
+
+function functionName(param1, param2, ...) {
+  // body
 }
 ```
 
-Function dengan parameter
+Agar sebuah function bisa jalan atau melakukan tugasnya tentu saja harus dipanggil dulu. Dibawah adalah contoh cara _call_ sebuah function.
 
 ```javascript
-function functionName(param1, param2, ...) {
-  // code
+function functionName(param1) {
+  console.log('Hi JS!');
 }
+
+functionName(); // call
+
+// Output: Hi JS!
 ```
 
 Konsep function sangat mirip seperti function atau _fungsi_ yang kita pelajari dalam Matematika. Dimana sebuah fungsi biasa menerima _input_, memprosesnya lalu menghasilkankan _output_. Misal fungsi matematika berikut 
