@@ -103,7 +103,7 @@ juga value nya adalah sebuah object. Kemudian property ```address``` masih punya
 
 ### Mengakses Property Object
 
-_Properties_ object dapat di akses dengan menggunakan _dot notation_ dan _bracket notation_.
+_Properties_ object dapat di akses dengan menggunakan _dot notation_ atau _bracket notation_.
 
 Mengakses object dengan _dot notation_
 
@@ -212,6 +212,35 @@ if (user.hasOwnProperty('email')) {
 if (user.email !== undefined) {
   console.log(user.email);
 }
+```
+
+#### Mengakses Property Object Dengan ```Destructuring```
+
+Cara lainnya untuk mengekases property sebuah object adalah dengan menggunakan ```Destructuring``` dengan sintaks:
+
+```javascript
+let { key1, key2, ... } = object
+```
+
+Misal property pada contoh object berikut
+
+```javascript
+let user = {
+  name: 'Budi',
+  age: 33,
+  address: {
+    city: 'Jakarta',
+  }
+};
+```
+dapat diakses dengan cara ```destructuring``` seperti berikut:
+
+```javascript
+let { name, age, address } = user;
+
+console.log(name); // Budi
+console.log(age); // 33
+console.log(address); // { city: "Jakarta" }
 ```
 
 #### Mengakses Property Object Dengan ```for-in```
