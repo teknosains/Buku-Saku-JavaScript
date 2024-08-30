@@ -38,10 +38,7 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * [Loop](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/09%20-%20Loop.md)
   * [Object](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/10%20-%20Object.md)
   * [Array](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/11%20-%20Array.md)
-  * Function
-  * Arrow Function
-  * Callback Function
-  * Constructor Function
+  * [Function](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/12%20-%20Function.md)
   * Class
 * DOM Dan Events Di Browser
   * Basic DOM
@@ -49,6 +46,10 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
 
 #### Chapter 2
 
+* Function Lanjutan Part 1
+  * Callback Function
+  * Constructor Function
+  * IIFE (Immediately Invoked Function Expression)
 * DOM Dan Events Di Browser Lanjutan  
   * Event Bubbling
   * Event Delegation
@@ -81,8 +82,7 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * Reference Object
   * Cloning Object
   * Freeze Object
-* Function Lanjutan
-  * IIFE (Immediately Invoked Function Expression)
+* Function Lanjutan Part 2
   * Function Binding
   * Function Generator
   * Function Composition
