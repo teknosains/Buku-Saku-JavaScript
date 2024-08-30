@@ -288,6 +288,8 @@ printTitle();
 // Output: S.kom
 ```
 
+Penulisan function ke sebuah variable disebut juga dengan istilah _function expression_.
+
 Karena di JavaScript function itu _first-class_ object, maka akan kita temui banyak sekali berbagai operasi dan penggunaannya. Oleh karena itu wajib banget latihan terus membuat function dengan berbagai variasi dan contoh-contoh seperti diatas agar semakin faham dan terbiasa.
 
 ### Mengenal istilah Pure Function
@@ -461,12 +463,8 @@ Pada versi ini, function ```makeAnimal()``` membuat object baru menggunakan _spr
 
 Antara _Pure Function_ dan _Impure Function_ keduanya sebenarnya bukan untuk diperbandingkan dan bukan pula yang satu lebih baik dari yang lain. Keduanya digunakan sesuai dengan use-case nya (yang tepat) masing-masing.
 
-
+> Notes: Karena materi mengenai Function sudah pasti panjang, kami kembali menyarankan agar mengulang semua materi Function diatas dan mencoba nya sendiri sebelum lanjut ke pembahsan Function selanjutnya.
 
 ### Arrow Function
-...
 
-### Callback Function
-...
-
-### Constructor Function
+Arrow function adalah 
