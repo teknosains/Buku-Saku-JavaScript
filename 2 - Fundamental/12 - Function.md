@@ -174,7 +174,7 @@ console.log(login);
 
 ### Function Paramater & Argument
 
-Paramater dalam sebuah function adalah variable yang gunakan untuk menampung sebuah value, sedangkan **Argument**
+Paramater dalam sebuah function adalah variable yang digunakan untuk menampung sebuah value, sedangkan **Argument**
 adalah si _value_ nya itu sendiri yang di kirim ke function. Agar lebih mudah difahami, perhatikan ilustrasi dibawah
 
 <div align="center">
