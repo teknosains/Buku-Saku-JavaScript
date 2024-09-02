@@ -18,6 +18,9 @@ Kini JS menjadi _lingua franca_ nya Web dan semua browser yang ada "_wajib_" men
 
 JS saat ini adalah satu satu bahasa pemrograman paling populer di dunia dengan _demand_ yang tinggi baik dibidang Frontend ataupun backend. Lowongan kerja untuk mereka para programmer JavaScript sudah tentu sangat banyak dan terus meningkat, inilah mengapa JavaScript adalah pilihan paling menjanjikan untuk kamu
 
+<div align="center">
+<img width="464" alt="Bahasa Pemrogramman Ter-populer 2022" src="https://user-images.githubusercontent.com/3906229/210478432-bf7806a8-def4-4781-9683-88d12f656f95.PNG">
+</div>
 
-![top-languange-2022](https://user-images.githubusercontent.com/3906229/210478432-bf7806a8-def4-4781-9683-88d12f656f95.PNG)
 <p align="center"><i>Bahasa Pemrogramman Ter-populer 2022. Sumber: octoverse.github.com</i></p>
+
