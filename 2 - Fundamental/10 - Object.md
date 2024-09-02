@@ -472,7 +472,7 @@ console.log(user2.name);
 
 Konsep _copy by-reference_ pada object ini sangat penting untuk di fahami, oleh karena itu sebaiknya kamu juga sekalian coba langsung contoh diatas yah.
 
-Kalau begitu bagaimana jika kita hanya ingin men-duplikat object nya saja? (bukan copy reference nya). Ada beberapa cara untuk melakukannya diantaranya adalah
+Kalau begitu bagaimana jika kita hanya ingin men-duplikat object nya saja? (bukan copy reference nya) sehingga meski object aslinya di modif, tidak akan pengaruh ke object _cloningan_-nya. Ada beberapa cara untuk melakukannya diantaranya adalah
 
 - Menggunakan ```Object.assign()```
 
