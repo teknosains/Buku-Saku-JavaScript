@@ -414,6 +414,118 @@ console.log(serial.serialRating);
 // Output: Dapat bintang 4
 ```
 
-Computed property tidak usah terlalu dipusingkan dulu karena seujujur nya memang cukup jarang ketemu _case_ yang
-mengharuskan pakai computed property. Nanti saat kita membuat aplikasi yang kompleks, baru kita akan
+Computed property tidak usah terlalu dipusingkan dulu karena seujujur nya memang cukup jarang ketemu _case_ yang mengharuskan pakai computed property. Nanti saat kita membuat aplikasi yang kompleks, baru kita akan
 ketemu _case_ yang mungkin harus pakai computed property.
+
+### Bagaimana Object Disimpan Di Memory
+
+Object di JavaScript disimpan di memory menggunakan _reference_. Maksudnya adalah ketika kita me-assign object ke sebuah variable, si variable itu akan memiliki _reference_ ke object yang ada di memory atau bisa dibilang si variable itu "tahu" dimana alamat si object tadi di memory.
+
+Perhatikan contoh berikut:
+
+```javascript
+let user = {
+  name: "Budi",
+  age: 33,
+};
+```
+
+Diatas kita punya sebuah _object_ ```{ name: "Budi", age: 33 }``` yang di assign ke variable ```user```. Ini artinya si object-nya sendiri disimpan oleh si _JavaScript Engine_ disuatu lokasi di memory, dan tidak ada yang tahu lokasinya dimana kecuali si variable ```user```. Dengan kata lain si variable ```user``` ini punya _reference_ atau _pointer_ ke lokasi memory tempat si object ```{ name: "Budi", age: 33 }``` disimpan.
+
+Maka ketika kita akses property nya misal ```user.name```, si _JavaScript Engine_ akan mencari alamat memory nya dimana dan ambil value dari object-nya.
+
+Nah karena behaviour object ini, satu hal yang **sangat penting** untuk di perhatikan yaitu ketika variable sebuah object di _copy_ ke variable lain, maka yang sebenarnya di copy itu bukan object-nya melainkan si _reference_ nya.
+
+Coba kita ulang, object diatas ```{ name: "Budi", age: 33 }``` saat ini hanya variable ```user``` saja yang tahu keberadaanya dimana di memory. Jika kita putuskan misal variable ```user2``` juga harus tahu keberadaanya dimana maka kita lakuan operasi _copy_ seperti ini.
+
+```javascript
+let user = {
+  name: "Budi",
+  age: 33,
+};
+
+let user2 = user; // copy reference-nya
+```
+Sekarang (lihat contoh diatas) artinya si object-nya sendiri **tetap satu** (tidak di copy / duplikat), namun sekarang variable ```user2``` juga tahu alamat atau lokasi object ```{ name: "Budi", age: 33 }``` di memory karena yang di copy dari ```user``` adalah _reference_ nya saja. Agar lebih terbayang, perhatikan ilustrasi berikut:
+
+<img width="564" alt="Object reference3" src="https://github.com/user-attachments/assets/b7755633-c935-4229-9645-9c3ca727a647">
+
+Terlihat bahwa sekarang masing-masing variable ```user``` dan ```user2``` sama-sama punya _reference_ ke object yang sama yaitu ```{ name: "Budi", age: 33 }```. Dan keduanya pun akan punya akses yang sama ke object itu.
+
+```javascript
+console.log(user.name); 
+// Output: Budi
+console.log(user2.name);
+// Output: Budi 
+```
+
+Karena yang di copy adalah _reference_ nya, maka **jika ada modifikasi** object oleh salah satu variable maka yang lain pun akan ikut berubah. Bisa terlihat pada contoh berikut:
+
+```javascript
+user.name = "Agus";
+
+console.log(user.name); 
+// Output: Agus
+console.log(user2.name);
+// Output: Agus
+```
+
+Konsep _copy by-reference_ pada object ini sangat penting untuk di fahami, oleh karena itu sebaiknya kamu juga sekalian coba langsung contoh diatas yah.
+
+Kalau begitu bagaimana jika kita hanya ingin men-duplikat object nya saja? (bukan copy reference nya). Ada beberapa cara untuk melakukannya diantaranya adalah
+
+- Menggunakan ```Object.assign()```
+
+  ```javascript
+  let user = {
+    name: "Budi",
+    age: 33,
+  };
+
+  let user2 = {};
+
+  Object.assign(user2, user);
+
+  // misal modif dikit
+  user.name = "Agus";
+
+  console.log(user); 
+  // Output: { age: 33, name: "Agus" }
+  console.log(user2); 
+  // Output: {  age: 33, name: "Budi" }
+  ```
+
+  Terlihat bahwa sekarang variable ```user2``` sudah punya object nya sendiri hasil _clone_ dari object ```user```.
+
+- Menggunakan ```structuredClone()``` khusus untuk nested object
+
+  Jika object kita cukup kompleks yaitu punya nested object satu level, dua level, dan seterusnya, maka tidak bisa pakai ```Object.assign()``` seperti diatas. Ini karena setiap nested object akan juga di copy by-reference yang membuat behaviour nya akan sama seperti pada **_ilustrasi object-001_** diatas.
+  
+  Untuk case ini, kita bisa menggunakan function ```structuredClone()``` untuk membuat meng-_clone_ object-nya.
+
+  ```javascript
+  let user = {
+    name: "Budi",
+    age: 33,
+    address: {
+      city: "Jakarta",
+      province: "DKI",
+
+    },
+  };
+
+  let user2 = structuredClone(user);
+  ```
+- Menggunakan spread operator ```...obj```
+
+  ```javascript
+  let user = {
+    name: "Budi",
+    age: 33,
+  };
+
+  let user2 = { ...user };
+  ```
+
+
+Materi tentang Object di bab Fundamental inisudah selesai, baiknya di baca ulang dan di coba lagi sendiri sampai betul-betul dikuasasi. Pembahasan tentang Object (yang lebih advance) sendiri masih akan berlanjut di chapter-chapter berikutnya.
