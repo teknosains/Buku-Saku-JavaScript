@@ -48,6 +48,7 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
 #### Chapter 2
 
 * Function Lanjutan Part 1
+  * Arrow Function Lanjutan
   * Callback Function
   * Constructor Function Lanjutan
   * IIFE (Immediately Invoked Function Expression)
