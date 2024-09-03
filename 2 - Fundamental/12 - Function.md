@@ -465,6 +465,211 @@ Antara _Pure Function_ dan _Impure Function_ keduanya sebenarnya bukan untuk dip
 
 > Notes: Karena materi mengenai Function sudah pasti panjang, kami kembali menyarankan agar mengulang semua materi Function diatas dan mencoba nya sendiri sebelum lanjut ke pembahsan Function selanjutnya.
 
+
+### Function Expression
+
+Kita sudah mengetahui bahwa Function adalah ```first-class``` object di JavaScript yang salah satu cirinya adalah bahwa function bisa di _assign_ ke variable. Kemampuan ini juga disebut sebagai ```Function Expression```, bertambah lagi istilah yang harus kita hafal, tapi disinilah justru letak seni nya kita belajar fundamental.
+
+Yang kita sudah pelajari dari potongan-potongan contoh diatas kebanyakannya adalah kita membuat function dengan ```Function Declaration```. Yaitu ketika membuat function dengan sintaks ```function functionName() { ... }```
+
+```javascript
+// Function Declaration
+
+function printMessage(name) {
+  return `Hi, ${name}. Selamat Datang!`;
+}
+```
+
+Adapun ```Function Expression```, kita bisa gunakan keyword ```var```, ```let``` dan ```const``` untuk deklarasi variable nya kemudian me-assign function nya. Perhatikan contoh berikut:
+
+```javascript
+const printMessage = function (name) {
+  return `Hi, ${name}. Selamat Datang!`;
+};
+
+console.log(printMessage('Budi'));
+// Output: Hi, Budi. Selamat Datang!
+
+let printTitle = function (title) {
+  return `Gelar: ${title}`;
+};
+
+console.log(printTitle('Sarjana'));
+// Output: Gelar: Sarjana
+```
+
+Kita bebas membuat function dengan ```Function Declaration``` atau ```Function Expression``` namun yang yang diperhatikan adalah adanya perbedaan kondisi _hoisting_ (lihat materi ```Konsep Dasar > Mengenal Scope di JavaScript```) pada _function declaration_ dan _function expression_. Function expression tidak di ```hoisting``` sehingga hanya bisa di panggil **setelah di definisikan**.
+
+```javascript
+let printTitle = function (title) {
+  return `Gelar: ${title}`;
+};
+
+console.log(printTitle('Sarjana'));
+// Output: Gelar: Sarjana
+```
+
+Dalam contoh ini, function ```printTitle``` hanya bisa di panggil setelah ```printTitle``` di definisikan. Jika tidak, maka akan error seperti ini
+
+```javascript
+console.log(printTitle('Sarjana'));
+
+let printTitle = function (title) {
+  return `Gelar: ${title}`;
+};
+
+// Output: ReferenceError: Cannot access 'printTitle' 
+//         before initialization
+```
+
+Berbeda dengan Function Declaration yang di ```hoisting```, function ```printTitle``` bisa di panggil bahkan **sebelum** ```printTitle``` di definisikan. 
+
+```javascript
+console.log(printTitle('Sarjana'));
+
+function printTitle(title) {
+  return `Gelar: ${title}`;
+}
+
+// Output: Gelar: Sarjana
+```
+
+Berikutnya, Function Expression juga bisa di tulis menggunakan ```Arrow Function``` yang akan kita bahas secara khusus dibawah ini
+
 ### Arrow Function
 
-Arrow function adalah 
+Arrow function adalah alternatif lain ketika membuat function menggunakan function expression. Seperti _nama_-nya, arrow function menggunakan operator ```=>```, sudah tidak lagi menggunakan statement ```function```.
+
+Beberapa sintaks ```Arrow Function``` yang bisa digunakan
+
+```javascript
+
+// tanpa parameter
+
+const functionName = () => {
+  // code...
+}
+
+// dengan satu parameter
+
+const functionName = param => {
+  // code...
+}
+
+// dengan parameter lebih dari satu
+
+const functionName = (param1, param2, ...) => {
+  // code...
+}
+```
+
+Misal kita punya function expression berikut
+
+```javascript
+const printMessage = function (name) {
+  return `Hi, ${name}. Selamat Datang!`;
+};
+```
+
+Maka kita bisa buat / konversi ke bentuk arrow function menjadi
+
+```javascript
+const printMessage = (name) => {
+  return `Hi, ${name}. Selamat Datang!`;
+};
+```
+
+Ketika expression nya pendek atau satu baris saja, arrow function bisa di tulis tanpa kurung ```{ }```.  Perhatikan contoh berikut
+
+```javascript
+let add = (a, b) => {
+  return a + b;
+};
+```
+
+Kita bisa ubah kedalam bentuk arrow function tanpa ```{ }``` menjadi seperti ini
+
+```javascript
+let add = (a, b) => a + b;
+
+console.log(add(10, 10));
+// Output: 20
+```
+
+Perhatikan bahwa statement ```return``` dan kurung ```{ }``` dihilangkan, menjadikan penulisan nya lebih singkat. Namun bagi sebagian orang, mungkin penulisan seperti itu bukan pilihan utama dan memang bagi pemula bisa cukup membingungkan. Jadi tidak ada masalah jika kita lebih _prefer_ menuliskan ```return``` dan ```{ }``` nya
+
+```javascript
+let add = (a, b) => {
+  return a + b;
+};
+```
+
+karena penulisan seperti diatas cukup memberikan flexsibilitas dan lebih terlihat "familiar" bagi semua orang.
+
+Karena _simplicity_-nya juga, arrow function menjadi favorit banyak developer JavaScript dan paling sering digunakan sebagai _callback_ function. Perhatikan contoh berikut:
+
+```javascript
+setTimeout(function () {
+  console.log('Hi JS!');
+}, 3000);
+```
+
+Penulisan diatas bisa ditulis kedalam bentuk arrow function seperti ini
+
+```javascript
+setTimeout(() => {
+  console.log('Hi JS!');
+}, 3000);
+
+// 3 detik kemudian:
+// Output: Hi JS!
+```
+
+contoh lagi, arrow function banyak digunakan sebagai callback untuk method-method ```built-in``` dalam ```Array```.
+
+```javascript
+let arr = [1, 2, 3, 4, 5];
+
+let arr2 = arr.map((val) => val + 1);
+
+console.log(arr2);
+// Output: [2, 3, 4, 5, 6]
+```
+
+contoh lagi
+
+```javascript
+let data = [
+  { name: "Budi", age: 33 },
+  { name: "Ahmad", age: 27 },
+  { name: "Siti", age: 30 },
+];
+
+let data2 = data.filter((val) => val.age > 30);
+
+console.log(data2);
+// Output: [{ name: "Budi", age: 33 }]
+```
+
+contoh satu lagi
+
+```javascript
+let data2 = data.map((val, index) => {
+  return {
+    ...val,
+    country: "Indonesia",
+    no: index + 1,
+  }
+});
+
+console.log(data2);
+// Output:
+
+/*
+[{name: 'Budi', age: 33, country: 'Indonesia', no: 1},
+{name: 'Ahmad', age: 27, country: 'Indonesia', no: 2},
+{name: 'Siti', age: 30, country: 'Indonesia', no: 3}]
+*/
+```
+
+Sekarang kamu bisa mulai perbanyak dan membiasakan memakai arrow function saat membuat _callback_ function terutama saat bermain dengan method-method ```built-in``` di ```Array```
