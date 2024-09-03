@@ -39,6 +39,7 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * [Object](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/10%20-%20Object.md)
   * [Array](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/11%20-%20Array.md)
   * [Function](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/12%20-%20Function.md)
+  * Constructor Function
   * Class
 * DOM Dan Events Di Browser
   * Basic DOM
@@ -48,7 +49,7 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
 
 * Function Lanjutan Part 1
   * Callback Function
-  * Constructor Function
+  * Constructor Function Lanjutan
   * IIFE (Immediately Invoked Function Expression)
 * DOM Dan Events Di Browser Lanjutan  
   * Event Bubbling
