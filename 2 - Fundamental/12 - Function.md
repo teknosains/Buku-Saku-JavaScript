@@ -418,7 +418,9 @@ function makeAnimal(obj) {
   return obj;
 }
 
-let originalObject = { species: 'Kucing', color: 'Coklat' };
+let originalObject = { 
+  species: 'Kucing', color: 'Coklat' 
+};
 
 let newAnimal = makeAnimal(originalObject);
 
@@ -448,7 +450,9 @@ function makeAnimal(obj) {
   };
 }
 
-let originalObject = { species: 'Kucing', color: 'Coklat' };
+let originalObject = { 
+  species: 'Kucing', color: 'Coklat'
+};
 
 let newAnimal = makeAnimal(originalObject);
 
