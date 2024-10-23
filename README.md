@@ -68,7 +68,14 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * Cookie
 
 #### Chapter 3
-
+* Object Lanjutan
+  * Reference Object
+  * Cloning Object
+  * Freeze Object
+* Function Lanjutan Part 2
+  * Function Binding
+  * Function Generator
+  * Function Composition
 * Advance Concept
   * Rest & Spread Operator
   * Promise
@@ -79,15 +86,11 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * Event loop
   * Closure
   * Design Pattern
+    * Module Pattern
+    * Revealing Module Pattern
+    * UMD Pattern
+    * Pseudo Classical Pattern
+    * Functional Pattern
   * Currying & Mixin
-* Object Lanjutan
-  * Reference Object
-  * Cloning Object
-  * Freeze Object
-* Function Lanjutan Part 2
-  * Function Binding
-  * Function Generator
-  * Function Composition
-
 ## Kontribusi
 Bantu saya memperbaiki konten, typo dan kesalahan lainnya agar series ini menjadi lebih baik. Silahkan clone dan lakukan PR (Pull Request) untuk berkontribusi memperbaiki series ini.
