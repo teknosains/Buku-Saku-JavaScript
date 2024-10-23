@@ -677,3 +677,106 @@ console.log(data2);
 ```
 
 Sekarang kamu bisa mulai perbanyak dan membiasakan memakai arrow function saat membuat _callback_ function terutama saat bermain dengan method-method ```built-in``` di ```Array```
+
+### Menulis Parameter Function Yang Efektif
+
+Ketika membuat sebuah function, sebisa mungkin jumlah paramaternya maksimal 3 parameter saja bahkan kalau bisa cukup 1 atau 2 saja. Kenapa begitu? karena function adalah sebuah _block_ code yang bisa dipanggil kembali kapanpun dan oleh siapapun. Jadi **penting** bagi kita untuk membiasakan menulis _code_ yang lebih _clean_ sehingga mudah di fahami dan mudah di _refactor_ dikemudian hari.
+
+Sebuah function yang memiliki lebih dari 3 paramater berpotensi akan sulit dibaca dan bisa jadi masalah ketika hendak di _refactor_. Contoh misal function berikut:
+
+```javascript
+
+function addProduct(name, qty, price) {
+  // ...  
+}
+
+// call
+addProduct('Madu', 10, 10000);
+```
+
+lambat laun kita akan butuh paramater lainnya sehingga kita update function kita misal menjadi seperti ini
+
+```javascript
+function addProduct(name, qty, price, category, 
+currentStock, description, expDate, isActive) {
+ // ... 
+}
+
+// call
+addProduct('Madu', 10, 10000, 'Health', 100, 
+'Madu hutan alami', '2024-01-01', true);
+```
+
+Semakin panjang paramaternya, semakin sulit untuk di _refactor_ dan makin sulit juga buat dipanggil. Bahkan sering kali kita sulit untuk tahu _value_ apa di posisi / urutan mana yang harus kita tulis sesuai dengan function-nya. Dan yang paling sering terjadi juga adalah kita bingung sendiri misal angka ```10``` diatas itu apa sih, lalu itu ```true``` itu maksudnya apa.
+
+Kalau function dan call nya berdekatan seperti contoh diatas sih mungkin tidak terlalu masalah. Tapi bagaimana misal kita function ```addProduct``` itu ada di baris paling atas sedangkan kita bisa saja baru panggil di baris ke 200. Atau misal function ```addProduct()``` itu ada di file yang berbeda atau dia misal function dari sebuah library yang kamu pakai, cukup menyulitkan dan mungkin harus bolak-balik buka function nya untuk tahu apa sih parameter yang dibutuhkan sesuai posisinya masing-masing.
+
+Solusi dari masalah ini adalah membuat paramater _object_ untuk menampung semua paramater yang banyak itu ke satu variable saja. Dengan cara ini kita bisa _refactor_ function diatas menjadi seperti ini
+
+```javascript
+/**
+ * @param {object} item
+ * jika perlu tambah details lagi di bagian comment
+ * sini item itu isi / property nya apa saja
+ */
+function addProduct(item) {
+
+  // code...
+  // modifikasi object dll
+  let data = item;
+  data.stock = item.currentStock + item.qty;
+  
+  submitToServer(data);
+
+}
+
+let item = {
+  name: 'Madu',
+  qty: 10,
+  price: 10000,
+  category: 'Health',
+  currentStock: 100,
+  description: 'Madu hutan alami',
+  expDate: '2024-01-01',
+  isActive: true
+}; 
+
+addProduct(item);
+```
+
+Atau misal jika kita ada si penulis original function ```addProduct()``` tadi, agar orang lain bisa tahu dengan mudah apa saja yang harus dikirim, kita bisa pakai _object destructuring_ (lihat lagi materi Object Desctructuring di materi pembahasan Object) seperti ini
+
+```javascript 
+/**
+ * @param {object} item
+ */
+function addProduct(item) {
+
+  // destructuring
+  const { 
+    name, qty, price, category, 
+    currentStock, description, expDate, isActive 
+  } = item;
+
+  // code...
+
+  console.log(name); // Madu
+
+  // dst...
+}
+
+let item = {
+  name: 'Madu',
+  qty: 10,
+  price: 10000,
+  category: 'Health',
+  currentStock: 100,
+  description: 'Madu hutan alami',
+  expDate: '2024-01-01',
+  isActive: true
+};  
+
+addProduct(item);
+```
+
+Terlihat jelas ketika kita refactor menjadi object, pemanggilan function nya pun menjadi lebih clean dan lebih mudah difahami. Bahkan tidak perlu khawatir soal urutan posisi property nya.
