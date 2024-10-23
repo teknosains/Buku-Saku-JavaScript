@@ -528,4 +528,4 @@ Kalau begitu bagaimana jika kita hanya ingin men-duplikat object nya saja? (buka
   ```
 
 
-Materi tentang Object di bab Fundamental inisudah selesai, baiknya di baca ulang dan di coba lagi sendiri sampai betul-betul dikuasasi. Pembahasan tentang Object (yang lebih advance) sendiri masih akan berlanjut di chapter-chapter berikutnya.
+Materi tentang Object di bab Fundamental ini sudah selesai, baiknya di baca ulang dan di coba lagi sendiri sampai betul-betul dikuasasi. Pembahasan tentang Object (yang lebih advance) sendiri masih akan berlanjut di chapter-chapter berikutnya.
