@@ -154,7 +154,7 @@ dan jika ingin logout dengan cara seperti ini:
 auth.logout();
 ```
 
-```login```, ```logout``` dalam constructor function ```Auth``` diatas adalah **method**. Dan kita bisa membuat banyak method sesuai dengan kebutuhan tentunya. Konsep method ini juga identik dengan konsep ```OOP``` di bahasa pemrograman lainnya. Misal kalau kita buat dalam ```C#```
+```login```, ```logout``` dalam constructor function ```Auth``` diatas adalah **method**. Dan kita bisa membuat banyak method sesuai dengan kebutuhan tentunya. Konsep method ini juga sangat mirip dengan konsep ```OOP``` di bahasa pemrograman lainnya. Misal kalau kita buat dalam ```C#```
 
 ```csharp
 using System;
@@ -193,6 +193,11 @@ public class Program
 ```
 
 ### Membuat Method Dengan ```Prototype```
+> Catatan: ```Prototype``` akan dibahas tersendiri secara khusus di chapter berikutnya. Pada materi constructor function ini, kamu tidak harus mengenal dalam dahulu tentang ```Prototype```
+
+..
+..lanjutkan besok
+
 
 sintaks:
 
@@ -205,6 +210,48 @@ Cfn.prototype.someMethod = function () {
   //...
 }
 ```
+
+Misal kita membuat sebuah fitur calculator sangat-sangat sederhana dengan 2 method utama yaitu ```add``` dan ```multiply```. Kita bisa buat seperti ini:
+
+```javascript
+function Calc(a, b) {
+  this.a = a;
+  this.b = b;
+
+  this.add = function () {
+    return this.a + this.b;
+  }
+  
+  this.multiply = function () {
+    return this.a * this.b;
+  }
+}
+```
+
+Cara diatas menggunakan method biasa yaitu ketika method nya di define langsung _didalam_ si constructor function nya. Meski cara diatas sah-sah saja, tidak akan error dan tetap akan sukses menghasilkan output yang benar, tetapi cara yang lebih direkomendasi adalah menggunakan ```prototype```. 
+
+Kita refaktor ```Calc``` diatas menjadi seperti ini:
+
+```javascript
+function Calc(a, b) {
+  this.a = a;
+  this.b = b;
+}
+
+Calc.prototype.add = function () {
+  return this.a + this.b;
+}
+
+Calc.prototype.multiply = function () {
+  return this.a * this.b;
+} 
+
+let calc = new Calc(10, 10);
+console.log(calc.add()); // 20
+console.log(calc.multiply()); // 100
+
+```
+....lanjutin besok
 
 #### Method prototype vs biasa
 
