@@ -2,10 +2,23 @@
 
 Di materi sebelumnya kita sudah membahas fundamental ```Function``` dan hal-hal mendasar yang kami rasa wajib untuk diketahui dan dikuasasi. Berikutnya dalam bagian ini kita akan membahas **Constructor Function** yang secara teknis sebenarnya sama dengan Function biasa namun ada beberapa point mendasar yang menjadi pembeda. 
 
-Karena itulah kami sengaja memisahkan pembahasan Constructor Function ini dengan pembahasan Function sebelumnya. Ada dua point mendasar yang menjadi pembeda yaitu:
+Di JavaScript sendiri ada beberapa Constructor Function _built-in_ (bawaan) yang sering digunakan seperti ```new Object()```, ```new Array()```, ```new Date()```, ```new String()``` dll. Misal saat kita butuh untuk mendapatkan _datetime_ saat ini kita bisa pakai ```new Date()```
+
+```javascript
+let now = new Date();
+
+console.log(now);
+// Output: Thu Oct 24 2024 16:21:39 GMT+0700
+
+console.log(now.toLocaleString());
+// Output: 10/24/2024, 4:24:43 PM
+```
+
+Untuk pembahasan ini kami sengaja memisahkan pembahasan Constructor Function ini dengan pembahasan Function sebelumnya karena ada beberapa point perbedaan keduanya misalnya
 
 1. Constructor Function harus dipanggil menggunakan keyword ```new```
-2. Nama Function nya harus diawali dengan huruf kapital
+2. Nama Function nya diawali dengan huruf kapital
+3. Constructor Function menggunakan keyword ```this``` untuk mengakses property object
 
 sintaks:
 
@@ -19,7 +32,11 @@ function Person(param) {
 let person = new Person('value');
 ```
 
-Ketika constructor function dipanggil menggunakan keyword ```new```, ia akan melakukan tiga proses dibawah
+Dimana variable ```person``` yang adalah berupa _object_ biasa disebut juga sebagai _instance_. Lebih tegasnya _instance_ dari ```Person```. 
+
+> <small>_```instance``` adalah sebuah object yang dibuat atau dihasilkan dari constructor function._</small>
+
+Ketika constructor function dipanggil menggunakan keyword ```new```, secara ringkas ia akan melakukan tiga proses dibawah
 
 1. Sebuah _object_ baru yang kosong dibuat lalu di-_assign_ ke ```this```.
 2. Lalu eksekusi apa-apa yang ada di body function tersebut.
@@ -63,9 +80,9 @@ let user = {
 };
 ```
 
-dan memang ini juga merupakan cara yang direkomendasi ketika membuat object. Namun seiring berjalannya waktu, kita akan butuh cara lain untuk membuat object yang lebih fleksibel dan dinamis. Untuk menjawab kebutuhan ini, maka kita bisa pakai bantuan Constructor Function.
+dan memang ini juga merupakan cara yang umum dipakai ketika membuat object. Namun seiring berjalannya waktu, kita akan butuh cara lain untuk membuat object yang lebih fleksibel dan dinamis. Untuk menjawab kebutuhan ini, maka kita bisa pakai bantuan Constructor Function.
 
-Bagi kamu yang mungkin pernah coding pakai bahasa pemrograman yang support ```OOP``` seperti Java atau PHP, Constructor Function di JavaScript ini sangat mirip konsepnya. Diatas sudah kita sebutkan kalau Constructor Function di panggil menggunakan keyword ```new``` dan mengakses property object nya dengan keyword ```this```, mirip dengan yang ada di bahasa pemrograman lain. Kemudian ada istilah ```constructor``` dan juga inheritance,  jadi memang secara konsep mirip dengan ```OOP``` dibahasa pemrograman lainnya. Kita akan jelaskan lebih lanjut.
+Bagi kamu yang mungkin pernah coding pakai bahasa pemrograman yang support ```OOP``` seperti Java, C# atau PHP, Constructor Function di JavaScript ini sangat mirip dengan konsep ```class``` di bahasa pemrograman lain. Diatas sudah kita sebutkan kalau Constructor Function di panggil menggunakan keyword ```new``` dan mengakses property object nya dengan keyword ```this```, mirip dengan yang ada di bahasa pemrograman lain. Kemudian ada istilah ```constructor``` dan juga ```inheritance```,  jadi memang secara konsep mirip dengan ```OOP``` dibahasa pemrograman lainnya. Kita akan jelaskan lebih lanjut nanti.
 
 Kembali lagi ke fungsi utama Constructor Function untuk membuat object lebih dinamis, kita akan membuat sebuah object seperti dibawah:
 
@@ -81,7 +98,7 @@ console.log(user.name); // Budi
 console.log(user.age); // 20
 ```
 
-Lalu jika kita ingin membuat object ```user``` lainnya, kita bisa _reuse_ constructor function ```User``` diatas seperti berikut:
+Lalu jika kita ingin membuat instance / object ```user``` lainnya, kita bisa _reuse_ constructor function ```User``` diatas seperti berikut:
 
 ```javascript
 let user2 = new User('Agus', 30);
@@ -90,9 +107,9 @@ console.log(user2.name); // Agus
 console.log(user2.age); // 30
 ```
 
-### Methods di Constructor Function
+### Method di Constructor Function
 
-Method adalah function yang dibuat didalam constructor function untuk melakukan tugas tertentu yang berkaitan dengan object nya. Kamu boleh cek kembali pembahasan **Array Method** di materi tentang Array sebelumnya untuk menambahkan pemahaman mengenai **Methods**. Karena sejatinya methods yang akan kita bahas di materi ini juga sama.
+Method adalah function yang dibuat didalam constructor function untuk melakukan tugas tertentu yang berkaitan dengan object nya. Kamu boleh cek kembali pembahasan **Array Method** di materi tentang Array sebelumnya untuk menambahkan pemahaman mengenai **Method**. Karena sejatinya method yang akan kita bahas di materi ini juga sama.
 
 sintaks:
 
@@ -154,7 +171,7 @@ dan jika ingin logout dengan cara seperti ini:
 auth.logout();
 ```
 
-```login```, ```logout``` dalam constructor function ```Auth``` diatas adalah **method**. Dan kita bisa membuat banyak method sesuai dengan kebutuhan tentunya. Konsep method ini juga sangat mirip dengan konsep ```OOP``` di bahasa pemrograman lainnya. Misal kalau kita buat dalam ```C#```
+```login```, ```logout``` dalam constructor function ```Auth``` diatas adalah **method**. Dan kita bisa membuat banyak method sesuai dengan kebutuhan tentunya. Konsep method ini juga sangat mirip dengan konsep method di bahasa pemrograman lain yang support ```OOP```. Misal kalau kita buat dalam ```C#```
 
 ```csharp
 using System;
@@ -193,13 +210,36 @@ public class Program
 ```
 
 ### Membuat Method Dengan ```Prototype```
-> Catatan: ```Prototype``` akan dibahas tersendiri secara khusus di chapter berikutnya. Pada materi constructor function ini, kamu tidak harus mengenal dalam dahulu tentang ```Prototype```
 
-..
-..lanjutkan besok
+> <small>Catatan: ```Prototype``` akan dibahas tersendiri secara khusus di chapter berikutnya. Pada materi constructor function ini, kamu tidak harus mengenal lebih dalam dahulu tentang ```Prototype```.</small>
 
+Ketika sebuah Constructor Function di inisialisasi / dipanggil dengan keyword```new```, ia akan memiliki property spesial yang disebut```prototype```. Kita bisa lihat / buktikan dengan cara seperti berikut:
 
-sintaks:
+```javascript
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+let agus = new Person('Agus', '30');
+
+console.dir(agus);
+// Output:
+
+// cek di browser Chrome
+Person { name: 'Agus', age: '30' }
+  > [[Prototype]]: Object
+
+// cek di browser Safari
+Person { name: 'Agus', age: '30' }
+  > Person Prototype
+
+// cek di browser Firefox
+Object { name: 'Agus', age: '30' }
+  > <prototype>: Object{...}
+```
+
+Cara setiap browser menampilkan output console bisa berbeda-beda saat kita coba eksekusi ke ```console```. Tapi terlihat bahwa property baru bernama ```prototype``` sudah **terbuat** dan siap digunakan. Untuk membuat method-method dengan ```protoptype``` di Constructor Function, kita mengikuti sintaks berikut:
 
 ```javascript
 function Cfn(params) {
@@ -211,7 +251,7 @@ Cfn.prototype.someMethod = function () {
 }
 ```
 
-Misal kita membuat sebuah fitur calculator sangat-sangat sederhana dengan 2 method utama yaitu ```add``` dan ```multiply```. Kita bisa buat seperti ini:
+Misal kita membuat sebuah fitur calculator sangat-sangat sederhana dengan 2 method utama yaitu ```add``` dan ```multiply```. Bisa kita  buat seperti ini:
 
 ```javascript
 function Calc(a, b) {
@@ -228,7 +268,7 @@ function Calc(a, b) {
 }
 ```
 
-Cara diatas menggunakan method biasa yaitu ketika method nya di define langsung _didalam_ si constructor function nya. Meski cara diatas sah-sah saja, tidak akan error dan tetap akan sukses menghasilkan output yang benar, tetapi cara yang lebih direkomendasi adalah menggunakan ```prototype```. 
+Cara diatas menggunakan method biasa yaitu ketika method nya di define langsung _didalam_ si constructor function nya. Meski cara diatas sah-sah saja, tidak akan error dan tetap akan sukses menghasilkan output yang benar, tetapi secara umum cara yang lebih direkomendasi adalah menggunakan ```prototype```. 
 
 Kita refaktor ```Calc``` diatas menjadi seperti ini:
 
@@ -249,10 +289,66 @@ Calc.prototype.multiply = function () {
 let calc = new Calc(10, 10);
 console.log(calc.add()); // 20
 console.log(calc.multiply()); // 100
-
 ```
-....lanjutin besok
 
-#### Method prototype vs biasa
+Keyword ```this``` pada method prototype (misal ```this.a```) juga bisa digunakan untuk mengakses property si Constructor Function-nya. Kemudian memang terlihat juga dengan ```prototype``` , code nya jadi lebih panjang dan terksesan kurang _clean_. Namun cara ini lebih direkomendasi dengan beberapa alasan yaitu:
 
-### Lebih Dalam Mengenai keyword ```this``` di Constructor Function dan Function Biasa
+1. Lebih hemat memori
+   
+   * Jika method didefinisikan langsung di dalam Constructor Function, setiap instance dari object akan memiliki salinan method tersebut. Ini bisa memakai lebih banyak memori jika banyak instance yang dibuat. Misal Constructor Function ```Person``` dibawah ini
+
+      ```javascript
+      function Person(name) {
+        this.name = name;
+        this.sayHello = function() {
+          return `Halo, ${this.name}`;
+        };
+      }
+
+      let person1 = new Person('Agus');
+      let person2 = new Person('Bob');
+      let person3 = new Person('Wati');
+      // ...
+      let personN = new Person('Nama N');
+      ```
+      Jika ```Person``` dipanggil berkali-kali, maka setiap _instance_ person1, person2 dst dibelakang layar akan **dibuatkan** method ```sayHello()``` yang sama sehingga masing-masing instance diatas akan punya method ```sayHello()``` sendiri.
+
+      Kita bisa test dan buktikan via console di browser, maka akan terlihat outputnya seperti ini
+
+      ```javascript
+      console.log(person1);
+      // Output: Person {name: 'Agus', sayHello: ƒ()}
+      console.log(person2);
+      // Output: Person {name: 'Bob', sayHello: ƒ()}
+      ```
+      Terlihat kalau semua instance person1, person2 dst masing-masing dibuatkan method ```sayHello()``` sendiri dan disimpan ke memori tentunya. Berbeda jika kita gunakan **prototye** dimana method ```sayHello()``` hanya akan dibuat sekali di memori dan selanjutnya akan di _share_ atau di wariskan ke semua instance.
+
+      Perhatikan contoh berikut:
+
+      ```javascript
+      function Person(name) {
+        this.name = name;
+      }
+
+      Person.prototype.sayHello = function() {
+        return `Hello, ${this.name}`;
+      };
+
+      let person1 = new Person('Agus');
+      let person2 = new Person('Bob');
+
+      console.log(person1);
+      // Output: Person {name: 'Agus'}
+      console.log(person2);
+      // Output: Person {name: 'Bob'}
+      ```
+
+      Terlihat pada output di console, tidak ada method ```sayHello()``` yang nempel langsung ke instance nya. Secara sederhana bisa dibilang method ```sayHello()``` tetap nempel ke si Constructor Function ```Person``` nya dan bisa dipakai bareng-bareng oleh semua instance nya.
+
+2. Performance lebih baik
+  
+   Method yang dibuat via prototype tidak akan di _re-create_ lagi setiap kali ada instance-instance baru yang di inisialisasi / dibuat. Ini tentu mempercepat proses pembuatan object / instance nya.
+
+3. Lebih _common_ digunakan oleh para developer
+
+### Lebih Dalam Mengenai keyword ```this```
