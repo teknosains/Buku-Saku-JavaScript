@@ -181,6 +181,63 @@ adalah si _value_ nya itu sendiri yang di kirim ke function. Agar lebih mudah di
  <img width="460" alt="Function" src="https://github.com/user-attachments/assets/0e0df713-feda-4182-85e2-a4cccd6579d8">
 </div>
 
+Cukup penting bagi seorang developer untuk hafal istilah ini (parameter dan argument) dan kenal perbedaan antara keduanya. Hal yang sederhana ini sangat mungkin ditanyakan ketika interview kerja.
+
+
+### Optional dan Default Parameter
+
+Saat membuat function, kita bisa menambahkan parameter dengan _default_ value. Parameter dengan _default_ value ini akan dianggap sebagai _optional parameter_ yang bisa di-_skip_ atau tidak diisi (argument nya) ketika memanggil function tersebut. 
+
+```javascript
+function printGreeting(name, title = 'Bpk/Ibu') {
+  return `Dear ${title} ${name},`;
+}
+
+console.log(
+  printGreeting('Budi', 'Bpk');
+);
+// Output: Dear Bpk Budi
+
+console.log(
+  printGreeting('Eka')
+);
+// Output: Dear Bpk/Ibu Eka
+```
+
+Expression parameter _default_ di evaluasi ketika function itu di panggil, bukan ketika function di definisikan. Jadi JavaScript baru akan me-_assign_ ```title = 'Bpk/Ibu'``` ketika kita panggil  ```printGreeting('Eka')```. Salah satu _case_ menarik tentang paramater _default_ ini adalah ketika function itu punya lebih dari satu paramater, kita bisa gunakan _value_ dari paramater **sebelumnya** untuk mengisi value _default_ paramater selanjutnya.
+
+Perhatikan contoh berikut:
+
+```javascript
+function markupPrice(price, markup = price + 500) {
+  return `Latest price =  ${markup}`;
+}
+
+console.log(
+  markupPrice(2000)
+);
+// Output: Latest price =  2500
+
+console.log(
+  markupPrice(2000, 3000)
+);
+// Output: Latest price = 3000
+```
+
+Perhatikan expression ```markup = price + 500```, variable ```price``` akan berisi value dari variable ```price``` di paramater pertama. Jadi kalau paramater ```price``` pertama nilainya ```2000``` maka variable ```price``` di expression ```markup = price + 500``` juga akan bernilai ```2000```. 
+
+Prilaku ini mirip seperti pada SQL Query yang mungkin sering kita pakai untuk mengubah nilai suatu kolom dengan cara seperti ini:
+
+```sql
+UPDATE products
+SET stock = stock + 1
+WHERE id = 1; 
+```
+
+yang artinya perintah untuk mengubah nilai ```stock``` di table ```products``` menjadi _berapapun stock saat ini_ ditambah ```1```.
+
+
+
 ### Function Sebagai Object
 
 Di JavaScript, function adalah ```first-class``` object. Artinya function itu bisa di _passing_ ke function lain, di _return_ dari function dan di-_assign_ ke sebuah variable.
