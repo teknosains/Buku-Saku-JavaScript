@@ -293,7 +293,7 @@ console.log(calc.multiply()); // 100
 
 Keyword ```this``` pada method prototype (misal ```this.a```) juga bisa digunakan untuk mengakses property si Constructor Function-nya. Kemudian memang terlihat juga dengan ```prototype``` , code nya jadi lebih panjang dan terksesan kurang _clean_. Namun cara ini lebih direkomendasi dengan beberapa alasan yaitu:
 
-1. Lebih hemat memori
+1. **Lebih hemat memori**
    
    * Jika method didefinisikan langsung di dalam Constructor Function, setiap instance dari object akan memiliki salinan method tersebut. Ini bisa memakai lebih banyak memori jika banyak instance yang dibuat. Misal Constructor Function ```Person``` dibawah ini
 
@@ -321,7 +321,7 @@ Keyword ```this``` pada method prototype (misal ```this.a```) juga bisa digunaka
       console.log(person2);
       // Output: Person {name: 'Bob', sayHello: ƒ()}
       ```
-      Terlihat kalau semua instance person1, person2 dst masing-masing dibuatkan method ```sayHello()``` sendiri dan disimpan ke memori tentunya. Berbeda jika kita gunakan **prototye** dimana method ```sayHello()``` hanya akan dibuat sekali di memori dan selanjutnya akan di _share_ atau di wariskan ke semua instance.
+      Terlihat kalau semua instance person1, person2 dst masing-masing dibuatkan method ```sayHello()``` sendiri dan disimpan ke memori tentunya. Berbeda jika kita gunakan **prototye** dimana method ```sayHello()``` hanya akan dibuat sekali di memori dan selanjutnya akan di _share_ atau di **wariskan** ke semua instance.
 
       Perhatikan contoh berikut:
 
@@ -343,12 +343,137 @@ Keyword ```this``` pada method prototype (misal ```this.a```) juga bisa digunaka
       // Output: Person {name: 'Bob'}
       ```
 
-      Terlihat pada output di console, tidak ada method ```sayHello()``` yang nempel langsung ke instance nya. Secara sederhana bisa dibilang method ```sayHello()``` tetap nempel ke si Constructor Function ```Person``` nya dan bisa dipakai bareng-bareng oleh semua instance nya.
+      Terlihat pada output di console, tidak ada method ```sayHello()``` yang nempel langsung ke _instance_-nya. Secara sederhana bisa dibilang method ```sayHello()``` tetap nempel ke si Constructor Function ```Person``` nya dan bisa dipakai bareng-bareng oleh semua instance nya atau dengan kata lain, semua instance ```Person``` tetap bisa mengakses method prototype ```sayHello()``` yang sama. 
 
-2. Performance lebih baik
+      Seperti pada contoh berikut:
+
+      ```javascript
+      console.log(person1.sayHello()); // Hello, Agus
+      console.log(person2.sayHello()); // Hello, Bob
+      ```
+
+2. **Performance lebih baik**
   
    Method yang dibuat via prototype tidak akan di _re-create_ lagi setiap kali ada instance-instance baru yang di inisialisasi / dibuat. Ini tentu mempercepat proses pembuatan object / instance nya.
 
-3. Lebih _common_ digunakan oleh para developer
+3. **Lebih _common_ digunakan oleh para developer**
 
 ### Lebih Dalam Mengenai keyword ```this```
+
+Keyword ```this``` semacam sudah menjadi konsensus umum di kebanyakan bahasa pemrograman terutama yang support OOP. Pun di JavaScript, hanya saja di JavaScript ```this``` ini seringkali menjadi kebingungan bagi developer terutama pemula. Oleh karena itu, kita akan coba bahas beberapa hal tentang ```this``` di JavaScript agar membantu semua memahami behavior dan cara kerjanya.
+
+#### 1. ```this``` di Browser global scope
+
+Di browser, ```this``` ini by default mengacu ke object _window_ yang merupakan object global di browser. Jadi ketika kita coba panggil / akses langsung
+
+```javascript
+console.log(this);
+// Output: Window {window: Window, self: Window, ...}
+
+// sama dengan
+
+console.log(window);
+// Output: Window {window: Window, self: Window, ...}
+
+window === this; // true
+```
+
+Dengan ```this``` ini kita bisa akses semua property dan method yang ada di object _window_ seperti yang umum kita kenal semisal ```alert```, ```confirm```, ```console``` dll. Contoh
+
+```javascript
+this.alert('hello'); 
+// sama dengan
+window.alert('hello');
+// Output: muncul popup alert
+
+this.confirm('Are you sure to delete this?');
+// sama dengan
+window.confirm('Are you sure to delete this?');
+// Output: muncul popup konfirmasi
+
+this.console.log('hello');
+// sama dengan
+window.console.log('hello');
+// Output: hello
+```
+
+namun karena di browser sifatnya _global_, kita jadi **tidak perlu lagi** menuliskan ```this``` ketika mengakses semua _property_ object _window_.
+
+Di environment ```Node.JS``` ```this``` ini mengacu ke object _global_. 
+
+```javascript
+global === this; // true
+
+global.console.log('hello');
+// sama dengan
+this.console.log('hello');
+// Output: hello
+```
+
+#### 2. ```this``` di dalam Function
+
+Khusus di dalam function, ```this``` ini tergantung bagaimana si function itu dipanggil. Ketika function dipanggil seperti biasa akan berbeda dengan jika function dipanggil menggunakan keyword ```new``` (sebagai Constructor Function, ini yang menjadi bahasan kita).
+
+Perhatikan contoh berikut:
+
+```javascript
+function Person(name) {
+  console.log(this);
+}
+
+// panggil biasa
+Person('Budi'); 
+// Output: Window {window: Window, self: Window, ...}
+
+// panggil menggunakan keyword new
+new Person('Budi'); 
+// Output: {name: 'Budi'}
+```
+
+Jadi di Construction Function, ```this``` itu sebagai **pointer** ke property-property yang ada didalamnya namun di dalam function biasa ```this``` ini mengacu ke object _window_.
+
+#### 3.```this``` di dalam Method object
+
+```javascript
+let person = {
+  name: 'Budi',
+  sayHello: function() {
+    console.log(`Hello, ${this.name}`);
+    console.log(this === person); // true
+  }
+};
+
+person.sayHello();
+// Output: Hello, Budi
+```
+
+```this``` dalam method sebuah object mengacu ke si object itu sendiri. Dalam contoh diatas berarti ```this``` nya mengacu ke object ```person```. Terlihat juga kalau kita cek ```this === person```, hasilnya adalah ```true```.
+
+#### 4. ```this``` di Event Handler
+
+Di _event handler_ seperti misalnya ```addEventListener```, by default ```this``` ini mengacu ke _element_ yang di _target_ oleh event tersebut. Contoh:
+
+```javascript
+let button = document.querySelector('button');
+
+button.addEventListener('click', function() {
+  console.log(this);
+  console.log(this.innerText);
+});
+
+// Output: <button>Click me</button> 
+// Output: Click me
+```
+
+Namun jika _event handler_-nya menggunakan arrow function, maka ```this``` ini akan mengacu ke object _window_. 
+
+```javascript
+let button = document.querySelector('button');  
+
+button.addEventListener('click', () => {
+  console.log(this);
+})
+// Output: Window {window: Window, self: Window, ...}
+```
+
+Jadi ```this``` di JavaScript itu tergantung _context_ dimana dia berada. Karena perbedaan behaviour ini maka wajib bagi developer JavaScript untuk faham bagaimana cara kerja ```this``` di JavaScript.
