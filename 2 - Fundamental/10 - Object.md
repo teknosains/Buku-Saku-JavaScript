@@ -360,6 +360,88 @@ Object {
   password: "secret"
 }
 ```
+### Object Method
+
+Object method adalah function yang dibuat didalam object untuk melakukan operasi tertentu yang berkaitan dengan object nya.
+
+sintaks:
+
+```javascript
+const obj = {
+  method: function () {
+    //...
+  }
+}
+
+// atau
+
+const obj = {
+  method() {
+    //...
+  }
+}
+
+// atau dengan arrow function
+
+const obj = {
+  method: () => {
+    //...
+  }
+}
+```
+
+Untuk mengakses property lainnya, bisa menggunakan keyword ```this```. Contoh:
+
+```javascript
+const obj = {
+  name: 'Budi',
+  age: 20,
+  printProfile() {
+    console.log(`Nama: ${this.name}, Umur: ${this.age}`);
+  }
+}
+
+obj.printProfile();
+
+// Output: Nama: Budi, Umur: 20
+```
+
+Ada sedikit perbedaan _behaviour_ untuk method di object yang menggunakan _Arrow Function_ yaitu keyword ```this``` tidak bisa digunakan untuk mengakses property di object tersebut. Hal ini karena memang Arrow Function itu tidak punya ```this```-nya sendiri.
+
+Perhatikan contoh dibawah:
+
+```javascript
+const obj = {
+  name: 'Budi',
+  age: 20,
+  printProfile: () => {
+    console.log(this.age); // Output: undefined
+  }
+}
+
+obj.printProfile();
+// Output: undefined
+```
+
+```this.age``` hasilnya _undefined_. Jika ingin tetap menggunakan method _Arrow Function_ maka kita bisa gunakan trik seperti berikut:  
+
+```javascript
+const obj = {
+  name: 'Budi',
+  age: 20,
+  printProfile: () => {
+    const _this = obj; // <-- triknya
+    console.log(_this.age)
+  }
+}
+
+obj.printProfile();
+// Output: 20
+```
+
+
+> Catatan: pembahasan mengenai Arrow Function bisa dilihat di materi tentang Function
+
 
 ### Computed Property
 
