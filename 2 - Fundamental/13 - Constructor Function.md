@@ -17,7 +17,7 @@ console.log(now.toLocaleString());
 Untuk pembahasan ini kami sengaja memisahkan pembahasan Constructor Function ini dengan pembahasan Function sebelumnya karena ada beberapa point perbedaan keduanya misalnya
 
 1. Constructor Function harus dipanggil menggunakan keyword ```new```
-2. Nama Function nya diawali dengan huruf kapital
+2. Nama Function (umumnya) nya diawali dengan huruf kapital
 3. Constructor Function menggunakan keyword ```this``` untuk mengakses property object
 
 sintaks:
