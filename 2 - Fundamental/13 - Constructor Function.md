@@ -476,4 +476,6 @@ button.addEventListener('click', () => {
 // Output: Window {window: Window, self: Window, ...}
 ```
 
-Jadi ```this``` di JavaScript itu tergantung _context_ dimana dia berada. Karena perbedaan behaviour ini maka wajib bagi developer JavaScript untuk faham bagaimana cara kerja ```this``` di JavaScript.
+Jadi ```this``` di JavaScript itu tergantung _context_ dimana dia berada. Karena perbedaan behaviour ini maka wajib bagi developer JavaScript untuk faham bagaimana cara kerja ```this``` di JavaScript dan ini juga merupakan salah satu konsep _fundamental_ di JavaScript yang wajib sekali di kuasai.
+
+Agar pemahaman tentang ```this``` ini semakin melekat, silahkan coba jalankan contoh-contoh code diatas.
