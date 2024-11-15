@@ -12,7 +12,7 @@ Untuk tahap belajar, kamu bisa mencoba jalankan contoh-contoh code pada masing-m
 
 - **Online playground**
 
-  Ada banyak playground JS online yang biasa dipakai untuk coding. Contohnya [Codepen](https://codepen.io/) dan [Stackblitz](https://stackblitz.com/), [JSbin.com](https://jsbin.com/) dll. Yang paling simple dari ketiga opsi yang kami sebutkan tadi adalah JSbin.com.
+  Ada banyak playground JS online yang biasa dipakai untuk coding. Contohnya [playcode](https://playcode.io/javascript) dan [Stackblitz](https://stackblitz.com/), [JSbin.com](https://jsbin.com/) dll. Yang paling simple dari ketiga opsi yang kami sebutkan tadi adalah JSbin.com.
 
 - **Text editor VSCode**
 
