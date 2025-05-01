@@ -14,3 +14,7 @@ DOM adalah cara browser merepresentasikan halaman web dalam bentuk pohon (tree).
   </body>
 </html>
 ```
+Maka kita bisa visualisasikan pohon DOM-nya seperti ini
+
+<img width="428" alt="DOM Tree" src="https://github.com/user-attachments/assets/847deb5c-207d-481b-9330-aa15c0646137" />
+
