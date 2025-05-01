@@ -393,7 +393,7 @@ class Student extends Person {
   sayGreet() {
     console.log(
       `Halo saya ${this.name}, umur ${this.age}thn, NIM ${this.nim}.`
-    )
+    );
   }
 }
 
@@ -405,4 +405,4 @@ student.sayGreet();
 expression ```super(name, age);``` diatas digunakan untuk nge-_call_ dan inisialisasi constructor parent class nya yakni ```Person```.
 Dengan kata lain, expression ```super(name, age);``` itu sama dengan ```new Person('Budi', 20)``` yang fungsinya untuk menginisialisasi instance dari class ```Person```.
 
-Memahami Class dengan baik akan sangat membantu kita menulis code yang lebih terstruktur, mudah di maintain, _reuseable_ dan lebih efisien. Silahkan kembali di ulang dan dicoba contoh-contoh code dalam pembahasan ini.
+Memahami Class dengan baik akan sangat membantu kita menulis code yang lebih terstruktur, mudah di maintain, _reusable_ dan lebih efisien. Silahkan kembali di ulang dan dicoba contoh-contoh code dalam pembahasan ini.
