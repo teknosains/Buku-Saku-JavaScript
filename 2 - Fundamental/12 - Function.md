@@ -178,7 +178,7 @@ Paramater dalam sebuah function adalah variable yang digunakan untuk menampung s
 adalah si _value_ nya itu sendiri yang di kirim ke function. Agar lebih mudah difahami, perhatikan ilustrasi dibawah
 
 <div align="center">
- <img width="460" alt="Function" src="https://github.com/user-attachments/assets/0e0df713-feda-4182-85e2-a4cccd6579d8">
+ <img width="460" alt="Function" src="https://github.com/user-attachments/assets/0e0df713-feda-4182-85e2-a4cccd6579d8" />
 </div>
 
 Cukup penting bagi seorang developer untuk hafal istilah ini (parameter dan argument) dan kenal perbedaan antara keduanya. Hal yang sederhana ini seringkali ditanyakan ketika interview kerja.
