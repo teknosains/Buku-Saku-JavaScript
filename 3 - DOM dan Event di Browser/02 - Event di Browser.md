@@ -1,4 +1,4 @@
-# Dasar Event di Browser
+# Event di Browser
 
 Setelah kita memahami bagaimana JavaScript berinteraksi dengan elemen HTML melalui DOM, berikutnya kita lanjut mengenal bagaimana JavaScript bisa merespons **aksi/interaksi dari pengguna**, seperti klik, ketik, scroll, dll. Inilah yang disebut dengan **event**.
 
@@ -23,7 +23,7 @@ Minimal ada tiga istilah penting yang perlu kita pahami lebih dulu:
 
 #### 1. Event Type
 
-**Event type** adalah jenis event yang terjadi di halaman web. Browser punyak banyak daftar event yang biasa digunakan, dan masing-masing punya nama atau tipe tertentu.
+**Event type** adalah jenis event yang terjadi di halaman web. Browser punyai banyak daftar event yang biasa digunakan, dan masing-masing punya nama dan tipe tertentu.
 
 Contoh event type yang sering digunakan:
 - `click`: saat t diklik
@@ -79,9 +79,9 @@ Variasi penulisan diatas secara fungsi sama dengan penulisan pada contoh sebelum
 
 Ketika kita menulis kode seperti ini:
 
-### Cara Menambahkan Event Listener
+### Cara Mendaftarkan Event Handler
 
-Untuk merespons event, kita menggunakan DOM API `addEventListener()`. Method ini adalah salah satu bagian terpenting dari DOM API yang disediakan browser dan yang paling sering digunakan untuk _handle_ interaksi antara user dengan halaman web. 
+Untuk merespon dan meng-handle event dalam suatu element HTML, kita harus mendaftarkan tipe event (event type) yang kita inginkan ke element tersebut agar bisa dieksekusi oleh browser. Caranya yang umum adalah menggunakan menggunakan DOM API `addEventListener()`. Method ini adalah salah satu bagian terpenting dari DOM API yang disediakan browser dan yang paling sering digunakan untuk _handle_ interaksi antara user dengan halaman web. 
 
 Sebenarnya ada **dua cara dasar** untuk menambahkan event handler. Yang pertama adalah dengan menambahkan _property event_ khusus langsung di element HTML, seperti ini:
 
@@ -93,6 +93,22 @@ Sebenarnya ada **dua cara dasar** untuk menambahkan event handler. Yang pertama 
   Click me!
 </button>
 ```
+atau variasi lainnya
+
+```html
+<button 
+  id="myButton" 
+  onclick="showAlert()"
+>
+  Click me!
+</button>
+
+<script>
+  function showAlert() {
+    alert('Tombol diklik!');
+  }
+</script>
+```
 
 Cara ini dikenal juga dengan istilah **inline event handler**. Setiap event type akan memiliki _property event_ yang sesuai, seperti ```onclick```, ```oninput```, ```onmouseover```, dan sebagainya.
 
@@ -100,15 +116,15 @@ Contoh:
 
 
 | Tipe Event   | Deskripsi                              | Inline Event Handler |
-|--------------|------------------------------------------|-----------------------|
-| `click`      | Saat element diklik                      | `onclick`             |
+|--------------|----------------------------------------|-----------------------|
+| `click`      | Saat element diklik                     | `onclick`             |
 | `mouseover`  | Saat kursor diarahkan ke elemen         | `onmouseover`         |
 | `keydown`    | Saat tombol keyboard ditekan            | `onkeydown`           |
 | `submit`     | Saat form di-submit                     | `onsubmit`            |
 | dst...       | ...                                     | ...                   |
 
 
-Yang kedua dan yang lebih umum digunakan adalah dengan menggunakan _method_ ```addEventListener()```.
+Yang kedua dan yang lebih modern dan umum digunakan adalah dengan menggunakan _method_ ```addEventListener()```.
 
 Contoh beberapa event handler menggunakan ```addEventListener()```:
 
@@ -142,7 +158,7 @@ Contoh beberapa event handler menggunakan ```addEventListener()```:
 </script>
 ```
 
-#### Contoh 3: Menangani Menangani Mouse Hover
+#### Contoh 3: Menangani Mouse Hover
 
 ```html
 <div 
@@ -182,7 +198,7 @@ Contoh beberapa event handler menggunakan ```addEventListener()```:
 </script>
 ```
 
-**Catatan**: _By default_ ketika sebuah form disubmit, browser akan melakukan refresh halaman. Menambahkan ```event.preventDefault()``` memberi tahu browser bahwa yang akan menangani form submisi ini adalah JavaSript, karenanya si browser tidak akan melakukan refresh halaman.
+**Catatan**: _By default_ ketika sebuah form disubmit, browser lah yang akan melakukan proses submisi nya dan akan melakukan refresh halaman. Menambahkan ```event.preventDefault()``` memberi tahu browser bahwa yang akan menangani form submisi ini adalah JavaSript, karenanya si browser tidak akan melakukan refresh halaman.
 
 ### Jenis-Jenis Event Populer
 
@@ -197,3 +213,56 @@ Contoh beberapa event handler menggunakan ```addEventListener()```:
 | `load`      | Saat halaman selesai dimuat          |
 | `mouseover` | Saat mouse diarahkan ke elemen       |
 | `mouseout`  | Saat mouse meninggalkan elemen       |
+
+### Mengenal `event object`
+
+Setiap kali event terjadi dan handler function-nya dipanggil, browser akan otomatis memberikan sebuah object ke dalam function handler tersebut. Object ini disebut `event`, yang berisi informasi tentang event yang terjadi.
+
+Contoh:
+
+```js
+button.addEventListener('click', function(event) {
+  // element target yang diklik
+  const btn = event.target; 
+  // melihat tipe event nya apa
+  console.log(event.type);   // 'click'
+  // lihat semua informasi lainnya di event
+  console.log(event);
+});
+```
+
+Event object ini sangat bermanfaat dalam berbagai operasi dan manipulasi DOM. Salah satu contohnya misal kita punya aplikasi web yang punya fitur _like_ dan _share_ article ke sosial media. Dua fitur ini bisa kita buatkan 2 tombol namun dengan satu event handler. 
+
+Kemudian melakukan aksi yang sesuai berdasarkan jenis tombol nya. Contohnya seperti ini:
+
+```html
+<button class="btn-action btn-like">Like</button>
+<button class="btn-action btn-share">Share</button>
+
+<script>
+  // akses semua button yang punya class 'btn-action'
+  const buttons = document.querySelectorAll('.btn-action');
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function (event) {
+      const target = event.target;
+      const targetClass = target.classList;
+
+      // Cek untuk membedakan button mana yang di klik  
+      if (targetClass.contains('btn-like')) {
+        doProcess('like');
+      } else if (targetClass.contains('btn-share')) {
+        doProcess('share');
+      }
+    });
+  });
+</script>
+```
+
+Event adalah salah satu fondasi utama untuk membuat aplikasi web kita menjadi interaktif dan dinamis. Dengan memahami konsep dasar seperti event type, event target, dan event handler, kita sudah bisa mulai membangun aplikasi web yang interaktif dan responsif terhadap aksi user.
+
+Kita juga sudah mempelajari cara menggunakan `addEventListener()` sebagai metode yang lebih modern dan fleksibel untuk menangani berbagai jenis event di browser, serta contoh-contoh penggunaannya dalam situasi real-life.
+
+Materi tentang event ini masih sangat luas, dan di bab-bab selanjutnya kita akan lanjutkan dengan topik lanjutan seperti event bubbling, delegation, dan cara kerja event system di JavaScript.
+
+Yang jelas, sekarang kamu sudah punya bekal penting untuk membuat halaman web yang bukan hanya statis, tapi benar-benar bisa “berinteraksi” dengan user.
