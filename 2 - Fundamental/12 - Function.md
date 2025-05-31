@@ -727,9 +727,11 @@ console.log(data2);
 // Output:
 
 /*
-[{name: 'Budi', age: 33, country: 'Indonesia', no: 1},
+[
+{name: 'Budi', age: 33, country: 'Indonesia', no: 1},
 {name: 'Ahmad', age: 27, country: 'Indonesia', no: 2},
-{name: 'Siti', age: 30, country: 'Indonesia', no: 3}]
+{name: 'Siti', age: 30, country: 'Indonesia', no: 3}
+]
 */
 ```
 
@@ -812,7 +814,8 @@ function addProduct(item) {
   // destructuring
   const { 
     name, qty, price, category, 
-    currentStock, description, expDate, isActive 
+    currentStock, description, expDate, 
+    isActive 
   } = item;
 
   // code...

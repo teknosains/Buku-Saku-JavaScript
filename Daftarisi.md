@@ -1,6 +1,6 @@
 # Daftar Isi
 
-- 1. Pendahuluan
+1. Pendahuluan
   - 1.1 Sejarah JavaScript
   - 1.2 Mengapa Belajar JavaScript
 - 2. Fundamental JavaScript

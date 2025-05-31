@@ -1,3 +1,12 @@
+---
+fontsize: 12pt
+highlight-style: pygments
+pdf-engine: pdflatex
+papersize: a4
+geometry: top=1in, bottom=1in, left=1in, right=1in
+header-includes: |
+  \pagestyle{empty}
+---
 # Event di Browser
 
 Setelah kita memahami bagaimana JavaScript berinteraksi dengan elemen HTML melalui DOM, berikutnya kita lanjut mengenal bagaimana JavaScript bisa merespons **aksi/interaksi dari pengguna**, seperti klik, ketik, scroll, dll. Inilah yang disebut dengan **event**.
@@ -5,6 +14,7 @@ Setelah kita memahami bagaimana JavaScript berinteraksi dengan elemen HTML melal
 ### Apa itu Event?
 
 **Event** adalah kejadian yang terjadi di halaman web, misalnya:
+
 - User mengklik tombol → **click event**
 - User mengetik di input teks → **input event**
 - Halaman selesai dimuat → **load event**
@@ -26,7 +36,7 @@ Minimal ada tiga istilah penting yang perlu kita pahami lebih dulu:
 **Event type** adalah jenis event yang terjadi di halaman web. Browser punyai banyak daftar event yang biasa digunakan, dan masing-masing punya nama dan tipe tertentu.
 
 Contoh event type yang sering digunakan:
-- `click`: saat t diklik
+- `click`: saat element diklik
 - `mouseover`: saat kursor diarahkan ke element
 - `keydown`: saat tombol keyboard ditekan
 - `submit`: saat form disubmit
