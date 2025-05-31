@@ -42,8 +42,9 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * [Constructor Function](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/13%20-%20Constructor%20Function.md)
   * [Class](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/14%20-%20Class.md)
 * DOM Dan Events Di Browser
-  * Basic DOM
-  * Event Listener
+  * [Konsep Dasar DOM](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/3%20-%20DOM%20dan%20Event%20di%20Browser/01%20-%20Konsep%20Dasar%20DOM.md)
+  * [Event di Browser](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/3%20-%20DOM%20dan%20Event%20di%20Browser/02%20-%20Event%20di%20Browser.md)
+
 
 #### Chapter 2
 
