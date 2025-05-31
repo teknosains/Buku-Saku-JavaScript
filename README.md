@@ -25,6 +25,9 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
 #### Chapter 1
 
 * [Introduction](https://github.com/teknosains/Buku-Saku-JavaScript/tree/main/1%20-%20Introduction)
+  * [Sejarah JavaScript](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/1%20-%20Introduction/01%20-%20Sejarah%20JavaScript.md)
+  * [Ekosistem JavaScript](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/1%20-%20Introduction/02%20-%20Ekosistem%20JavaScript.md)
+  * [Mengenal EcmaScript](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/1%20-%20Introduction/03%20-%20Mengenal%20Ecmascript.md)
 * [Fundamental JavaScript](https://github.com/teknosains/Buku-Saku-JavaScript/tree/main/2%20-%20Fundamental)
   * [Konsep Dasar](https://github.com/teknosains/Buku-Saku-JavaScript/tree/main/2%20-%20Fundamental/Konsep%20Dasar)
   * [Tipe Data](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/2%20-%20Fundamental/01%20-%20Tipe%20Data.md)
