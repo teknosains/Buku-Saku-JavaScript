@@ -154,7 +154,7 @@ DOM API biasanya digunakan melalui object `document`, karena object `document` a
 
 Coba ketik dan jalankan kodenya lalu buka browser console. 
 
-<img width="593" alt="Document Object Model" style="border:1px solid #ddd;margin-bottom:20px" src="https://github-production-user-asset-6210df.s3.amazonaws.com/3906229/449498386-0fb5185f-dc76-44f9-8596-23ced74c3073.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20250531%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250531T093833Z&X-Amz-Expires=300&X-Amz-Signature=2a7741026b55d10c965a0fb9e1e68c4a722d1f0bef138310f67fdc4fa9f94f8b&X-Amz-SignedHeaders=host" />
+<img width="593" alt="Document Object Model" style="border:1px solid #ddd;margin-bottom:20px" src="https://res.cloudinary.com/cepot/image/upload/v1748694170/Screenshot_2025-05-31_at_16.37.39_fbyulw.png" />
 
 
 Terlihat di console output dari ```console.log(document)``` yaitu object ```document```. Terlihat bahwa output-nya sama persis dengan struktur HTML di atas. Ini membuktikan bahwa object document adalah representasi dari halaman HTML yang sedang dibuka. dan lewat object ```document``` ini JavaScript bisa berinteraksi dengan halaman HTML.
