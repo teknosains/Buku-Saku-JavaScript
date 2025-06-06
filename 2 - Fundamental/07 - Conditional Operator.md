@@ -7,7 +7,7 @@ Sintaks:
 condition ? expression1 : expression2
 ```
 
-Pada contoh diatas, jika ```condition``` bernilai _Truthy_, maka ```expression1``` akan di eksekusi, jika ```condition``` bernilai _Falsy_ atau _Nullish_, maka ```expression2``` akan di eksekusi.
+Pada contoh di atas, jika ```condition``` bernilai _Truthy_, maka ```expression1``` akan di eksekusi, jika ```condition``` bernilai _Falsy_ atau _Nullish_, maka ```expression2``` akan di eksekusi.
 
 contoh:
 
@@ -35,7 +35,7 @@ console.log(status);
 Ternary operator cocok digunakan untuk membuat sebuah variable yang value nya bergantung kepada suatu kondisi tertentu. Terlihat
 operator ini juga membuat _conditional statement_ menjadi lebih ringkas (cukup satu baris atau istilah populer nya one liner).
 
-```Condition``` pada ternary operator bisa lebih dari satu kondisi dan ini umum dilakukan pada praktek coding di dunia nyata (real world). 
+```Condition``` pada ternary operator bisa lebih dari satu kondisi dan ini umum dilakukan pada praktik coding di dunia nyata (real world). 
 
 contoh:
 ```javascript
@@ -81,4 +81,24 @@ console.log(status);
 
 // Output: Lulus bersyarat
 ```
-**Tips**: Jika belum terbiasa atau merasa kondisi berantai itu malah sulit, gunakan ```else if``` saja.
+**Tips**: Jika belum terbiasa atau merasa kondisi berantai itu malah sulit, gunakan ```else if``` saja. Ini penting untuk diperhatikan karena _code readability_ itu lebih didahulukan daripada code yang nampak lebih ringkas.
+
+### Kesalahan Umum yang Perlu Dihindari:
+```javascript
+// ❌ Jangan seperti ini (terlalu kompleks)
+let grade = score >= 90 ? 'A' 
+    : score >= 80 ? 'B' 
+    : score >= 70 ? 'C' 
+    : 'D';
+
+// ✅ Lebih baik seperti ini (mudah dibaca)
+if (score >= 90) {
+  grade = 'A';
+} else if (score >= 80) {
+  grade = 'B';
+} else if (score >= 70) {
+  grade = 'C';
+} else {
+  grade = 'D';
+}
+```

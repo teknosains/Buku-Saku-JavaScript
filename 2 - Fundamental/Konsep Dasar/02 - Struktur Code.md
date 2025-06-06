@@ -1,13 +1,13 @@
 ## Struktur Code
 
-Seperti pada bahasa pemrograman lainnya, JavaScript juga punya struktur code yang harus diketahui sebelum lebih lanjut praktek coding. 
+Seperti pada bahasa pemrograman lainnya, JavaScript juga punya struktur code yang harus diketahui sebelum lebih lanjut praktik coding. 
 
 ### Statement
 
-Statement adalah sintaks instruksi atau kalimat perintah yang kita tulis agar di eksekusi oleh si JavaScript Engine atau Browser. Contoh sederhana Statement adalah seperti berikut
+Statement adalah sintaks instruksi atau kalimat perintah yang kita tulis agar dieksekusi oleh si JavaScript Engine atau Browser. Contoh sederhana Statement adalah seperti berikut.
 
 ```javascript
-// statement untuk mendefinisakan variable
+// statement untuk mendefinisikan variable
 const umur = 12;
 ```
 
@@ -47,13 +47,13 @@ if (umur < 12) {
   
 } else {
   
-}  // <-- tidak perlu ada titik coma disini
+}  // <-- tidak perlu ada titik koma di sini
 
 switch (umur) {
   case:
   default:
      
-} // <-- tidak perlu ada titik coma disini
+} // <-- tidak perlu ada titik koma di sini
 ```
 
 ```javascript
@@ -61,11 +61,11 @@ switch (umur) {
 
 for (let i = 0; i < 5; i++) {
 
-} // <-- tidak perlu ada titik coma disini
+} // <-- tidak perlu ada titik koma di sini
 
 while (true) {
 
-} // <-- tidak perlu ada titik coma disini
+} // <-- tidak perlu ada titik koma di sini
 
 ```
 
@@ -74,11 +74,11 @@ while (true) {
 
 function printName() {
 
-} // <-- tidak perlu ada titik coma disini
+} // <-- tidak perlu ada titik koma di sini
 
 class Animal {
 
-} // <-- tidak perlu ada titik coma disini
+} // <-- tidak perlu ada titik koma di sini
 
 ```
 
@@ -87,23 +87,32 @@ Rekomendasi saya tetap gunakan titik koma karena ada beberapa situasi dimana cod
 ```javascript
 alert("Hello world")
 
-['Budi', 'Agus', 'Ujang'].forEach(name => alert(name));  
+[
+  'Budi', 
+  'Agus', 
+  'Ujang'
+].forEach(name => alert(name));  
 
-// error: Uncaught TypeError: Cannot read properties of undefined (reading '2')
+// Uncaught TypeError: 
+// Cannot read properties of undefined (reading '2')
 ```
-Code seperti diatas akan error jika kita jalankan karena, oleh karena itu perlu pakai titik koma agar JavaScript Engine / Browser tahu bahwa ke-2 baris code diatas adalah statement yang berbeda
+Code seperti di atas akan error jika kita jalankan karena, oleh karena itu perlu pakai titik koma agar JavaScript Engine/Browser tahu bahwa ke-2 baris code di atas adalah statement yang berbeda
 
 
 ```javascript
-alert("Hello world"); // <-- pakai titik koma disini
+alert("Hello world"); // <-- pakai titik koma di sini
 
-['Budi', 'Agus', 'Ujang'].forEach(name => alert(name)); 
+[
+  'Budi', 
+  'Agus', 
+  'Ujang'
+].forEach(name => alert(name)); 
 
 ```
 
 ### Comments
 
-Comment berguna untuk memberi keterangan tambahan pada codingan kita. Dengan begitu kita atau programmer lainnya yang akan membaca codingan kita dikemudian hari lebih mudah memahami arti atau maksud dari codingan kita.
+Comment berguna untuk memberi keterangan tambahan pada codingan kita. Dengan begitu kita atau programmer lainnya yang akan membaca codingan kita di kemudian hari lebih mudah memahami arti atau maksud dari codingan kita.
 
 Comment tidak akan di eksekusi oleh JavaScript, jadi tidak perlu khawatir bisa jadi bugs atau masalah. Ada **2** cara yang umum untuk menulis _comment_ yaitu 
 
@@ -112,10 +121,11 @@ Comment tidak akan di eksekusi oleh JavaScript, jadi tidak perlu khawatir bisa j
 
 ```javascript
 /*
-  ini adalah untuk check kondisi status usia berdasarkan umur
-  dari seseorang.
+  ini adalah untuk check kondisi status 
+  usia berdasarkan umur dari seseorang.
     
-  Outputnya hanya ada 2 yatu *kecil* atau *besar* saja
+  Outputnya hanya ada 2 yaitu:
+  *kecil* atau *besar* saja
 */
 if (umur < 12) {
   console.log('Kamu masih kecil');
@@ -128,7 +138,8 @@ if (cuaca === 'hujan') {
   console.log('Dirumah sajalah');
 }
 
-// contoh comment yang lebih advance, untuk dokumentasi internal
+// contoh comment yang lebih advance
+// untuk dokumentasi internal
 
 /**
 * fungsi untuk menghitung luas persegi
@@ -142,10 +153,10 @@ function luasPersegi(panjang, lebar) {
 }
 ```
 
-Comment juga berfungsi untuk me-nonaktifkan suatu statement agar tidak di eksekusi oleh JS Engine atau browser.
+Comment juga berfungsi untuk menonaktifkan suatu statement agar tidak di eksekusi oleh JS Engine atau browser.
 
 ```javascript
-// non-aktifkan sementara, kita ganti dengan yg baru
+// nonaktifkan sementara, kita ganti dengan yg baru
 
 /*
 function luasPersegi(panjang, lebar) {

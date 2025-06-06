@@ -2,9 +2,9 @@
 
 Operator adalah symbol matematika yang menghasilkan suatu output ketika di evaluasi dari dua (atau lebih) nilai atau variable. 
 
-Ada banyak operasi yang umum dilakukan saat kita coding diantaranya operasi standar matematika seperti ```penambahan```, ```pengurangan```, ```perkalian```, ```pembagian``` dan ```modulus```.
+Ada banyak operasi yang umum dilakukan saat kita coding di antaranya operasi standar matematika seperti ```penambahan```, ```pengurangan```, ```perkalian```, ```pembagian``` dan ```modulus```.
 
-Kemudian yang paling sering kita coding juga adalah operator untuk ```assignment```, ```comparison```, ```logical```, ```increment / decrement``` dan ```concatenation```. Dan pada tingkat yang lebih _advance_ ada operator Bitwise, namun kita tidak akan membahas Bitwise dalam series ini.
+Kemudian yang paling sering kita coding juga adalah operator untuk ```assignment```, ```comparison```, ```logical```, ```increment/decrement``` dan ```concatenation```. Dan pada tingkat yang lebih _advance_ ada operator Bitwise, namun kita tidak akan membahas Bitwise dalam series ini.
 
 ### Operand dan Operator
 
@@ -18,7 +18,7 @@ Sintaks:
 ```javascript
  x + y = z
 ```
-Dimana ```x``` dan ```y``` adalah operand, ```+``` dan ```=``` adalah operator dan ```z``` adalah result.
+Di mana ```x``` dan ```y``` adalah operand, ```+``` dan ```=``` adalah operator dan ```z``` adalah result.
 
 Contoh:
 ```javascript
@@ -34,7 +34,6 @@ Symbol: ```+```, ```-```, ```*```, ```%```, ```/```, ```**```
 
 Contoh:
 ```javascript
-
 // operasi penambahan
 let a = 4;
 let b = 1;
@@ -80,7 +79,7 @@ let z = 2 ** 2; // 2² = 4
 
 ### Operator assignment
 
-Digunakan untuk me-_assign_ sebuah value ke suatu variable.
+Digunakan untuk meng-_assign_ sebuah value ke suatu variable.
 
 Symbol: ```=```
 
@@ -108,7 +107,6 @@ console.log(result);
 Jika variable dengan tipe ```number``` di concat (```+```) dengan ```string```, maka variable bertipe ```number``` akan otomatis diubah menjadi ```string```.
 
 
-
 ### Operator increment/decrement
 
 Umumnya digunakan dalam looping atau ketika ada kebutuhan untuk menambah ```+1``` atau mengurangi ```-1``` suatu nilai.
@@ -122,7 +120,8 @@ let counter = 2;
 counter++;
 console.log(counter); // 3
 
-// penulisan diatas counter++ itu sebenarnya sama dengan
+// penulisan di atas counter++ itu 
+// sebenarnya sama dengan
 counter = counter + 1;
 
 for (let i = 0; i < 10; i++) {
@@ -142,7 +141,7 @@ for (let i = 10; i > 0; i--) {
  
 Operator ini dibagi menjadi 2 tipe yaitu Postfix dan Prefix.
  
-```Postfix``` adalah ketika operator nya diletakan **setelah** variable, syntax: ```counter++```, ```counter--```.
+```Postfix``` adalah ketika operator nya diletakan **setelah** variable, syntaks: ```counter++```, ```counter--```.
 
 penulisan dengan cara Postfix membuat nilai variable akan di _return_ dahulu **sebelum** operasi increment/decrement dilakukan
 
@@ -157,12 +156,12 @@ console.log(x); // 2
 let counter2 = 3;
 console.log(counter2++); // 3
 ```
-Perhatikan pada 2 contoh code diatas, sekilas kita mengira nilai ```x``` harusnya ```3``` dan ```counter2``` harusnya ```4``` namun hasilnya berbeda.
+Perhatikan pada 2 contoh code di atas, sekilas kita mengira nilai ```x``` harusnya ```3``` dan ```counter2``` harusnya ```4``` namun hasilnya berbeda.
 Ini memang agak _tricky_ sehingga kita mesti berhati-hati.
 
 Pada baris ```let x = counter++``` yang terjadi adalah variable ```counter``` akan segera me-return value originalnya yaitu ```2``` (sebelum proses increment/decrement terjadi) kemudian di assign ke ```x``` sehingga nilai ```x``` adalah 2, sama dengan nilai ```counter``` originalnya.
 
-Kemudian pada sample ```#2```, nilai variable ```counter2``` tetap ```3```, karena saat proses evaluasi syntax ```console.log(counter2++)```, nilai original dari ```counter2``` sudah di return duluan sehingga langsung ke-print ke console.
+Kemudian pada sample ```#2```, nilai variable ```counter2``` tetap ```3```, karena saat proses evaluasi syntaks ```console.log(counter2++)```, nilai original dari ```counter2``` sudah di return duluan sehingga langsung ke-print ke console.
 
 Nilai variable ```counter2``` akan ```4``` ketika kita kembali mengakses variable itu di baris berikut nya.
 
@@ -174,9 +173,9 @@ console.log(counter2++); // 4
 Ini terjadi karena ```counter2``` sudah di increment/decrement sebelumnya di baris ke-2, sehingga saat kita akses berikutnya, maka nilai nya sudah bertambah.
 
 > **Catatan**:
-> Silahkan kamu coba sendiri contoh code diatas yah agar semakin faham.
+> Silahkan kamu coba sendiri contoh code di atas yah agar semakin paham.
  
-```Prefix``` adalah ketika operator nya diletakan **sebelum** variable, syntax: ```++counter```, ```--counter```
+```Prefix``` adalah ketika operator nya diletakkan **sebelum** variable, syntaks: ```++counter```, ```--counter```
 
 Increment/decrement dalam bentuk ```prefix``` akan me-return value terbaru setelah proses increment/decrement nya terjadi
 
@@ -188,7 +187,7 @@ let counter2 = 3;
 console.log(--counter2); // 2
 ```
 
-Dilapangan kebanyakan kita akan menggunakan operator ```++``` dan ```--``` itu ketika menggunakan ```loop```. Saat menggunakan loop, tidak menjadi masalah mau pakai bentuk Postfix atau Prefix.
+Di lapangan kebanyakan kita akan menggunakan operator ```++``` dan ```--``` itu ketika menggunakan ```loop```. Saat menggunakan loop, tidak menjadi masalah mau pakai bentuk Postfix atau Prefix.
 
 ```javascript
 // Postfix

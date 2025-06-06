@@ -1,8 +1,8 @@
 ## Tipe Data di JavaScript
 
-Sebuah nilai/_value_ akan selalu disimpan dalam suatu tipe data. Dan ada 8 Tipe Data di JavaScript yang harus kita kuasasi, ke-8 tipe data itu dikelompokan menjadi **Primitif** dan **Non-Primitif**.
+Sebuah nilai/_value_ akan selalu disimpan dalam suatu tipe data. Dan ada 8 Tipe Data di JavaScript yang harus kita kuasai, ke-8 tipe data itu dikelompokkan menjadi **Primitif** dan **Non-Primitif**.
 
-##### Primitf
+##### Primitif
 
 1. ```null```
 2. ```undefined```
@@ -15,7 +15,7 @@ Sebuah nilai/_value_ akan selalu disimpan dalam suatu tipe data. Dan ada 8 Tipe 
 ##### Non-Primitif
 8. ```object```
 
-Ke-8 tipe data diatas secara umum sama fungsinya yaitu untuk menyimpan suatu nilai / _value_. Normalnya untuk men-check type data suatu value dapat menggunakan operator ```typeof```
+Ke-8 tipe data di atas secara umum sama fungsinya yaitu untuk menyimpan suatu nilai / _value_. Normalnya untuk mengecek type data suatu value dapat menggunakan operator ```typeof```
 
 ```javascript
 typeof 12;                  // "number"
@@ -28,7 +28,7 @@ typeof { name: 'Budi' };    // "object"
 typeof [];                  // "object"
 typeof function test(){};   // "function"
 ```
-Silahkan buka tab ```console``` di browser dan coba sample code diatas.
+Silahkan buka tab ```console``` di browser dan coba sample code di atas.
 
 
 #### 1. null
@@ -44,7 +44,7 @@ if (langit === 'biru') {
   cuaca = 'Mendung'
 }
 ```
-pada contoh diatas, kita bisa katakan bahwa nilai variable ```cuaca``` itu **tidak diketahui** atau **kosong**.
+pada contoh di atas, kita bisa katakan bahwa nilai variable ```cuaca``` itu **tidak diketahui** atau **kosong**.
 
 type ```null``` juga bersifat _falsy_, artinya jika di evalusasi, maka akan menjadi _false_ sehingga umum digunakan dalam conditional statement.
 
@@ -74,6 +74,7 @@ contoh:
 let umur;
 console.log(umur) 
 // output: undefined
+
 console.log(typeof umur) 
 // output: "undefined"
 
@@ -200,9 +201,9 @@ console.log(user);
 // output: {nama: 'Budi', umur: 12, alamat: 'Jl. Kemayoran no 12, Jakarta'}
 ```
 
-#### Dimanakah ```Array``` ?
+#### Di manakah ```Array``` ?
 
-Di JavaScript Array termasuk keluarga ```object```. Oleh karena itu jika kita check type sebuah array maka hasilnya adalah ```object```
+Di JavaScript Array termasuk keluarga ```object```. Oleh karena itu jika kita cek type sebuah array maka hasilnya adalah ```object```
 
 ```javascript
 const nomor = [1, 2, 3, 4, 5];
@@ -210,4 +211,4 @@ const nomor = [1, 2, 3, 4, 5];
 console.log(typeof nomor); // output: "object"
 ```
 
-Disarankan untuk mencoba-coba coding sendiri dan menghafal tipe-tipe data diatas karena kedepan ke-8 type ini akan menemani keseharian kita saat coding JavaScript. Selain itu hal ini juga sering kali ditanyakan saat sesi Interview kerja.
+Disarankan untuk mencoba-coba coding sendiri dan menghafal tipe-tipe data di atas karena ke depan ke-8 **type** ini akan menemani keseharian kita saat coding JavaScript. Selain itu hal ini juga sering kali ditanyakan saat sesi Interview kerja.

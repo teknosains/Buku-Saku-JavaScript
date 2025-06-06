@@ -1,5 +1,5 @@
 ## Environment JavaScript
-Kita bisa bilang Environment JavaScript adalah tempat dimana code JavaScript bisa dijalankan. Ada beberapa environment yang wajib kita ketahui yaitu
+Kita bisa bilang Environment JavaScript adalah tempat di mana code JavaScript bisa dijalankan. Ada beberapa environment yang wajib kita ketahui yaitu
 
 * Browser environment
 * Node environment
@@ -25,13 +25,13 @@ Contoh:
 </html>
 ```
 
-Seperti terlihat pada sample code diatas, kita bisa letakkan langsung code JavaScript beserta code _HTML_ didalam tag ```<script></script>```
+Seperti terlihat pada sample code di atas, kita bisa letakkan langsung code JavaScript beserta code _HTML_ di dalam tag ```<script></script>```
 
 ```html
 <body>
   <h1>Selamat datang!</h1>
-  <!-- code html lainnya diatas-->
-  <!-- code JavaScript dibawah -->
+  <!-- code HTML lainnya di atas-->
+  <!-- code JavaScript di bawah -->
   <script>
    const title = 'Buku Saku JavaScript';
    alert(title);
@@ -39,7 +39,7 @@ Seperti terlihat pada sample code diatas, kita bisa letakkan langsung code JavaS
 </body>
 ```
 
-Praktek yang umum dilakukan adalah membuat file javascript terpisah lalu kemudian di-_load_ di html-nya dengan cara seperti berikut:
+Praktik yang umum dilakukan adalah membuat file javascript terpisah lalu kemudian di-_load_ di HTML-nya dengan cara seperti berikut:
 
 ```javascript
 // file script.js
@@ -55,12 +55,12 @@ alert(title);
   <script src="script.js"></script>
 </body>
 ```
-Manfaat dari memisahkan code JavaScript menjadi file tersendiri adalah struktur file project kita menjadi lebih rapih, lebih modular dan lebih mudah dibaca. Namun untuk project yang besar, adakalanya kita lebih memilih untuk langsung di _embedd_ di html seperti contoh sebelumnya. Ini bisa mengurangi beban network request ke server karena dengan menulis code seperti ini
+Manfaat dari memisahkan code JavaScript menjadi file tersendiri adalah struktur file project kita menjadi lebih rapi, lebih modular dan lebih mudah dibaca. Namun untuk project yang besar, adakalanya kita lebih memilih untuk langsung di-_embedd_ di HTML seperti contoh sebelumnya. Ini bisa mengurangi beban network request ke server karena dengan menulis code seperti ini
 
 ```html
 <script src="script.js"></script>
 ```
-si browser akan me-lakukan request ke server untuk me-load file ```script.js```. Namun tidak perlu terlalu dikhawatirkan untuk saat ini, silahkan gunakan cara mana yang kamu lebih suka.
+si browser akan melakukan request ke server untuk me-load file ```script.js```. Namun tidak perlu terlalu dikhawatirkan untuk saat ini, silakan gunakan cara mana yang kamu lebih suka.
 
 #### 2. Node environment
 
@@ -81,12 +81,14 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+  console.log(
+    `Server running at http://${hostname}:${port}/`
+  );
 });
 ```
 
 #### 3. Environment lainnya
 
-Ada 2 environment cukup populer lainnya yaitu Bun dan Deno. Deno adalah alternatif lain selain Node.JS jika kamu ingin _coding_ untuk backend (di server) dan faktanya adalah creator Deno adalah orang yang sama dengan creator Node.JS. Pelajari tentang Deno lebih lanjut disitus resminya https://deno.land
+Ada 2 environment cukup populer lainnya yaitu Bun dan Deno. Deno adalah alternatif lain selain Node.JS jika kamu ingin _coding_ untuk backend (di server) dan faktanya adalah creator Deno adalah orang yang sama dengan creator Node.JS. Pelajari tentang Deno lebih lanjut di situs resminya https://deno.land
 
-Adapun Bun adalah environment JavaScript yang di claim yang tercepat sejauh ini. Pelajari tentang Bun lebih jauh disitus resminya https://bun.sh
+Adapun Bun adalah environment JavaScript yang di claim yang tercepat sejauh ini. Pelajari tentang Bun lebih jauh di situs resminya https://bun.sh

@@ -1,14 +1,14 @@
 ## Variable
 
 Setiap bahasa pemrograman pasti memiliki mekanisme untuk menyimpan suatu informasi. Dalam bahasa pemrograman, suatu informasi akan disimpan
-kedalam sebuah **Variable**. Sebagai contoh informasi profile seseorang dapat disimpan dalam variable seperti ini:
+ke dalam sebuah **Variable**. Sebagai contoh informasi profil seseorang dapat disimpan dalam variable seperti ini:
 
 ```javascript
 let nama = 'Agus';
 let umur = 20;
-let alamat = 'Jl. Ujung berung Bandung';
+let alamat = 'Jl. Ujung Berung Bandung';
 ```
-Dimana **nama, umur dan alamat** adalah sebuah _variable_. Untuk membuat sebuah variable di JavaScript cukup menggunakan keyword ```let``` atau ```const```.
+Di mana **nama, umur, dan alamat** adalah sebuah _variable_. Untuk membuat sebuah variable di JavaScript cukup menggunakan keyword `let` atau ```const```.
 
 Struktur sebuah variable secara sederhana mengikuti pola berikut:
 
@@ -34,7 +34,7 @@ const tahun;
 let judul;
 let bahasa;
 ```
-Kemudian variable diatas dapat kita isi / _definisi_ dengan informasi apapun sebagai contoh
+Kemudian variable di atas dapat kita isi / _definisi_ dengan informasi apapun sebagai contoh
 
 ```javascript
 const tahun = 2023;
@@ -49,7 +49,7 @@ let bahasa = 'JavaScript';
 > **Note**
 > 
 > Jika mendeklaraskan variable menggunakan ```const``` maka _value_ nya harus langsung didefinisikan karena value dari variable
-```const``` tidak bisa didefinisi/diubah belakangan.
+```const``` tidak bisa didefinisikan/diubah belakangan.
 > ```javascript
 > const tahun;
 > // atau
@@ -92,7 +92,7 @@ const app = document.getElementById('app');
 
 ### Aturan Penamaan Variable
 
-Ada beberapa aturan penaaman **variable** di JavaScript yang wajib kita patuhi diantaranya:
+Ada beberapa aturan penamaan **variable** di JavaScript yang wajib kita patuhi di antaranya:
 - Nama variable wajib hanya terdiri dari huruf, kombinasi huruf-angka, simbol ```$``` dan ```_``` 
    
   contoh:
@@ -153,9 +153,9 @@ Ada beberapa aturan penaaman **variable** di JavaScript yang wajib kita patuhi d
   let alamatLengkap = 'Jl. Palmerah no 12 Rt/Rw 01/03';
   let namaIbuKandung = 'Marni Hidayat';
   ```
-- Direkomendasi menggunakan bahasa inggris
+- Direkomendasi menggunakan bahasa Inggris
   
-  Penggunaan bahasa **inggris** dalam penamaan _variable_ akan membuat code lebih selaras dengan syntax-syntax JavaScript yang memang dibuat dalam bahasa inggris.
+  Penggunaan bahasa **Inggris** dalam penamaan _variable_ akan membuat code lebih selaras dengan syntax-syntax JavaScript yang memang dibuat dalam bahasa Inggris.
 
   contoh:
 
@@ -168,7 +168,7 @@ Ada beberapa aturan penaaman **variable** di JavaScript yang wajib kita patuhi d
   }
   ```
   
-Buat dan namailah variable sesuai dengan aturan dan rekomendasi agar code kita lebih clean dan lebih terlihat profesional. Selanjutnya, pada contoh-contoh code dalam series **Buku Saku JavaScript** ini, kita akan menamai variable dengan bahasa inggris yah.
+Buat dan namailah variable sesuai dengan aturan dan rekomendasi agar code kita lebih clean dan lebih terlihat profesional. Selanjutnya, pada contoh-contoh code dalam series **Buku Saku JavaScript** ini, kita akan menamai variable dengan bahasa Inggris yah.
 
 ### Konkatenasi / penggabungan Variable dan String
 

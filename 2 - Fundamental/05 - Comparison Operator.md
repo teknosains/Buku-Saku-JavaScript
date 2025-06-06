@@ -50,7 +50,7 @@ console.log(name === name2); // false
 console.log(name != name2); // true
 ```
 
-Seringkali kita juga harus hati-hati ketika membandingkan type data yang berbeda seperti pada contoh dibawah
+Seringkali kita juga harus hati-hati ketika membandingkan type data yang berbeda seperti pada contoh di bawah
 
 1. JavaScript akan mengkonversi string menjadi number
 
@@ -64,7 +64,6 @@ console.log('01' == 1); // true
 2. Untuk boolean, ```true``` dikonversi menjadi ```1```, ```false``` dikonversi menjadi ```0```
 
 ```javascript
-
 console.log(true == 1); // true
 console.log(false == 0); // true
 console.log(false === 0); // false, karena Strict check

@@ -1,7 +1,6 @@
 # Mengenal Istilah Truthy, Falsy dan Nullish
-Memahami ketiga istilah diatas sangat penting mengingat istilah-istilah ini sering banget dipakai ketika
+Memahami ketiga istilah di atas sangat penting mengingat istilah-istilah ini sering banget dipakai ketika
 kita baca tutorial, komunikasi atau ngobrol dengan programmer lain. Jadi ini wajib kita hafal dan sering kita gunakan juga nantinya dalam keseharian coding.
-
 
 
 ### Truthy
@@ -26,15 +25,14 @@ if (name) {
 }
 
 // Output: Nama saya Agus
-
 ```
 
-Dalam contoh diatas variable ```name``` bernilai truthy dan bisa digunakan dalam _conditional statement_ untuk menguji
+Dalam contoh di atas variable ```name``` bernilai truthy dan bisa digunakan dalam _conditional statement_ untuk menguji
 apakah variable ```name``` ada isinya atau tidak.
 
 ### Falsy
 
-Adalah sebuah value yang selalu bernilai ```false``` jika di evaluasi dengan ```Boolean(value)```.
+Adalah sebuah value yang selalu bernilai ```false``` jika di-evaluasi dengan ```Boolean(value)```.
 Daftar falsy value adalah ```false```, ```0```, ```-0```, ```0n```, ```''```, ```null```, ```undefined```, ```NaN```.
 
 contoh:
@@ -84,6 +82,5 @@ const name = 'Agus';
 console.log(name); 
 
 // Output: Agus
-
 ```
 
