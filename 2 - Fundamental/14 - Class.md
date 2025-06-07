@@ -187,14 +187,13 @@ class Auth {
     if (checkAccount(this.username, this.password)) {
       Session.create({
         username: this.username
-      })
+      });
     }
   }
 
   doLogout() {
     Session.destroy(this.username);
   }
-
 }
 ```
 
@@ -237,7 +236,7 @@ console.log(
 );
 // Output: Luas segitiga = 7.5cm²
 
-// kita modif satuan nya
+// kita modif satuannya
 // dengan setter
 segitiga1.satuan = 'm';
 
@@ -285,7 +284,6 @@ class Segitiga {
   hitungLuas() {
    // ...  
   }
-
 }
 
 const segitiga1 = new Segitiga(3, 5);
@@ -317,7 +315,6 @@ class Segitiga {
   static namaSegitiga() {
     return 'Siku-siku'
   }
-
 }
 ```
 

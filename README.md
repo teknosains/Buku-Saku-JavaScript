@@ -54,7 +54,7 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
 * Function Lanjutan Part 1
   * Arrow Function Lanjutan
   * Callback Function
-  * Constructor Function Lanjutan
+  * Higher Order Function
   * IIFE (Immediately Invoked Function Expression)
 * DOM Dan Events Di Browser Lanjutan  
   * Event Bubbling
