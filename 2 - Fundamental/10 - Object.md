@@ -1,6 +1,6 @@
 # Object
 
-Dipembahasan sebelumnya mengenal **Tipe Data**, kita sudah menyinggung tentang```Object``` yang merupakah salah satu tipe data di JavaScript, namun Object ini adalah tipe data non-primitif. 
+Di pembahasan sebelumnya mengenal **Tipe Data**, kita sudah menyinggung tentang```Object``` yang merupakan salah satu tipe data di JavaScript, namun Object ini adalah tipe data non-primitif. 
 
 Object adalah sebuah _collection_ data yang memungkinkan kita untuk menyimpan data dalam bentuk pasangan ```key:value``` yang disebut dengan _property_.
 
@@ -15,25 +15,27 @@ sintaks:
 }
 ```
 
-dimana setiap property dipisahkan oleh tanda koma ```,```.
+di mana setiap property dipisahkan oleh tanda koma ```,```.
 
 contoh:
 
 ```javascript
 let user = {
-  name: 'Budi', // key: value
+  name: 'Budi',
   age: 33
 };
 ```
 
-Object ```user``` diatas dikatakan memiliki 2 property yang berisi ```name``` dan ```age``` berserta _value_ nya masing-masing. Bayangkan _property_ dari sebuah object adalah karakteristik yang secara khusus melekat ke si object itu sendiri.
+Object ```user``` di atas dikatakan memiliki 2 property yang berisi ```name``` dan ```age``` berserta _value_ nya masing-masing. Bayangkan _property_ dari sebuah object adalah karakteristik yang secara khusus melekat ke si object itu sendiri.
 
 Object ```user``` misalnya, menunjukan bahwa ia adalah orang atau manusia sehingga minimal ia akan punya dua _property_ yang melekat yaitu pasti memiliki nama, umur, jenis kelamin, tinggi badan, asal negara dsb.
 
 
-Untuk membuat object, minimal ada dua cara yaitu dengan menggunakan object literal ```{ }``` atau pakai constructor ```new Object()```.
+### Empat Cara Membuat Object
 
-Contoh membuat object dengan object literal ```{ }```
+Ada 4 cara untuk membuat object di JavaScript yaitu melalui object literal ```{ }```, constructor ```new Object()```, function ```Object.create()```, dan class ```class```.
+
+1. Membuat object dengan object literal ```{ }```
 
 ```javascript
 let user = {
@@ -42,7 +44,7 @@ let user = {
 };
 ```
 
-sedangkan membuat object dengan constructor ```new Object()``` adalah seperti berikut
+2. Membuat object dengan constructor ```new Object()``` 
 
 ```javascript
 let user = new Object();
@@ -50,16 +52,41 @@ user.name = 'Budi';
 user.age = 33;
 ```
 
-Semua contoh diatas akan menghasilkan output yang sama saat di _console_.
+3. Membuat object dengan function ```Object.create()```
 
 ```javascript
+let user = Object.create(null);
+user.name = 'Budi';
+user.age = 33;
+```
+
+4. Membuat object dengan class ```class``` adalah seperti berikut
+
+```javascript
+class User {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  } 
+}
+
+let user = new User('Budi', 33);
+```
+
+
+Semua contoh di atas akan menghasilkan output yang sama saat di _console_.
+
+```javascript
+console.log(user);
+
+// output
 [Object] {
   age: 33,
   name: "Budi"
 }
 ```
 
-Disarankan juga ketika membuat object langsung, kita menambahkan koma ```,``` pada property terakhir. Ini disebut sebagai ```trailing comma``` yang fungsinya untuk membuat lebih mudah saat menambah, menghapus atau memindahkan posisi property.
+Disarankan juga ketika membuat object langsung (object literal), kita menambahkan koma ```,``` pada property terakhir. Ini disebut sebagai ```trailing comma``` yang fungsinya untuk membuat lebih mudah saat menambah, menghapus atau memindahkan posisi property.
 
 contoh:
 
@@ -74,7 +101,7 @@ Secara umum membuat object langsung dengan object literal ```{ }``` adalah cara 
 
 ### Nested Object
 
-Saat membuat real-world aplikasi, sangat umum banget membuat object yang lebih kompleks seperti object yang property nya ada object lain atau object turunannya.
+Saat membangun sebuah aplikasi, sangat umum membuat object yang lebih kompleks seperti object yang property nya terdapat object lain atau object turunannya.
 
 contoh:
 
@@ -98,7 +125,7 @@ let user = {
 };
 ```
 
-Object ```user``` terlihat lebih kompleks dari sebelumnya. Didalamnya ada property ```address``` yang
+Object ```user``` terlihat lebih kompleks dari sebelumnya. Di dalamnya ada property ```address``` yang
 juga value nya adalah sebuah object. Kemudian property ```address``` masih punya property yang juga sebuah object yaitu ```mapLocation```.
 
 ### Mengakses Property Object
@@ -173,9 +200,9 @@ alert(car[key]); // blue
   />
 </div>
 
-Output dari contoh diatas akan sesuai dengan nama property / key yang di input. Misal _key_ ```color``` akan menghasilkan _value_ ```blue``` dst.
+Output dari contoh di atas akan sesuai dengan nama property / key yang di input. Misal _key_ ```color``` akan menghasilkan _value_ ```blue``` dst.
 
-Ketika mengakses nama property yang tidak ada didalam object maka akan menghasilkan _undefined_. Contoh
+Ketika mengakses nama property yang tidak ada di dalam object maka akan menghasilkan _undefined_. Contoh
 
 ```javascript
 let user = {
@@ -190,7 +217,7 @@ console.log(user.email); // undefined
 console.log(user['email']); // undefined
 ```
 
-Untuk mengantisipasi pengaksesan property yang tidak ada didalam object (agar meminimalisir bugs), ada beberapa cara yang kita bisa dilakukan seperti menggunakan operator ```in```, ```property !== undefined```, dan ```Object.hasOwnProperty()```.
+Untuk mengantisipasi pengaksesan property yang tidak ada di dalam object (agar meminimalisir bugs), ada beberapa cara yang kita bisa dilakukan seperti menggunakan operator ```in```, ```property !== undefined```, dan ```Object.hasOwnProperty()```.
 
 contoh:
 
@@ -282,9 +309,9 @@ for (let key in user) {
 }
 ```
 
-Pada contoh diatas ada penambahan pengecekan ```typeof user[key] === 'object'``` agar loop ```for-in``` yang kedua
+Pada contoh di atas ada penambahan pengecekan ```typeof user[key] === 'object'``` agar loop ```for-in``` yang kedua
 (nested) hanya akan di eksekusi jika _value_ dari salah satu property object ```user``` adalah sebuah object.
-Dalam contoh diatas berarti _value_ dari property ```address``` lah yang berupa object.
+Dalam contoh di atas berarti _value_ dari property ```address``` lah yang berupa object.
 
 Bagaimana jika nested object nya ada banyak, misal kedalamannya lebih dari 5? Untuk kasus seperti itu maka kita bisa gunakan bantuan loop ```while``` (dengan modifikasi khusus tentunya ) dan bahkan dengan function rekursif.
 Kita tidak akan membahasnya lebih detail dalam materi ini karena akan panjang sekali dan bisa membuat kamu pusing dan melewatkan hal-hal yang justru lebih ditekankan dalam pembahasan ini.
@@ -309,7 +336,7 @@ userLogin['email']= 'budi@email.com'
 console.log(userLogin);
 ```
 
-Pada contoh diatas kita menambahkan property baru ```isLogin``` dan ```email``` sehingga object ```userLogin```
+Pada contoh di atas kita menambahkan property baru ```isLogin``` dan ```email``` sehingga object ```userLogin```
 akan menjadi seperti berikut (ketika di console)
 
 ```javascript
@@ -362,7 +389,7 @@ Object {
 ```
 ### Object Method
 
-Object method adalah function yang dibuat didalam object untuk melakukan operasi tertentu yang berkaitan dengan object nya.
+Object method adalah function yang dibuat di dalam object untuk melakukan operasi tertentu yang berkaitan dengan object nya.
 
 sintaks:
 
@@ -408,7 +435,7 @@ obj.printProfile();
 
 Ada sedikit perbedaan _behaviour_ untuk method di object yang menggunakan _Arrow Function_ yaitu keyword ```this``` tidak bisa digunakan untuk mengakses property di object tersebut. Hal ini karena memang Arrow Function itu tidak punya ```this```-nya sendiri.
 
-Perhatikan contoh dibawah:
+Perhatikan contoh di bawah:
 
 ```javascript
 const obj = {
@@ -439,9 +466,7 @@ obj.printProfile();
 // Output: 20
 ```
 
-
-> Catatan: pembahasan mengenai Arrow Function bisa dilihat di materi tentang Function
-
+**Catatan**: pembahasan mengenai Arrow Function bisa dilihat di materi tentang Function
 
 ### Computed Property
 
@@ -462,7 +487,7 @@ const film = printRating('film', 5);
 const serial = printRating('serial', 4);
 ```
 
-Misal pada contoh diatas kita ingin membuat sebuah fungsi untuk mencetak rating anime Doraemon dalam bentuk film atau serial-nya. Contoh diatas akan menghasilkan output seperti berikut:
+Misal pada contoh di atas kita ingin membuat sebuah fungsi untuk mencetak rating anime Doraemon dalam bentuk film atau serial-nya. Contoh di atas akan menghasilkan output seperti berikut:
 
 ```javascript
 Object {
@@ -512,13 +537,13 @@ let user = {
 };
 ```
 
-Diatas kita punya sebuah _object_ ```{ name: "Budi", age: 33 }``` yang di assign ke variable ```user```. Ini artinya si object-nya sendiri disimpan oleh si _JavaScript Engine_ disuatu lokasi di memory, dan tidak ada yang tahu lokasinya dimana kecuali si variable ```user```. Dengan kata lain si variable ```user``` ini punya _reference_ atau _pointer_ ke lokasi memory tempat si object ```{ name: "Budi", age: 33 }``` disimpan.
+di atas kita punya sebuah _object_ ```{ name: "Budi", age: 33 }``` yang di assign ke variable ```user```. Ini artinya si object-nya sendiri disimpan oleh si _JavaScript Engine_ disuatu lokasi di memory, dan tidak ada yang tahu lokasinya dimana kecuali si variable ```user```. Dengan kata lain si variable ```user``` ini punya _reference_ atau _pointer_ ke lokasi memory tempat si object ```{ name: "Budi", age: 33 }``` disimpan.
 
 Maka ketika kita akses property nya misal ```user.name```, si _JavaScript Engine_ akan mencari alamat memory nya dimana dan ambil value dari object-nya.
 
 Nah karena behaviour object ini, satu hal yang **sangat penting** untuk di perhatikan yaitu ketika variable sebuah object di _copy_ ke variable lain, maka yang sebenarnya di copy itu bukan object-nya melainkan si _reference_ nya.
 
-Coba kita ulang, object diatas ```{ name: "Budi", age: 33 }``` saat ini hanya variable ```user``` saja yang tahu keberadaanya dimana di memory. Jika kita putuskan misal variable ```user2``` juga harus tahu keberadaanya dimana maka kita lakuan operasi _copy_ seperti ini.
+Coba kita ulang, object di atas ```{ name: "Budi", age: 33 }``` saat ini hanya variable ```user``` saja yang tahu keberadaanya dimana di memory. Jika kita putuskan misal variable ```user2``` juga harus tahu keberadaanya dimana maka kita lakuan operasi _copy_ seperti ini.
 
 ```javascript
 let user = {
@@ -528,7 +553,7 @@ let user = {
 
 let user2 = user; // copy reference-nya
 ```
-Sekarang (lihat contoh diatas) artinya si object-nya sendiri **tetap satu** (tidak di copy / duplikat), namun sekarang variable ```user2``` juga tahu alamat atau lokasi object ```{ name: "Budi", age: 33 }``` di memory karena yang di copy dari ```user``` adalah _reference_ nya saja. Agar lebih terbayang, perhatikan ilustrasi berikut:
+Sekarang (lihat contoh di atas) artinya si object-nya sendiri **tetap satu** (tidak di copy / duplikat), namun sekarang variable ```user2``` juga tahu alamat atau lokasi object ```{ name: "Budi", age: 33 }``` di memory karena yang di copy dari ```user``` adalah _reference_ nya saja. Agar lebih terbayang, perhatikan ilustrasi berikut:
 
 <img width="564" alt="Object reference3" src="https://github.com/user-attachments/assets/b7755633-c935-4229-9645-9c3ca727a647">
 
@@ -552,9 +577,9 @@ console.log(user2.name);
 // Output: Agus
 ```
 
-Konsep _copy by-reference_ pada object ini sangat penting untuk di fahami, oleh karena itu sebaiknya kamu juga sekalian coba langsung contoh diatas yah.
+Konsep _copy by-reference_ pada object ini sangat penting untuk dipahami, oleh karena itu sebaiknya kamu juga sekalian coba langsung contoh di atas yah.
 
-Kalau begitu bagaimana jika kita hanya ingin men-duplikat object nya saja? (bukan copy reference nya) sehingga meski object aslinya di modif, tidak akan pengaruh ke object _cloningan_-nya. Ada beberapa cara untuk melakukannya diantaranya adalah
+Kalau begitu bagaimana jika kita hanya ingin menduplikat object nya saja? (bukan copy reference nya) sehingga meski object aslinya di modifikasi, tidak akan pengaruh ke object _cloningan_-nya. Ada beberapa cara untuk melakukannya diantaranya adalah
 
 - Menggunakan ```Object.assign()```
 
@@ -581,7 +606,7 @@ Kalau begitu bagaimana jika kita hanya ingin men-duplikat object nya saja? (buka
 
 - Menggunakan ```structuredClone()``` khusus untuk nested object
 
-  Jika object kita cukup kompleks yaitu punya nested object satu level, dua level, dan seterusnya, maka tidak bisa pakai ```Object.assign()``` seperti diatas. Ini karena setiap nested object akan juga di copy by-reference yang membuat behaviour nya akan sama seperti pada **_ilustrasi object-001_** diatas.
+  Jika object kita cukup kompleks yaitu punya nested object satu level, dua level, dan seterusnya, maka tidak bisa pakai ```Object.assign()``` seperti di atas. Ini karena setiap nested object akan juga di copy by-reference yang membuat perilakunya akan sama seperti pada **_ilustrasi object-001_** di atas.
   
   Untuk case ini, kita bisa menggunakan function ```structuredClone()``` untuk membuat meng-_clone_ object-nya.
 
@@ -610,4 +635,4 @@ Kalau begitu bagaimana jika kita hanya ingin men-duplikat object nya saja? (buka
   ```
 
 
-Materi tentang Object di bab Fundamental ini sudah selesai, baiknya di baca ulang dan di coba lagi sendiri sampai betul-betul dikuasasi. Pembahasan tentang Object (yang lebih advance) sendiri masih akan berlanjut di chapter-chapter berikutnya.
+Sebelum lanjut ke pembahasan selanjutnya, baiknya di baca ulang dan di coba lagi sendiri sampai betul-betul dikuasai. Pembahasan tentang Object (yang lebih advance) sendiri masih akan berlanjut di chapter-chapter berikutnya.

@@ -1,6 +1,6 @@
 # Conditional Statement
 
-Conditional statement atau percabangan digunakan untuk untuk membuat atau menentukan keputusan. Ada tiga cara untuk membuat percabangan yaitu dengan ```if..else```, ```switch``` dan ```ternary```. Ternary sendiri sudah kita bahas di halaman sebelumnya _so_ sekarang kita akan hanya focus mengenal ```if..else``` dan ```switch```.
+Conditional statement atau percabangan digunakan untuk membuat atau menentukan keputusan berdasarkan kondisi tertentu. Ada tiga cara untuk membuat percabangan yaitu dengan ```if..else```, ```switch``` dan ```ternary```. Ternary sendiri sudah kita bahas di halaman sebelumnya, jadi sekarang kita hanya akan fokus membahas ```if..else``` dan ```switch```.
 
 
 ### if...else
@@ -71,7 +71,7 @@ else console.log('Lulus');
 // Output: Tidak lulus
 ```
 
-Cara penulisan diatas valid-valid saja sebenarnya namun akan lebih memudahkan untuk dibaca dan dimengerti kalau kita menuliskan ```if...else``` dengan kurung kurawal. 
+Cara penulisan di atas valid-valid saja sebenarnya namun akan lebih memudahkan untuk dibaca dan dimengerti kalau kita menuliskan ```if...else``` dengan kurung kurawal. 
 
 ```javascript
 let score = 60;
@@ -108,7 +108,7 @@ contoh:
 function checkWeather(cuaca) {
   
   if (cuaca === 'terang') {
-    return 'Nonton diluar';
+    return 'Nonton di luar';
   } else if (cuaca === 'mendung') {
     return 'Nonton di tetangga';
   } else if (cuaca === 'hujan') {
@@ -124,12 +124,12 @@ console.log(nonton);
 
 // Output: Cuaca tidak dikenali
 ```
-Pada contoh diatas, JavaScript pertama kali akan cek apakah ```cuaca === 'terang'```. Jika _falsy_, maka lanjut ke kondisi berikutnya ```cuaca === 'mendung'```. Jika masih _falsy_ juga, maka lanjut ke kondisi berikutnya ```cuaca === 'hujan'```. Jika _falsy_ juga, maka akan masuk ke blok ```else``` terakhir ```return 'Cuaca tidak dikenali''```.
+Pada contoh di atas, JavaScript pertama kali akan cek apakah ```cuaca === 'terang'```. Jika _falsy_, maka lanjut ke kondisi berikutnya ```cuaca === 'mendung'```. Jika masih _falsy_ juga, maka lanjut ke kondisi berikutnya ```cuaca === 'hujan'```. Jika _falsy_ juga, maka akan masuk ke blok ```else``` terakhir ```return 'Cuaca tidak dikenali''```.
 
 
 ### Nested if...else
 
-Secara sederhana, kondisi Nested atau bersarang (sebaiknya jangan pakai istilah _bersarang_ dalam keseharian nanti yah :D ) digunakan saat kita butuh ada ```if``` didalam ```if``` dan ini sangat umum digunakan dalam keseharian coding.
+Secara sederhana, kondisi Nested atau bersarang (sebaiknya jangan pakai istilah _bersarang_ dalam keseharian nanti yah :D ) digunakan saat kita butuh ada ```if``` di dalam ```if``` dan ini sangat umum digunakan dalam keseharian coding.
 
 contoh:
 
@@ -156,7 +156,7 @@ console.log(status);
 
 // Output: Lulus bersyarat
 ```
-Pada contoh diatas pertama JavaScript akan cek apakah ```score < 70```, jika ```true``` maka akan lanjut ke ```if``` dibawahnya
+Pada contoh di atas pertama JavaScript akan cek apakah ```score < 70```, jika ```true``` maka akan lanjut ke ```if``` dibawahnya
 untuk cek ```score >= 60```, jika ternyata score nya >= 60 maka harus di cek juga _behaviour_-nya, kira-kira begitu seterusnya.
 
 ### switch
@@ -169,13 +169,14 @@ sintaks:
 ```javascript
 switch (condition) {
   case value1:
-    // jalanin code ini
+    // jalankan code ini
     break;
   case value2:
-    // jalanin code ini
+    // jalankan code ini
     break;
   default:
-    // kondisi gk ada yg match? jalanin code ini
+    // kondisi tidak ada yg match? 
+    // jalankan code ini
     break;
 }
 ```
@@ -192,7 +193,7 @@ function checkWeather(cuaca) {
 
   switch (cuaca) {
     case 'terang':
-      nonton = 'Nonton diluar';
+      nonton = 'Nonton di luar';
       break;
     case 'mendung':
       nonton = 'Nonton di tetangga';
@@ -223,14 +224,14 @@ memakai ```if``` akan lebih cocok. Misal:
 
 ```javascript
 if (cuaca === 'terang' && suhu >= 30) {
-  console.log('Nonton diluar');
+  console.log('Nonton di luar');
 } else if (cuaca === 'mendung' && suhu < 30) {
   // ..dst
 }
 ```
 
 Contoh berikut ini harusnya lebih meyakinkan kita kalau ```switch``` lebih cocok saat kita punya **satu**
-condition untuk di _compare_ dengan beberapa bahkan banyak _value_ yang memungkinkan.
+condition untuk di _compare_ dengan beberapa _value_ yang memungkinkan.
 
 ```javascript
 
@@ -277,7 +278,7 @@ console.log(
 ```
 
 Kalau diperhatikan lagi, menggunakan contoh potongan code yang sama, penulisan dengan ```switch``` terlihat lebih mudah dibaca dan code menjadi lebih clean. 
-Untuk kondisi percabangan yang cukup banyak, jika menggunakan ```if...else``` maka secara natural mata kita akan scan tiap kondisi pada  ```if...else``` nya sampai akhir.
+Untuk kondisi percabangan yang cukup banyak, jika menggunakan ```if...else``` maka secara natural mata kita akan _scan_ tiap kondisi pada  ```if...else``` nya sampai akhir.
 
 #### Fitur ```fall-through``` di statement ```switch```
 
@@ -285,8 +286,8 @@ Bagaimana kalau kita ingin multiple condition dengan ```switch```?. ```switch```
 biasa disebut ```fall-through```, yaitu kondisi dimana jika sebuah ```case``` tidak punya statement ```break```,
 maka eksekusi code akan dilanjutkan ke ```case``` selanjutnya sampai ketemu ```break```.
 
-```fall-through``` ini dapat bisa dibilang se-prilaku dengan ```if...else``` saat kita punya
-multiple condition dengan ```OR "||"```
+```fall-through``` ini bisa dibilang seprilaku dengan ```if...else``` saat kita punya
+multiple condition dengan operator ```OR "||"```
 
 contoh:
 
@@ -329,8 +330,8 @@ console.log(
 // Output: Hari libur kerja
 ```
 
-Pada contoh diatas jika bilangan hari nya 1 **atau** 2 atau 3 atau 4 atau 5, maka ```status``` akan bernilai ```Hari kerja```. 
+Pada contoh di atas jika bilangan hari nya 1 **atau** 2 atau 3 atau 4 atau 5, maka ```status``` akan bernilai ```Hari kerja```. 
 Sedangkan jika bilangan 6 atau 7, maka ```status``` akan bernilai ```Hari libur kerja```.
 
 
-**Catatan**: penjelasan diatas bukan untuk menyimpulkan ```switch``` lebih baik dari```if...else```. Keduanya sama namun harus digunakan sesuai dengan fungsi dan kasusnya masing-masing. 
+**Catatan**: penjelasan di atas bukan untuk menyimpulkan ```switch``` lebih baik dari```if...else```. Keduanya sama namun harus digunakan sesuai dengan fungsi dan kasusnya masing-masing. 

@@ -62,7 +62,8 @@ Saat kita menggunakan event handler, kita bisa tahu element mana yang menjadi ta
   let button = document.getElementById('myButton');
 
   button.addEventListener('click', function(event) {
-    console.log(event.target); // element <button> yang diklik
+    console.log(event.target); 
+    // element <button> yang diklik
   });
 </script>
 ```
@@ -75,7 +76,7 @@ button.addEventListener('click', function() {
   alert('button diklik');
 });
 ```
-Bagian ```function() { alert(...) }``` pada contoh diatas disebut **event handler** yang berfungsi untuk menangani event yang terjadi. Untuk lebih jelas kita coba variasi penulisan event handler seperti berikut:
+Bagian ```function() { alert(...) }``` pada contoh di atas disebut **event handler** yang berfungsi untuk menangani event yang terjadi. Untuk lebih jelas kita coba variasi penulisan event handler seperti berikut:
 
 ```js
 function showAlert() {
@@ -85,7 +86,7 @@ function showAlert() {
 button.addEventListener('click', showAlert);
 ```
 
-Variasi penulisan diatas secara fungsi sama dengan penulisan pada contoh sebelumnya. Terlihat fungsi ```showAlert``` dipanggil saat event `click` terjadi dan function `showAlert` ini disebut **event handler**.
+Variasi penulisan di atas secara fungsi sama dengan penulisan pada contoh sebelumnya. Terlihat fungsi ```showAlert``` dipanggil saat event `click` terjadi dan function `showAlert` ini disebut **event handler**.
 
 Ketika kita menulis kode seperti ini:
 
@@ -155,7 +156,11 @@ Contoh beberapa event handler menggunakan ```addEventListener()```:
 #### Contoh 2: Menangani Input Teks
 
 ```html
-<input type="text" id="nameInput" placeholder="Ketik nama kamu">
+<input 
+  type="text" 
+  id="nameInput" 
+  placeholder="Ketik nama kamu"
+>
 <p id="preview"></p>
 
 <script>
@@ -173,8 +178,9 @@ Contoh beberapa event handler menggunakan ```addEventListener()```:
 ```html
 <div 
   id="box" 
-  style="width: 200px; height: 100px; background-color: lightblue;"
+  style="background-color: lightblue;"
 >
+Hello Box
 </div>
 
 <script>
@@ -194,7 +200,11 @@ Contoh beberapa event handler menggunakan ```addEventListener()```:
 
 ```html
 <form id="myForm">
-  <input type="text" name="name" placeholder="Ketik nama kamu">
+  <input 
+    type="text" 
+    name="name" 
+    placeholder="Ketik nama kamu"
+  >
   <button type="submit">Kirim</button>
 </form>
 
@@ -251,9 +261,9 @@ Kemudian melakukan aksi yang sesuai berdasarkan jenis tombol nya. Contohnya sepe
 
 <script>
   // akses semua button yang punya class 'btn-action'
-  const buttons = document.querySelectorAll('.btn-action');
+  const btns = document.querySelectorAll('.btn-action');
 
-  buttons.forEach(function (btn) {
+  btns.forEach(function (btn) {
     btn.addEventListener('click', function (event) {
       const target = event.target;
       const targetClass = target.classList;

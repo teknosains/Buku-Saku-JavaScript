@@ -1,7 +1,7 @@
 # Function
 
 Function adalah sebuah blok _code_ yang bersifat _reusable_ dan biasa digunakan untuk melakukan tugas spesifik.
-Dikatakan _reusable_ karena dapat dipanggil kembali kapan saja dan dimana saja diperlukan.
+Dikatakan _reusable_ karena dapat dipanggil kembali kapan saja dan di mana saja diperlukan.
 
 Kita sudah sering lihat dan pakai contoh ```built-in``` function di browser seperti
 
@@ -29,19 +29,19 @@ function functionName(param1, param2, ...) {
 }
 ```
 
-Agar sebuah function bisa jalan atau melakukan tugasnya tentu saja harus dipanggil dulu. Dibawah adalah contoh cara _call_ sebuah function.
+Agar sebuah function bisa jalan atau melakukan tugasnya tentu saja harus dipanggil dulu. di bawah adalah contoh cara _memanggil_ sebuah function.
 
 ```javascript
 function functionName(param1) {
   console.log('Hi JS!');
 }
 
-functionName(); // call
+functionName();
 
 // Output: Hi JS!
 ```
 
-Konsep function sangat mirip seperti function atau _fungsi_ yang kita pelajari dalam Matematika. Dimana sebuah fungsi biasa menerima _input_, memprosesnya lalu menghasilkan _output_. Misal fungsi matematika berikut 
+Konsep function sangat mirip seperti function atau _fungsi_ yang kita pelajari dalam pelajaran Matematika. di mana sebuah fungsi biasa menerima _input_, memprosesnya, lalu menghasilkan _output_. Misal fungsi matematika berikut 
 
 &emsp;&nbsp;<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&#xA0;</mo><mo>=</mo><mo>&#xA0;</mo><mn>2</mn><mi>x</mi><mo>&#xA0;</mo><mo>+</mo><mo>&#xA0;</mo><mn>1</mn></math>
 
@@ -49,18 +49,18 @@ kemudian fungsi ini kita panggil dengan memberi input <math xmlns="http://www.w3
 
 &emsp;&nbsp;<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>f</mi><mo>(</mo><mn>5</mn><mo>)</mo><mo>=</mo><mn>2</mn><mo>&#x2217;</mo><mn>5</mn><mo>+</mo><mn>1</mn><mo>=</mo><mn>11</mn></math>
 
-Angka ```11``` diatas adalah _output_ yang dihasilkan oleh fungsi ```f```. Kalau kita tulis ke JavaScript kira-kira jadi seperti ini:
+Angka ```11``` di atas adalah _output_ yang dihasilkan oleh fungsi ```f```. Kalau kita tulis ke JavaScript kira-kira jadi seperti ini:
 
 ```javascript
 function f(x) {
   return 2 * x + 1;
 }
 
-console.log(f(5));
+console.log( f(5) );
 // Output: 11
 ```
 
-Saat coding, Function kita buat saat code-code yang kita tulis dirasa butuh untuk dijadikan satu proses sendiri yang bisa di panggil berkali-kali. Ini juga membuat code kita menjadi lebih terstruktur dan mudah dibaca.
+Saat coding sehari-hari, Function kita buat saat code-code yang kita tulis dirasa butuh untuk dijadikan satu proses sendiri yang bisa dipanggil berkali-kali. Ini juga membuat code kita menjadi lebih terstruktur dan mudah dibaca.
 
 ```javascript
 let a = 5;
@@ -72,7 +72,7 @@ console.log(c);
 // Output: 15
 ```
 
-Daripada menuliskan code seperti diatas, lebih baik kita jadikan function seperti berikut:
+Daripada menuliskan code seperti di atas, lebih baik kita jadikan function seperti berikut:
 
 ```javascript
 function add(a, b) {
@@ -88,10 +88,10 @@ console.log(e);
 // Output: 20
 ```
 
-Sangat jelas terlihat bedanya, dengan function code diatas menjadi lebih terstruktur dan bisa di panggil berulang kali dengan _argument_ yang lebih dinamis.
+Sangat jelas terlihat bedanya, dengan function code di atas menjadi lebih terstruktur dan bisa dipanggil berulang kali dengan _argument_ yang lebih dinamis.
 
 Contoh lagi yang lebih _real_ misal kita membuat fitur untuk mengelola _Account_ dalam aplikasi. Kita bisa susun
-proses-proses yang terjadi kedalam sebuah file dengan function-function yang sesuai.
+proses-proses yang terjadi ke dalam sebuah file dengan function-function yang sesuai.
 
 Misal kita buat sebuah file ```account.js``` dengan isi seperti:
 
@@ -127,7 +127,7 @@ function doLogout() {
 }
 ```
 
-Bisa terlihat kalau penyusunan code kedalam _function-function_ membuat code lebih terstruktur, mudah dibaca, di modifikasi dan di _refactor_.
+Bisa terlihat kalau penyusunan code ke dalam _function-function_ membuat code lebih terstruktur, mudah dibaca, di modifikasi dan di _refactor_.
 
 ### Statement ```return```
 
@@ -150,7 +150,7 @@ function doLogin(username, password) {
   if (username !== '') {
     console.log('masuk sini');
     return;
-    // code dibawah gk akan di eksekusi
+    // code di bawah gk akan di eksekusi
     let check = checkToServer(username, password);
     // ...
   }
@@ -175,7 +175,7 @@ console.log(login);
 ### Function Paramater & Argument
 
 Paramater dalam sebuah function adalah variable yang digunakan untuk menampung sebuah value, sedangkan **Argument**
-adalah si _value_ nya itu sendiri yang di kirim ke function. Agar lebih mudah difahami, perhatikan ilustrasi dibawah
+adalah si _value_ nya itu sendiri yang di kirim ke function. Agar lebih mudah dipahami, perhatikan ilustrasi di bawah
 
 <div align="center">
  <img width="460" alt="Function" src="https://github.com/user-attachments/assets/0e0df713-feda-4182-85e2-a4cccd6579d8" />
@@ -204,7 +204,7 @@ console.log(
 // Output: Dear Bpk/Ibu Eka
 ```
 
-Expression parameter _default_ di evaluasi ketika function itu di panggil, bukan ketika function di definisikan. Jadi JavaScript baru akan me-_assign_ ```title = 'Bpk/Ibu'``` ketika kita panggil  ```printGreeting('Eka')```. Salah satu _case_ menarik tentang paramater _default_ ini adalah ketika function itu punya lebih dari satu paramater, kita bisa gunakan _value_ dari paramater **sebelumnya** untuk mengisi value _default_ paramater selanjutnya.
+Expression parameter _default_ di evaluasi ketika function itu dipanggil, bukan ketika function di definisikan. Jadi JavaScript baru akan me-_assign_ ```title = 'Bpk/Ibu'``` ketika kita panggil  ```printGreeting('Eka')```. Salah satu _case_ menarik tentang paramater _default_ ini adalah ketika function itu punya lebih dari satu paramater, kita bisa gunakan _value_ dari paramater **sebelumnya** untuk mengisi value _default_ paramater selanjutnya.
 
 Perhatikan contoh berikut:
 
@@ -234,7 +234,7 @@ SET stock = stock + 1
 WHERE id = 1; 
 ```
 
-yang artinya perintah untuk mengubah nilai ```stock``` di table ```products``` menjadi _berapapun stock saat ini_ ditambah ```1```.
+yang artinya perintah untuk mengubah nilai ```stock``` di table ```products``` menjadi _berapapun stock yang ada saat ini_ ditambah ```1```.
 
 
 
@@ -287,14 +287,16 @@ btn.addEventListener('click', function () {
 });
 ```
 
-Di javascript function tanpa paramater-pun bisa kita passing-kan argument dan bisa kita cek isinya apa saja dengan statement ```argument```. Perhatikan dan cobalah contoh berikut:
+Di JavaScript function tanpa paramater-pun bisa kita passing-kan argument dan bisa kita cek isinya apa saja dengan statement ```argument```. Perhatikan dan cobalah contoh berikut:
 
 ```javascript
 function tanpaParamater() {
   console.log(arguments); 
   // Output: { 0: 'Budi', 1: '35', 2: 'Pria' }
+
   console.log(arguments.length);
   // Output: 3
+  
   console.log(arguments[0]); 
   // Output: Budi
 }
@@ -318,14 +320,14 @@ console.log(
 // Output: Hello Mr. Budi!
 ```
 
-**Note**: Function diatas juga bisa langsung di panggil seperti berikut.
+**Note**: Function di atas juga bisa langsung dipanggil seperti berikut.
 
 ```javascript
 let msg = printName('Mr.')('Budi');
 console.log(msg);
 // Output: Hello Mr. Budi!
 ```
-Perhatikan kurung nya dua kali, ```printName('Mr.')('Budi')```, ini disebut juga dengan _currying_. Kita akan bahas lebih dalam tentang _currying_ di Chapter 3.
+Perhatikan kurung nya dua kali, ```printName('Mr.')('Budi')```, ini disebut juga dengan _currying_. Kita akan bahas lebih dalam tentang _currying_ di Chapter berikutnya dalam series buku ini.
 
 -  **Function bisa di-_assign_ ke variable**
 
@@ -347,7 +349,7 @@ printTitle();
 
 Penulisan function ke sebuah variable disebut juga dengan istilah _function expression_.
 
-Karena di JavaScript function itu _first-class_ object, maka akan kita temui banyak sekali berbagai operasi dan penggunaannya. Oleh karena itu wajib banget latihan terus membuat function dengan berbagai variasi dan contoh-contoh seperti diatas agar semakin faham dan terbiasa.
+Karena di JavaScript function itu _first-class_ object, maka akan kita temui banyak sekali berbagai operasi dan penggunaannya. Oleh karena itu wajib banget latihan terus membuat function dengan berbagai variasi dan contoh-contoh seperti di atas agar semakin paham dan terbiasa.
 
 ### Mengenal istilah Pure Function
 
@@ -370,7 +372,7 @@ console.log(add(2, 3)); // 5
 console.log(add(2, 3)); // 5
 ```
 
-Function ```add()``` diatas adalah _pure_ karena ketika diberi input yang sama meski di panggil berulang kali, maka outputnya tetap sama. Karena jika tiba-tiba hasilnya beda, maka tentu ini berpotensi bahaya dan malah akan jadi bugs. Oleh karena itu _pure function_ sebisa mungkin harus hindari mengakses variable global.
+Function ```add()``` di atas adalah _pure_ karena ketika diberi input yang sama meski dipanggil berulang kali, maka outputnya tetap sama. Karena jika tiba-tiba hasilnya beda, maka tentu ini berpotensi bahaya dan malah akan jadi bugs. Oleh karena itu _pure function_ sebisa mungkin harus hindari mengakses variable global.
 
 ```javascript
 let minAge = 17; // di global scope
@@ -384,7 +386,7 @@ function canDrive(age) {
 }
 ```
 
-Function ```canDrive()``` diatas bergantung ke variable ```minAge``` artinya jika value ```minAge``` nya berubah maka outputnya akan berubah. Bagaimana jika tiba-ba variable ```minAge``` ada yang rubah jadi _string_ misal?
+Function ```canDrive()``` di atas bergantung ke variable ```minAge``` artinya jika value ```minAge``` nya berubah maka outputnya akan berubah. Bagaimana jika tiba-tiba tipe data variable ```minAge``` ada yang rubah menjadi _string_?
 
 Kemudian _pure function_ juga tidak boleh boleh menghasilkan _side-effect_ yaitu jika sebuah function ternyata melakukan sesuatu yang bisa merubah _external state_. Contoh side-effect diantaranya adalah:
 
@@ -394,7 +396,7 @@ Kemudian _pure function_ juga tidak boleh boleh menghasilkan _side-effect_ yaitu
 4. Merubah value variable global
 5. Manipulasi DOM
 
-Perhatikan contoh berikut dimana function nya merubah _external state_.
+Perhatikan contoh berikut di mana function nya merubah _external state_.
 
 ```javascript
 let total = 0;
@@ -409,9 +411,9 @@ console.log(addTotal(1)); // 1
 console.log(addTotal(1)); // 2
 ```
 
-Terlihat bahwa function ```addTotal()``` diatas dapat merubah nilai variable ```total``` dan ketika dipanggil beberapa kali dengan input yang sama, akan menghasilkan output yang berbeda. Maka ini bukan _pure_ function, tetapi disebut dengan _impure_ function. 
+Terlihat bahwa function ```addTotal()``` di atas dapat merubah nilai variable ```total``` dan ketika dipanggil beberapa kali dengan input yang sama, akan menghasilkan output yang berbeda. Maka ini bukan _pure_ function, tetapi disebut dengan _impure_ function. 
 
-Contoh lainnya misal jika sebuah function bisa memutasi / merubah array yang di _passing_ kedalam nya.
+Contoh lainnya misal jika sebuah function bisa memutasi / merubah array yang di _passing_ ke dalam nya.
 
 ```javascript
 function printList(arr) {
@@ -421,7 +423,7 @@ function printList(arr) {
 }
 ```
 
-Namun contoh dibawah ini adalah _pure_ function
+Namun contoh di bawah ini adalah _pure_ function
 
 ```javascript
 function sumOfArray(array) {
@@ -441,7 +443,7 @@ console.log(
 // Output: 3
 ```
 
-Karena function ```sumOfArray()``` diatas tidak merubah / memutasi array ```array``` yang di _passing_ dan akan tetap mengembalikan value yang sama jika diberi input yang sama meski di panggil berkali-kali.
+Karena function ```sumOfArray()``` di atas tidak merubah / memutasi array ```array``` yang di _passing_ dan akan tetap mengembalikan value yang sama jika diberi input yang sama meski dipanggil berkali-kali.
 
 Kemudian bahkan bukan dikatakan _pure function_ meski hanya nge-print ke console seperti ini
 
@@ -454,7 +456,7 @@ function printList(arr) {
 
 karena print sesuatu ke console artinya function itu melakukan operasi I/O (input output).
 
-Dari penjelasan dan contoh-contoh diatas, menjadi lebih _clear_ pula bagi kita apa itu _impure function_. Setiap function yang kebalikan dari kriteria _pure_ function, disebut _impure function_. Coba kita beri contoh satu kali lagi, perhatikan ```built-in``` function dibawah ini
+Dari penjelasan dan contoh-contoh di atas, menjadi lebih _clear_ pula bagi kita apa itu _impure function_. Setiap function yang kebalikan dari kriteria _pure_ function, disebut _impure function_. Coba kita beri contoh satu kali lagi, perhatikan ```built-in``` function di bawah ini
 
 ```javascript
 console.log(Math.random());
@@ -465,7 +467,7 @@ console.log(Math.random());
 ```
 ```Math.random()``` adalah contoh paling nyata _impure function_. Setiap kali dipanggil akan menghasilkan output yang berbeda. 
 
-Khusus ketika kita _bermain_ dengan Object dan Array, direkomendasikan untuk membuat function yang _pure_ yaitu tidak memutasi object original nya, namun dengan membuat / me-return object baru yang sudah dimodif. Perhatikan contoh _impure function_ berikut
+Khusus ketika kita _bermain_ dengan Object dan Array, direkomendasikan untuk membuat function yang _pure_ yaitu tidak memutasi object original-nya, namun dengan membuat/me-return object baru yang sudah dimodif. Perhatikan contoh _impure function_ berikut
 
 ```javascript
 function makeAnimal(obj) {
@@ -524,14 +526,14 @@ Pada versi ini, function ```makeAnimal()``` membuat object baru menggunakan _spr
 
 Antara _Pure Function_ dan _Impure Function_ keduanya sebenarnya bukan untuk diperbandingkan dan bukan pula yang satu lebih baik dari yang lain. Keduanya digunakan sesuai dengan use-case nya (yang tepat) masing-masing.
 
-> Notes: Karena materi mengenai Function sudah pasti panjang, kami kembali menyarankan agar mengulang semua materi Function diatas dan mencoba nya sendiri sebelum lanjut ke pembahsan Function selanjutnya.
+> Notes: Karena materi mengenai Function sudah pasti panjang, kami kembali menyarankan agar mengulang semua materi Function di atas dan mencoba nya sendiri sebelum lanjut ke pembahsan Function selanjutnya.
 
 
 ### Function Expression
 
-Kita sudah mengetahui bahwa Function adalah ```first-class``` object di JavaScript yang salah satu cirinya adalah bahwa function bisa di _assign_ ke variable. Kemampuan ini juga disebut sebagai ```Function Expression```, bertambah lagi istilah yang harus kita hafal, tapi disinilah justru letak seni nya kita belajar fundamental.
+Kita sudah mengetahui bahwa Function adalah ```first-class``` object di JavaScript yang salah satu cirinya adalah bahwa function bisa di _assign_ ke variable. Kemampuan ini juga disebut sebagai ```Function Expression```, bertambah lagi istilah yang harus kita hafal, tapi di sinilah justru letak seni nya kita belajar fundamental.
 
-Yang kita sudah pelajari dari potongan-potongan contoh diatas kebanyakannya adalah kita membuat function dengan ```Function Declaration```. Yaitu ketika membuat function dengan sintaks ```function functionName() { ... }```
+Yang kita sudah pelajari dari potongan-potongan contoh di atas kebanyakannya adalah kita membuat function dengan ```Function Declaration```. Yaitu ketika membuat function dengan sintaks ```function functionName() { ... }```
 
 ```javascript
 // Function Declaration
@@ -559,7 +561,7 @@ console.log(printTitle('Sarjana'));
 // Output: Gelar: Sarjana
 ```
 
-Kita bebas membuat function dengan ```Function Declaration``` atau ```Function Expression``` namun yang yang diperhatikan adalah adanya perbedaan kondisi _hoisting_ (lihat materi ```Konsep Dasar > Mengenal Scope di JavaScript```) pada _function declaration_ dan _function expression_. Function expression tidak di ```hoisting``` sehingga hanya bisa di panggil **setelah di definisikan**.
+Kita bebas membuat function dengan ```Function Declaration``` atau ```Function Expression``` namun yang yang diperhatikan adalah adanya perbedaan kondisi _hoisting_ (lihat materi ```Konsep Dasar > Mengenal Scope di JavaScript```) pada _function declaration_ dan _function expression_. Function expression tidak di ```hoisting``` sehingga hanya bisa dipanggil **setelah di definisikan**.
 
 ```javascript
 let printTitle = function (title) {
@@ -570,7 +572,7 @@ console.log(printTitle('Sarjana'));
 // Output: Gelar: Sarjana
 ```
 
-Dalam contoh ini, function ```printTitle``` hanya bisa di panggil setelah ```printTitle``` di definisikan. Jika tidak, maka akan error seperti ini
+Dalam contoh ini, function ```printTitle``` hanya bisa dipanggil setelah ```printTitle``` di definisikan. Jika tidak, maka akan error seperti ini
 
 ```javascript
 console.log(printTitle('Sarjana'));
@@ -583,7 +585,7 @@ let printTitle = function (title) {
 //         before initialization
 ```
 
-Berbeda dengan Function Declaration yang di ```hoisting```, function ```printTitle``` bisa di panggil bahkan **sebelum** ```printTitle``` di definisikan. 
+Berbeda dengan Function Declaration yang di ```hoisting```, function ```printTitle``` bisa dipanggil bahkan **sebelum** ```printTitle``` di definisikan. 
 
 ```javascript
 console.log(printTitle('Sarjana'));
@@ -595,7 +597,7 @@ function printTitle(title) {
 // Output: Gelar: Sarjana
 ```
 
-Berikutnya, Function Expression juga bisa di tulis menggunakan ```Arrow Function``` yang akan kita bahas secara khusus dibawah ini
+Berikutnya, Function Expression juga bisa di tulis menggunakan ```Arrow Function``` yang akan kita bahas secara khusus di bawah ini
 
 ### Arrow Function
 
@@ -648,7 +650,7 @@ let add = (a, b) => {
 };
 ```
 
-Kita bisa ubah kedalam bentuk arrow function tanpa ```{ }``` menjadi seperti ini
+Kita bisa ubah ke dalam bentuk arrow function tanpa ```{ }``` menjadi seperti ini
 
 ```javascript
 let add = (a, b) => a + b;
@@ -665,7 +667,7 @@ let add = (a, b) => {
 };
 ```
 
-karena penulisan seperti diatas cukup memberikan flexsibilitas dan lebih terlihat "familiar" bagi semua orang.
+karena penulisan seperti di atas cukup memberikan fleksibilitas dan lebih terlihat "familiar" bagi semua orang.
 
 Karena _simplicity_-nya juga, arrow function menjadi favorit banyak developer JavaScript dan paling sering digunakan sebagai _callback_ function. Perhatikan contoh berikut:
 
@@ -675,7 +677,7 @@ setTimeout(function () {
 }, 3000);
 ```
 
-Penulisan diatas bisa ditulis kedalam bentuk arrow function seperti ini
+Penulisan di atas bisa ditulis ke dalam bentuk arrow function seperti ini
 
 ```javascript
 setTimeout(() => {
@@ -739,7 +741,7 @@ Sekarang kamu bisa mulai perbanyak dan membiasakan memakai arrow function saat m
 
 ### Menulis Parameter Function Yang Efektif
 
-Ketika membuat sebuah function, sebisa mungkin jumlah paramaternya maksimal 3 parameter saja bahkan kalau bisa cukup 1 atau 2 saja. Kenapa begitu? karena function adalah sebuah _block_ code yang bisa dipanggil kembali kapanpun dan oleh siapapun. Jadi **penting** bagi kita untuk membiasakan menulis _code_ yang lebih _clean_ sehingga mudah di fahami dan mudah di _refactor_ dikemudian hari.
+Ketika membuat sebuah function, sebisa mungkin jumlah paramaternya maksimal 3 parameter saja bahkan kalau bisa cukup 1 atau 2 saja. Kenapa begitu? karena function adalah sebuah _block_ code yang bisa dipanggil kembali kapanpun dan oleh siapapun. Jadi **penting** bagi kita untuk membiasakan menulis _code_ yang lebih _clean_ sehingga mudah dipahami dan mudah di _refactor_ di kemudian hari.
 
 Sebuah function yang memiliki lebih dari 3 paramater berpotensi akan sulit dibaca dan bisa jadi masalah ketika hendak di _refactor_. Contoh misal function berikut:
 
@@ -766,11 +768,11 @@ addProduct('Madu', 10, 10000, 'Health', 100,
 'Madu hutan alami', '2024-01-01', true);
 ```
 
-Semakin panjang paramaternya, semakin sulit untuk di _refactor_ dan makin sulit juga buat dipanggil. Bahkan sering kali kita sulit untuk tahu _value_ apa di posisi / urutan mana yang harus kita tulis sesuai dengan function-nya. Dan yang paling sering terjadi juga adalah kita bingung sendiri misal angka ```10``` diatas itu apa sih, lalu itu ```true``` itu maksudnya apa.
+Semakin panjang paramaternya, semakin sulit untuk di _refactor_ dan makin sulit juga buat dipanggil. Bahkan sering kali kita sulit untuk tahu _value_ apa di posisi / urutan mana yang harus kita tulis sesuai dengan function-nya. Dan yang paling sering terjadi juga adalah kita bingung sendiri misal angka ```10``` di atas itu apa sih, lalu itu ```true``` itu maksudnya apa.
 
-Kalau function dan call nya berdekatan seperti contoh diatas sih mungkin tidak terlalu masalah. Tapi bagaimana misal kita function ```addProduct``` itu ada di baris paling atas sedangkan kita bisa saja baru panggil di baris ke 200. Atau misal function ```addProduct()``` itu ada di file yang berbeda atau dia misal function dari sebuah library yang kamu pakai, cukup menyulitkan dan mungkin harus bolak-balik buka function nya untuk tahu apa sih parameter yang dibutuhkan sesuai posisinya masing-masing.
+Kalau function dan _call_-nya berdekatan seperti contoh di atas sih mungkin tidak terlalu masalah. Tapi bagaimana misal kita function ```addProduct``` itu ada di baris paling atas sedangkan kita bisa saja baru panggil di baris ke 200. Atau misal function ```addProduct()``` itu ada di file yang berbeda atau dia misal function dari sebuah library yang kamu pakai, cukup menyulitkan dan mungkin harus bolak-balik buka function nya untuk tahu apa sih parameter yang dibutuhkan sesuai posisinya masing-masing.
 
-Solusi dari masalah ini adalah membuat paramater _object_ untuk menampung semua paramater yang banyak itu ke satu variable saja. Dengan cara ini kita bisa _refactor_ function diatas menjadi seperti ini
+Solusi dari masalah ini adalah membuat paramater _object_ untuk menampung semua paramater yang banyak itu ke satu variable saja. Dengan cara ini kita bisa _refactor_ function di atas menjadi seperti ini
 
 ```javascript
 /**
@@ -839,4 +841,14 @@ let item = {
 addProduct(item);
 ```
 
-Terlihat jelas ketika kita refactor menjadi object, pemanggilan function nya pun menjadi lebih clean dan lebih mudah difahami. Bahkan tidak perlu khawatir soal urutan posisi property nya.
+Terlihat jelas ketika kita refactor menjadi object, pemanggilan function-nya pun menjadi lebih clean dan lebih mudah dipahami. Bahkan tidak perlu khawatir soal urutan posisi property-nya.
+
+#### Tips penting untuk pemula:
+1. Gunakan nama function yang jelas dan deskriptif
+2. Batasi jumlah parameter (maksimal 3)
+3. Gunakan object untuk parameter yang banyak
+4. Tambahkan komentar untuk function yang cukup kompleks
+5. Konsisten dalam penamaan (camelCase)
+6. Tambahkan nilai default untuk parameter opsional
+7. Gunakan return yang jelas
+8. Hindari side effects jika memungkinkan

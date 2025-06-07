@@ -2,7 +2,7 @@
 
 Jika konsep OOP sudah terlihat cukup jelas dan bisa dilakukan dengan Constructor Function seperti pada pembahasan sebelumnya, maka dengan adanya ```Class``` akan terlihat semakin lebih nyata lagi ke-OOP-an nya layaknya bahasa pemrograman OOP-based seperti Java atau C#.
 
-```Class``` mulai perkenalkan / ditambahkan ke JavaScript pada ES6 di bulan Juni tahun 2015 silam. Jadi jika kamu masih menggunakan browser keluaran 2015 kebawah, syntax ```Class``` itu tentu tidak bisa dipakai. Juga secara teknis, ```Class``` itu sama saja dengan Constructor Function, yakni sama-sama dibangun diatas fitur mekanisme pewarisan / inheritance dengan prototype (Prototype-based). 
+```Class``` mulai perkenalkan / ditambahkan ke JavaScript pada ES6 di bulan Juni tahun 2015 silam. Jadi jika kamu masih menggunakan browser keluaran 2015 kebawah, syntax ```Class``` itu tentu tidak bisa dipakai. Juga secara teknis, ```Class``` itu sama saja dengan Constructor Function, yakni sama-sama dibangun di atas fitur mekanisme pewarisan / inheritance dengan prototype (Prototype-based). 
 
 Jadi ```Class``` tidak memperkenalkan fitur baru di JavaScript, semata-mata hanya menambah _cara baru_ untuk membuat dan memanipulasi object dengan sintaks yang lebih _clean_ dan lebih ke-OOP-an.
 
@@ -16,16 +16,7 @@ class ClassName {
     // ...
   }
 }
-
-// atau bisa juga
-
-const classname = class ClassName {
-  constructor() {
-    // ...
-  }
-}
 ```
-
 
 JavaScript secara fundamental merupakan bahasa pemrograman berbasis _prototype_. Secara sederhana _prototype_ itu adalah **ketika sebuah object mewarisi _property_ dan _method_ dari object lain**. Kita coba lihat lagi contoh di Constructor Function sebelumnya:
 
@@ -53,7 +44,7 @@ console.log(typeof person1); // object
 console.log(person1 instanceof Person); // true
 ```
 
-Sekarang kita coba lihat contoh penerapan ```Class``` untuk code diatas berikut:
+Sekarang kita coba lihat contoh penerapan ```Class``` untuk code di atas berikut:
 
 ```javascript
 class Person {
@@ -98,7 +89,7 @@ person1.sayGreet();
 // Output: Halo saya Budi, umur 20thn.
 ```
 
-Terlihat juga dari function diatas adalah tidak perlunya menggunakan keyword ```new``` untuk membuat instance object nya. Function ```createPerson``` disebut juga dengan istilah _Factory Function_ yaitu ketika sebuah function me-_return_ object baru.
+Terlihat juga dari function di atas adalah tidak perlunya menggunakan keyword ```new``` untuk membuat instance object nya. Function ```createPerson``` disebut juga dengan istilah _Factory Function_ yaitu ketika sebuah function me-_return_ object baru.
 
 sintaks factory function:
 
@@ -113,11 +104,53 @@ function factoryFunction(prop1, prop2, ...) {
 
 Ok kembali focus ke pembahasan ```Class```, kita akan bahas beberapa point penting mengenai ```Class``` di materi ini. 
 
+### Keyword `this` dalam Class
+
+Saat kita membuat class di JavaScript, kita akan sering menggunakan keyword `this`. Dalam konteks class, `this` selalu merujuk ke **instance object** yang sedang dibuat dari class tersebut.
+
+Perhatikan contoh berikut:
+
+```javascript
+class User {
+  constructor(nama) {
+    this.nama = nama;
+  }
+
+  sayHello() {
+    console.log(`Halo, saya ${this.nama}`);
+  }
+}
+
+// this disini milik instance object user1
+
+const user1 = new User("Budi");
+user1.sayHello(); 
+// Output: Halo, saya Budi
+```
+
+Di dalam method constructor, `this.nama = nama` artinya kita menyimpan nilai nama ke dalam instance object. Kemudian di method `sayHello()`, `this.nama` akan mengambil nilai yang sudah disimpan sebelumnya di object tersebut.
+
+Setiap kali kita buat instance object baru dengan keyword **new**, maka _this_ di dalam class akan mengacu ke object baru tersebut. Ini berlaku untuk semua method di dalam class, bukan hanya constructor.
+
+Perhatikan contoh berikut:
+
+```javascript
+const user2 = new User("Goku");
+user2.sayHello(); 
+// Output: Halo, saya Goku
+
+const user3 = new User("Bejita");
+user3.sayHello(); 
+// Output: Halo, saya Bejita
+```
+
+Terlihat bahwa masing-masing object punya value _this_ yang berbeda, sesuai dengan siapa yang memanggil method-nya.
+
 ### Method ```constructor```
 
-Method ini adalah method spesial di dalam sebuah ```Class``` yang berguna untuk menginisialisasi dan membuat object baru. Hanya boleh ada tepat satu method ```constructor``` didalam sebuah class sebab akan muncul error ```SyntaxError``` kalau ada atau tidak sengaja kebuat lebih dari satu.
+Method ini adalah method spesial di dalam sebuah ```Class``` yang berguna untuk menginisialisasi dan membuat object baru. Hanya boleh ada tepat satu method ```constructor``` di dalam sebuah class sebab akan muncul error ```SyntaxError``` kalau ada atau tidak sengaja kebuat lebih dari satu.
 
-Didalam ```constructor``` pula property-property selain property berbentuk method dibuat. Perhatikan contoh berikut:
+Di dalam ```constructor``` pula property-property selain property berbentuk method dibuat. Perhatikan contoh berikut:
 
 ```javascript
 class Person {
@@ -167,9 +200,7 @@ class Auth {
 
 ### Method Spesial setter dan getter
 
-***Setter*** adalah method spesial yang digunakan untuk mengubah value dari sebuah property sedangkan ***Getter*** adalah method yang digunakan untuk mengambil value dari property itu. Setter dan getter di definisikan di dalam class dengan keyword ***set*** dan ***get*** kemudian di gunakan setelah class nya dipangil / dibuat instance nya.
-
-
+***Setter*** adalah method spesial yang digunakan untuk mengubah value dari sebuah property sedangkan ***Getter*** adalah method yang digunakan untuk mengambil value dari property itu. Setter dan getter didefinisikan di dalam class dengan keyword ***set*** dan ***get*** kemudian digunakan setelah class nya dipangil / dibuat instance nya.
 
 Perhatikan contoh berikut:
 
@@ -193,7 +224,6 @@ class Segitiga {
   hitungLuas() {
     return 1/2 * this.alas * this.tinggi;
   }
-  
 }
 
 const segitiga1 = new Segitiga(3, 5)
@@ -215,12 +245,11 @@ console.log(
   `Luas segitiga = ${luas}${segitiga1.satuan}²`
 );
 // Output: Luas segitiga = 7.5m²
-
 ```
 
-Perhatikan bahwa setter dan getter ```satuan()``` diatas menggunakan  **nama yang sama** ```satuan```. Ini supaya lebih konsisten dari segi konteksnya karena ia merujuk ke modifikasi data yang sama dalam ini ya si _satuan_ itu. 
+Perhatikan bahwa setter dan getter ```satuan()``` di atas menggunakan  **nama yang sama** ```satuan```. Ini supaya lebih konsisten dari segi konteksnya karena ia merujuk ke modifikasi data yang sama dalam ini ya si _satuan_ itu. 
 
-Perhatikan expression ```this._satuan``` kemudian ```set satuan()``` dan ```get satuan()```. ***Harus dibedakan*** penamaanya karena kalau tidak akan error ```RangeError```
+Perhatikan expression ```this._satuan``` kemudian ```set satuan()``` dan ```get satuan()```. ***Harus dibedakan*** penamaannya karena kalau tidak akan error ```RangeError```
 
 ```javascript
 class Segitiga {
@@ -244,7 +273,7 @@ Oleh karena itu kita misal gunakan ```this._satuan``` (pakai tanda _) untuk prop
 
 ### Static Method
 
-Didalam sebuah Class, sejatinya semua property dan method itu bukan milik si Class nya, namun nantinya akan jadi milik si instance nya. Coba perhatikan contoh berikut:
+Di dalam sebuah Class, sejatinya semua property dan method itu bukan milik si Class nya, namun nantinya akan jadi milik si instance nya. Coba perhatikan contoh berikut:
 
 ```javascript
 class Segitiga {
@@ -302,7 +331,7 @@ console.log(Segitiga);
 //   > namaSegitiga: f namaSegitiga()
 ```
 
-untuk mengakses method static tersebut langsung dengan menggunakan ```[Nama Class].[[Nama Method]``` Contoh:
+untuk mengakses method static tersebut langsung dengan menggunakan ```[Nama Class].[Nama Method]``` Contoh:
 
 ```javascript
 Segitiga.namaSegitiga();  
@@ -340,7 +369,7 @@ Dan library bawaan **Math** adalah contoh nyata dari konsep ini. Kita sering lih
 console.log(Math.PI); // 3.141..
 console.log(Math.sqrt(16)); // 4
 console.log(Math.max(1, 2, 3)); // 3
-console.log(Math.random()); // random number antara 0 dan 1
+console.log(Math.random()); // random antara 0 dan 1
 ```
 
 ### Inheritance
@@ -380,7 +409,7 @@ this.name = name;
 this.age = age;
 ```
 
-karena sudah diwariskan otomatis dari class ```Person```. Termasuk juga method ```sayGreet()``` tidak perlu lagi di tulis didalam class Student. Kecuali jika kita ingin meng-override method tersebut dengan alasan misal ingin menambahakan _behavior_ yang berbeda.
+karena sudah diwariskan otomatis dari class ```Person```. Termasuk juga method ```sayGreet()``` tidak perlu lagi di tulis di dalam class Student. Kecuali jika kita ingin meng-override method tersebut dengan alasan misal ingin menambahakan _behavior_ yang berbeda.
 
 ```javascript
 class Student extends Person {
@@ -391,9 +420,11 @@ class Student extends Person {
 
   // override method
   sayGreet() {
-    console.log(
-      `Halo saya ${this.name}, umur ${this.age}thn, NIM ${this.nim}.`
-    );
+    console.log(`
+      Halo,
+      saya ${this.name}, umur ${this.age}thn, 
+      NIM ${this.nim}.
+    `);
   }
 }
 
@@ -402,7 +433,7 @@ student.sayGreet();
 // Output: Halo saya Budi, umur 20thn, NIM 12345.
 ```
 
-expression ```super(name, age);``` diatas digunakan untuk nge-_call_ dan inisialisasi constructor parent class nya yakni ```Person```.
+expression ```super(name, age);``` di atas digunakan untuk meng-_call_ dan menginisialisasi constructor parent class-nya yakni ```Person```.
 Dengan kata lain, expression ```super(name, age);``` itu sama dengan ```new Person('Budi', 20)``` yang fungsinya untuk menginisialisasi instance dari class ```Person```.
 
-Memahami Class dengan baik akan sangat membantu kita menulis code yang lebih terstruktur, mudah di maintain, _reusable_ dan lebih efisien. Silahkan kembali di ulang dan dicoba contoh-contoh code dalam pembahasan ini.
+Memahami Class dengan baik akan sangat membantu kita menulis code yang lebih terstruktur, mudah di-_maintain_, _reusable_ dan lebih efisien. Silahkan kembali diulang dan dicoba contoh-contoh code dalam pembahasan ini.

@@ -27,7 +27,7 @@ dan seperti ini penampakan struktur-nya yang lebih detail
 
 Implementasi DOM sendiri sudah di standarisasi dan semua pembuat Browser wajib mengikuti sehingga sebuah halaman web, mau dibuka di browser apapun, harus bisa diakses dan dimanipulasi oleh JavaScript dengan cara dan standar yang sama. Dengan begini, developer tidak perlu _coding_ khusus untuk untuk masing-masing browser.
 
-Sebagai contoh, jika kita ingin mengubah _content_ text yang ada di tag ```<h1>``` diatas menjadi "Selamat datang di Buku Saku JavaScript", kita bisa lakukan seperti berikut
+Sebagai contoh, jika kita ingin mengubah _content_ text yang ada di tag ```<h1>``` di atas menjadi "Selamat datang di Buku Saku JavaScript", kita bisa lakukan seperti berikut
 
 ```html
 <script>
@@ -36,7 +36,7 @@ Sebagai contoh, jika kita ingin mengubah _content_ text yang ada di tag ```<h1>`
 </script>
 ``` 
 
-cukup satu kali coding seperti diatas, _output_ nya akan sama di semua Browser. 
+cukup satu kali coding seperti di atas, _output_ nya akan sama di semua Browser. 
 
 ### Fungsi utama DOM
 
@@ -182,11 +182,11 @@ API ini digunakan untuk mengambil / mengakses elemen HTML berdasarkan atribut `i
   let title = document.querySelector('h1');
 
   // merubah dengan content berupa Text
-  title.innerText = 'Selamat datang di Buku Saku JavaScript';
+  title.innerText = 'Hi JavaScript!';
 
   // merubah dengan content berupa HTML
   let title = document.querySelector('h1');
-  title.innerHTML = '<strong>Selamat datang di Buku Saku JavaScript</strong>';
+  title.innerHTML = '<strong>Hi JavaScript!</strong>';
 </script>
 ```
 
@@ -217,7 +217,7 @@ API ini digunakan untuk mengambil / mengakses elemen HTML berdasarkan atribut `i
 </script>
 ```
 
-#### 4. Mengubah struktur html dengan manipulasi _element_ didalam sebuah tag
+#### 4. Mengubah struktur html dengan manipulasi _element_ di dalam sebuah tag
 
 ```html
 <script>
@@ -265,7 +265,7 @@ Perhatikan contoh berikut
 </div>
 ```
 
-Kita bisa akses dan telusuri element-element dalam kode HTML diatas seperti ini
+Kita bisa akses dan telusuri element-element dalam kode HTML di atas seperti ini
 
 ```html
 <script>
@@ -302,13 +302,181 @@ Kita bisa akses dan telusuri element-element dalam kode HTML diatas seperti ini
 >
 > ```html
 > <script>
->   document.addEventListener('DOMContentLoaded', function () {
->     // kode JS utk manipulasi DOM  di sini
->   });
+>   document.addEventListener(
+>     'DOMContentLoaded', 
+>     function () {
+>       // kode JS utk manipulasi DOM  di sini
+>     }
+>   );
 > </script>
 > ```
 >
 > Dengan begitu, kita bisa menjalankan kode JavaScript dengan lebih aman tanpa khawatir element HTML belum tersedia saat diakses.
 
-
 DOM API adalah jembatan utama antara JavaScript dan halaman web. Dengan DOM API, kita bisa membuat halaman yang interaktif, dinamis, dan bisa merespon aksi dari user. Hampir semua manipulasi halaman yang dilakukan oleh JavaScript menggunakan DOM API, baik yang sederhana seperti mengganti teks, maupun yang kompleks seperti menambah element baru ke dalam halaman.
+
+### Bonus
+
+Salah satu hal yang paling sering dilakukan dalam sebuah aplikasi adalah menampilkan data dari server ke dalam bentuk table. Manipulasi table HTML tentu dilakukan dengan bantuan JavaScript dan DOM API baik dilakukan secara manual maupun menggunakan library seperti jQuery, ReactJS dsb.
+
+Sebagai tambahan, berikut kita akan berikan contoh dengan cara manual dan ReactJS.
+
+Contoh manipulasi DOM dengan cara manual:
+
+Misal kita punya data user yang datang dari server berubah array object. Contohnya seperti ini:
+
+```js
+const users = [
+  {
+    name: "Budi Santoso",
+    age: 28,
+    social_media: [
+      { platform: "Twitter", handle: "@budi_s" },
+      { platform: "Instagram", handle: "@budigram" }
+    ]
+  },
+  {
+    name: "Sari Dewi",
+    age: 25,
+    social_media: [
+      { platform: "LinkedIn", handle: "sari-dewi" },
+      { platform: "Instagram", handle: "@saridewi" },
+      { platform: "YouTube", handle: "Sari Vlog" }
+    ]
+  }
+];
+```
+
+Kita bisa tampilkan data tersebut di dalam bentuk table HTML dengan JavaScript dan DOM API. Pertama kita buat struktur HTML-nya seperti ini:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabel User dan Media Sosial</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h2>Daftar User dan Media Sosial</h2>
+  <table id="userTable">
+    <thead>
+      <tr>
+        <th>Nama</th>
+        <th>Usia</th>
+        <th>Platform</th>
+        <th>Akun</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <!-- script JavaScript di sini -->
+ </body>
+</html>
+```
+
+Kemudian untuk JavaScript-nya seperti ini:
+
+```html
+<script>
+  const users = [
+    {
+      name: "Budi Santoso",
+      age: 28,
+      social_media: [
+        { platform: "Twitter", handle: "@budi_s" },
+        { platform: "Instagram", handle: "@budigram" }
+      ]
+    },
+    {
+      name: "Sari Dewi",
+      age: 25,
+      social_media: [
+        { platform: "LinkedIn", handle: "sari-dewi" },
+        { platform: "Instagram", handle: "@saridewi" },
+        { platform: "YouTube", handle: "Sari Vlog" }
+      ]
+    }
+  ];
+
+  const tbody = document.querySelector("#userTable tbody");
+
+  users.forEach(user => {
+    user.social_media.forEach((account, index) => {
+      const row = document.createElement("tr");
+
+      // Hanya tampilkan nama & usia di baris pertama
+      if (index === 0) {
+        const tdName = document.createElement("td");
+        tdName.textContent = user.name;
+        tdName.rowSpan = user.social_media.length;
+        row.appendChild(tdName);
+
+        const tdAge = document.createElement("td");
+        tdAge.textContent = user.age;
+        tdAge.rowSpan = user.social_media.length;
+        row.appendChild(tdAge);
+      }
+
+      const tdPlatform = document.createElement("td");
+      tdPlatform.textContent = account.platform;
+      row.appendChild(tdPlatform);
+
+      const tdHandle = document.createElement("td");
+      tdHandle.textContent = account.handle;
+      row.appendChild(tdHandle);
+
+      tbody.appendChild(row);
+    });
+  });
+</script>
+```
+
+Hasilnya seperti ini:
+
+<img width="430" style="border:1px solid #ddd;padding:10px;margin-bottom:20px" src="https://res.cloudinary.com/cepot/image/upload/v1749269624/Screenshot_2025-06-07_at_11.13.01_qphzii.png">
+
+Terlihat bagaimana kita bisa menggunakan JavaScript dan DOM API untuk menampilkan data dari server ke dalam bentuk table HTML. Namun nampak juga kalau menggunakan JavaScript dan DOM API (tanpa bantuan library) itu cukup kompleks. Karena alasan ini dalam pengembangan aplikasi web modern, developer lebih memilih menggunakan library seperti jQuery, ReactJS, VueJS, dan lain-lain.
+
+Perhatikan contoh implementasi yang sama menggunakan ReactJS. 
+
+```js
+<tbody>
+  {users.flatMap((user, userIndex) =>
+    user.social_media.map((account, accountIndex) => (
+      <tr key={`${userIndex}-${accountIndex}`}>
+        {accountIndex === 0 && (
+          <>
+            <td rowSpan={user.social_media.length}>
+              {user.name}
+            </td>
+            <td rowSpan={user.social_media.length}>
+              {user.age}
+            </td>
+          </>
+        )}
+        <td>{account.platform}</td>
+        <td>{account.handle}</td>
+      </tr>
+    ))
+  )}
+</tbody>
+```
+
+Terlihat cara menampilkan rows table nya menjadi lebih ringkas dan mudah dibaca.
+
+**Catatan**: Tambahan ini hanya untuk menunjukkan bahwa kedepan dalam pengembangan aplikasi web modern, ada banyak cara untuk berinteraksi dengan DOM agar aplikasi web lebih interaktif, dinamis dan lebih mudah di-_coding_. 
+
+Namun sebelum kita terjun menggunakan berbagai macam library yang ada di luar sana, penting bagi kita memahami konsep dasar dari DOM dan bagaimana ia bekerja di browser terlebih dahulu. Inilah tujuan dan harapan utama dari penyusunan series **Buku Saku JavaScript** ini.
