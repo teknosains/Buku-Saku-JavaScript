@@ -63,6 +63,7 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * Mouse Events
 * Network / Backend Request
   * HTTP Verbs
+  * JSON
   * AJAX dengan Fetch
   * AJAX dengan Axios
   * AJAX dengan jQuery

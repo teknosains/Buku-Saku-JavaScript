@@ -1,7 +1,7 @@
 # Konsep Dasar DOM (Document Object Model)
 Di pembahasan sebelumnya kita sudah berbicara banyak mengenai fundamental JavaScript beserta teorinya. Sekarang waktunya kita selangkah lebih dekat untuk membuat aplikasi web dengan mengenal lebih dulu apa itu DOM dan bagaimana cara kerjanya.
 
-DOM adalah representasi struktur halaman web dalam bentuk pohon (tree structure) yang dibuat oleh browser. Setiap elemen atau _tag_ HTML dianggap sebagai _object_ yang bisa kita akses dan modifikasi menggunakan JavaScript. Ketika kita menulis kode HTML misal seperti berikut:
+DOM adalah representasi struktur halaman web dalam bentuk pohon (tree structure) yang dibuat oleh browser. Setiap element atau _tag_ HTML dianggap sebagai _object_ yang bisa kita akses dan modifikasi menggunakan JavaScript. Ketika kita menulis kode HTML misal seperti berikut:
 
 ```html
 <!DOCTYPE html>
@@ -25,14 +25,16 @@ dan seperti ini penampakan struktur-nya yang lebih detail
   <img width="386" alt="DOM Tree 2" src="https://private-user-images.githubusercontent.com/3906229/439658022-4356cb03-2316-4f7b-8e8c-0ec913b2b712.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDg2NzgxMDIsIm5iZiI6MTc0ODY3NzgwMiwicGF0aCI6Ii8zOTA2MjI5LzQzOTY1ODAyMi00MzU2Y2IwMy0yMzE2LTRmN2ItOGU4Yy0wZWM5MTNiMmI3MTIucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDUzMSUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTA1MzFUMDc1MDAyWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YTJjZTcxNTg0NzIxZjRiYzQ4NWJmNmM4YjRmNWIzYjgyNTgzZGMzNDFjYjI1NDMyYTlhZDRjYWNhYzRmZWQyNyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.5YCVHVAHQb8PROMQhieFlz8ETY0JsRB1kbS5deudUo4" />
 </div>
 
+Setiap element dengan warna hitam pada diagram diatas — seperti _html, head, body, title, dan h1_ semuanya disebut dengan **Node** dalam struktur DOM.
+
 Implementasi DOM sendiri sudah di standarisasi dan semua pembuat Browser wajib mengikuti sehingga sebuah halaman web, mau dibuka di browser apapun, harus bisa diakses dan dimanipulasi oleh JavaScript dengan cara dan standar yang sama. Dengan begini, developer tidak perlu _coding_ khusus untuk untuk masing-masing browser.
 
-Sebagai contoh, jika kita ingin mengubah _content_ text yang ada di tag ```<h1>``` di atas menjadi "Selamat datang di Buku Saku JavaScript", kita bisa lakukan seperti berikut
+Sebagai contoh, jika kita ingin mengubah _content_ text yang ada di tag ```<h1>``` di atas menjadi "Buku Saku JavaScript", kita bisa lakukan seperti berikut
 
 ```html
 <script>
   let title = document.querySelector('h1');
-  title.innerText = 'Selamat datang di Buku Saku JavaScript';
+  title.innerText = 'Buku Saku JavaScript';
 </script>
 ``` 
 
@@ -54,7 +56,6 @@ Agar javaScript bisa berinteraksi dengan document HTML, Browser menyediakan _obj
   // Misal: Mengakses element <body>
   let body = document.querySelector('body');
 </script>
-
 ``` 
 
 Sebuah halaman web biasanya memuat banyak sekali elemen / tag html yang berulang-ulang seperti tag ```<div>``` yang biasanya sangat mendominasi sebuah halaman web. JavaScript butuh bantuan tambahan agar tahu ```<div>``` yang mana yang ingin di akses dan mana yang tidak. Untuk itu, kita bisa menggunakan _id_ pada tag ```<div>``` seperti ini
@@ -115,8 +116,10 @@ Dan kita bisa mengaksesnya seperti berikut
 
   // atau
 
-  let menuItem = document.querySelector('.menu-item');
-  let listArticle = document.querySelector('.list-article');
+  let menuItem = document
+    .querySelector('.menu-item');
+  let listArticle = document
+    .querySelector('.list-article');
 
   // untuk mengakses class, gunakan tanda . (titik)
 </script>
@@ -204,13 +207,17 @@ API ini digunakan untuk mengambil / mengakses elemen HTML berdasarkan atribut `i
 
 ```html
 <script>
-  let article = document.getElementsByClassName('article')[0];
+  let article = document
+    .getElementsByClassName('article')[0];
 
   // menambahkan attribute data
   article.setAttribute('data-read', '1');
 
   // Menambahkan attribute style
-  article.setAttribute('style', 'background-color: #f0f0f0'); 
+  article.setAttribute(
+    'style', 
+    'background-color: #f0f0f0'
+  ); 
 
   // Menghapus attribute style
   article.removeAttribute('style');
@@ -221,7 +228,8 @@ API ini digunakan untuk mengambil / mengakses elemen HTML berdasarkan atribut `i
 
 ```html
 <script>
-  let article = document.getElementByClassName('article');
+  let article = document
+    .getElementByClassName('article');
 
   // Menambahkan element baru
   let newElement = document.createElement('p');
@@ -269,28 +277,68 @@ Kita bisa akses dan telusuri element-element dalam kode HTML di atas seperti ini
 
 ```html
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener(
+    'DOMContentLoaded', 
+    function() {
+      let menu = document.getElementById('menu');
 
-    let menu = document.getElementById('menu');
+      // Mengakses children langsung dari elemen ul
+      let children = menu.children;
 
-    // Mengakses children langsung dari elemen ul
-    let children = menu.children;
+      // Mengakses child pertama dan terakhir
+      let firstChild = menu.firstElementChild;
+      let lastChild = menu.lastElementChild;
 
-    // Mengakses child pertama dan terakhir
-    let firstChild = menu.firstElementChild;
-    let lastChild = menu.lastElementChild;
+      // Mengakses parent 
+      let parent = menu.parentElement;
 
-    // Mengakses parent 
-    let parent = menu.parentElement;
+      // Mengakses sibling dari li kedua
 
-    // Mengakses sibling dari li kedua
-    let about = menu.children[1]; // <li>About</li>
-    let prevElement = about.previousElementSibling; // Home
-    let nextElement = about.nextElementSibling; // Contact
-
-  });
+      // <li>About</li>
+      let about = menu.children[1];
+      // Home
+      let prevElement = about.previousElementSibling; 
+      // Contact
+      let nextElement = about.nextElementSibling; 
+  }
+);
 </script>
 ```
+
+Lalu bagaimana cara untuk menelusuri **semua node** yang ada di sebuah halaman HTML?. Proses ini biasa dilakukan oleh Search Engine atau aplikasi Web Scraper dimana mereka akan menelusuri Setiap Node yang ada untuk menemukan sebuah informasi yang mereka butuhkan seperti mencari sebuah **text** tertentu.
+
+Secara sederhana, kita bisa lakukan teknik _rekursif_ untuk menelusuri semua node dan menemukan _informasi_ yang kita cari.
+
+Perhatikan contoh berikut:
+
+```js
+function findText(node, text) {
+  // Jika node adalah element (seperti <div>, <p>, dll)
+  if (node.nodeType === Node.ELEMENT_NODE) {
+    // Telusuri semua anak node
+    for (let child of node.childNodes) {
+      // fungsi rekursif
+      // yang memanggil dirinya sendiri
+      if (findText(child, text)) {
+        return true;
+      }
+    }
+    return false; 
+  } else if (node.nodeType === Node.TEXT_NODE) {
+    return node.nodeValue.includes(text);
+  }
+}
+
+console.log(
+  findText(document.body, "Buku Saku")
+);
+```
+
+**Penjelasan Singkat:** 
+
+- Function ini menelusuri seluruh Node dan isi halaman web yang ada di bawah tag `<body>`(document.body)
+- Jika menemukan teks "Buku Saku" di mana pun dalam struktur HTML, maka return true
+- Jika tidak ada, maka return false
 
 > ⚠️ **Penting:**
 >
