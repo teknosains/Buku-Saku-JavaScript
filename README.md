@@ -22,9 +22,9 @@ Sekarang saatnya *back to basic* belajar bersama Fundamental JavaScript disini. 
 
 ## Topic Bahasan
 
-Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar secara runut dan efektif.
+Pembahasan akan dibagi menjadi beberapa _Part_ untuk memudahkan kamu belajar secara runut dan efektif.
 
-#### Chapter 1
+#### Part 1
 
 * [Introduction](https://github.com/teknosains/Buku-Saku-JavaScript/tree/main/1%20-%20Introduction)
   * [Sejarah JavaScript](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/1%20-%20Introduction/01%20-%20Sejarah%20JavaScript.md)
@@ -51,7 +51,7 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * [Event di Browser](https://github.com/teknosains/Buku-Saku-JavaScript/blob/main/3%20-%20DOM%20dan%20Event%20di%20Browser/02%20-%20Event%20di%20Browser.md)
 
 
-#### Chapter 2
+#### Part 2
 
 * Function Lanjutan Part 1
   * Arrow Function Lanjutan
@@ -74,7 +74,7 @@ Pembahasan akan dibagi menjadi beberapa _Chapter_ untuk memudahkan kamu belajar 
   * Session Storage
   * Cookie
 
-#### Chapter 3
+#### Part 3
 * Object Lanjutan
   * Reference Object
   * Cloning Object
