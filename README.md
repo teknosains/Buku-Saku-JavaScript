@@ -2,6 +2,8 @@
 
 Series ini adalah bagi mereka yang sabar ingin mempelajari JavaScript dari ```titik 0```. Diharapkan pembaca dapat memahami JavaScript fundamental dan konsep-konsep dasar lainnya sehingga membantu membentuk pemahaman yang kokoh sebelum lebih jauh terjun ke dunia Web Development dan Framework-framework JavaScript di luar sana.
 
+> Versi E-Book dengan bonus/tambahan material bisa di cek [disini](https://lynk.id/jalanterang/1wx10mpp813w) 
+
 <div align="center">
   <img src="https://github.com/user-attachments/assets/32c8abbf-2ae4-4545-8183-b4e0b6499b12"/>
 </div>
